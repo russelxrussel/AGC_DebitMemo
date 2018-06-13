@@ -1,0 +1,685 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FF20D557-B532-4AE3-B709-5F1AD050F8C2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>DGMU_DEBIT_TICKET_PROJ.My.MyApplication</StartupObject>
+    <RootNamespace>DGMU_DEBIT_TICKET_PROJ</RootNamespace>
+    <AssemblyName>DGMU_DEBIT_TICKET_PROJ</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>DGMU_DEBIT_TICKET_PROJ.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>DGMU_DEBIT_TICKET_PROJ.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>process-24.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>DGMU_DEBIT_TICKET_PROJ.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>DGMU_DEBIT_TICKET_PROJ.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\Base_C.vb" />
+    <Compile Include="Class\DMT_C.vb" />
+    <Compile Include="DMRequestStatus.Designer.vb">
+      <DependentUpon>DMRequestStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMRequestStatus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dsRequestListItem.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsRequestListItem.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsTest.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTest.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmApprover.Designer.vb">
+      <DependentUpon>frmApprover.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmApprover.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDebitMemoRequest.Designer.vb">
+      <DependentUpon>frmDebitMemoRequest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDebitMemoRequest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmItemMaintenance.Designer.vb">
+      <DependentUpon>frmItemMaintenance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmItemMaintenance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewAttachment.Designer.vb">
+      <DependentUpon>frmViewAttachment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewAttachment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LookUp_Item.Designer.vb">
+      <DependentUpon>LookUp_Item.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LookUp_Item.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="repDebitMemoApproved.Designer.vb">
+      <DependentUpon>repDebitMemoApproved.vb</DependentUpon>
+    </Compile>
+    <Compile Include="repDebitMemoApproved.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="repDMTotalSummary.Designer.vb">
+      <DependentUpon>repDMTotalSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="repDMTotalSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\repApprovedDM.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>repApprovedDM.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\repDebitMemoTotalSummary_Details_Supervisor.vb">
+      <DependentUpon>repDebitMemoTotalSummary_Details_Supervisor.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\repDebitMemoTotalSummary_Details.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>repDebitMemoTotalSummary_Details.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\repDebitMemoTotalSummary_List.vb">
+      <DependentUpon>repDebitMemoTotalSummary_List.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\repDebitMemoTotalSummary_List_Supervisor.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>repDebitMemoTotalSummary_List_Supervisor.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DMRequestStatus.resx">
+      <DependentUpon>DMRequestStatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmApprover.resx">
+      <DependentUpon>frmApprover.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDebitMemoRequest.resx">
+      <DependentUpon>frmDebitMemoRequest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmItemMaintenance.resx">
+      <DependentUpon>frmItemMaintenance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewAttachment.resx">
+      <DependentUpon>frmViewAttachment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LookUp_Item.resx">
+      <DependentUpon>LookUp_Item.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="repDebitMemoApproved.resx">
+      <DependentUpon>repDebitMemoApproved.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="repDMTotalSummary.resx">
+      <DependentUpon>repDMTotalSummary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\repApprovedDM.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>repApprovedDM.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\repDebitMemoTotalSummary_Details_Supervisor.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>repDebitMemoTotalSummary_Details_Supervisor.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\repDebitMemoTotalSummary_Details.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>repDebitMemoTotalSummary_Details.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\repDebitMemoTotalSummary_List.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>repDebitMemoTotalSummary_List.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\repDebitMemoTotalSummary_List_Supervisor.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>repDebitMemoTotalSummary_List_Supervisor.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dsRequestListItem.xsc">
+      <DependentUpon>dsRequestListItem.xsd</DependentUpon>
+    </None>
+    <None Include="dsRequestListItem.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsRequestListItem.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="dsRequestListItem.xss">
+      <DependentUpon>dsRequestListItem.xsd</DependentUpon>
+    </None>
+    <None Include="dsTest.xsc">
+      <DependentUpon>dsTest.xsd</DependentUpon>
+    </None>
+    <None Include="dsTest.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTest.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="dsTest.xss">
+      <DependentUpon>dsTest.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\frmMain.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\x1.png" />
+    <Content Include="process-24.ico" />
+    <None Include="packages.config" />
+    <None Include="Resources\DGMU_logo_700x385px.PNG" />
+    <None Include="Resources\workflow-24.png" />
+    <None Include="Resources\webcam-24.png" />
+    <None Include="Resources\voicemail-24.png" />
+    <None Include="Resources\voice_presentation-24.png" />
+    <None Include="Resources\vip-24.png" />
+    <None Include="Resources\view_details-24.png" />
+    <None Include="Resources\video_projector-24.png" />
+    <None Include="Resources\video_file-24.png" />
+    <None Include="Resources\video_call-24.png" />
+    <None Include="Resources\upload-24.png" />
+    <None Include="Resources\up-24.png" />
+    <None Include="Resources\up_right-24.png" />
+    <None Include="Resources\up_left-24.png" />
+    <None Include="Resources\unlock-24.png" />
+    <None Include="Resources\undo-24.png" />
+    <None Include="Resources\two_smartphones-24.png" />
+    <None Include="Resources\tree_structure-24.png" />
+    <None Include="Resources\trademark-24.png" />
+    <None Include="Resources\touchscreen_smartphone-24.png" />
+    <None Include="Resources\todo_list-24.png" />
+    <None Include="Resources\timeline-24.png" />
+    <None Include="Resources\template-24.png" />
+    <None Include="Resources\tablet_android-24.png" />
+    <None Include="Resources\synchronize-24.png" />
+    <None Include="Resources\switch_camera-24.png" />
+    <None Include="Resources\survey-24.png" />
+    <None Include="Resources\support-24.png" />
+    <None Include="Resources\statistics-24.png" />
+    <None Include="Resources\start-24.png" />
+    <None Include="Resources\stack_of_photos-24.png" />
+    <None Include="Resources\sports_mode-24.png" />
+    <None Include="Resources\speaker-24.png" />
+    <None Include="Resources\sound_recording_copyright-24.png" />
+    <None Include="Resources\sms-24.png" />
+    <None Include="Resources\smartphone_tablet-24.png" />
+    <None Include="Resources\slr_back_side-24.png" />
+    <None Include="Resources\sim_card-24.png" />
+    <None Include="Resources\sim_card_chip-24.png" />
+    <None Include="Resources\signature-24.png" />
+    <None Include="Resources\shop-24.png" />
+    <None Include="Resources\shipped-24.png" />
+    <None Include="Resources\share-24.png" />
+    <None Include="Resources\settings-24.png" />
+    <None Include="Resources\services-24.png" />
+    <None Include="Resources\service_mark-24.png" />
+    <None Include="Resources\serial_tasks-24.png" />
+    <None Include="Resources\selfie-24.png" />
+    <None Include="Resources\self_service_kiosk-24.png" />
+    <None Include="Resources\search-24.png" />
+    <None Include="Resources\scatter_plot-24.png" />
+    <None Include="Resources\sales_performance-24.png" />
+    <None Include="Resources\safe-24.png" />
+    <None Include="Resources\rules-24.png" />
+    <None Include="Resources\ruler-24.png" />
+    <None Include="Resources\rotate_to_portrait-24.png" />
+    <None Include="Resources\rotate_to_landscape-24.png" />
+    <None Include="Resources\rotate_camera-24.png" />
+    <None Include="Resources\right-24.png" />
+    <None Include="Resources\right_up-24.png" />
+    <None Include="Resources\right_up2-24.png" />
+    <None Include="Resources\right_down-24.png" />
+    <None Include="Resources\right_down2-24.png" />
+    <None Include="Resources\reuse-24.png" />
+    <None Include="Resources\remove_image-24.png" />
+    <None Include="Resources\registered_trademark-24.png" />
+    <None Include="Resources\refresh-24.png" />
+    <None Include="Resources\redo-24.png" />
+    <None Include="Resources\reading-24.png" />
+    <None Include="Resources\reading_ebook-24.png" />
+    <None Include="Resources\ratings-24.png" />
+    <None Include="Resources\rating-24.png" />
+    <None Include="Resources\radar_plot-24.png" />
+    <None Include="Resources\questions-24.png" />
+    <None Include="Resources\puzzle-24.png" />
+    <None Include="Resources\process-24.png" />
+    <None Include="Resources\privacy-24.png" />
+    <None Include="Resources\print-24.png" />
+    <None Include="Resources\previous-24.png" />
+    <None Include="Resources\positive_dynamic-24.png" />
+    <None Include="Resources\portrait_mode-24.png" />
+    <None Include="Resources\podium_without_speaker-24.png" />
+    <None Include="Resources\podium_with_speaker-24.png" />
+    <None Include="Resources\podium_with_audience-24.png" />
+    <None Include="Resources\plus-24.png" />
+    <None Include="Resources\planner-24.png" />
+    <None Include="Resources\pie_chart-24.png" />
+    <None Include="Resources\picture-24.png" />
+    <None Include="Resources\photo_reel-24.png" />
+    <None Include="Resources\phone-24.png" />
+    <None Include="Resources\phone_android-24.png" />
+    <None Include="Resources\parallel_tasks-24.png" />
+    <None Include="Resources\panorama-24.png" />
+    <None Include="Resources\paid-24.png" />
+    <None Include="Resources\package-24.png" />
+    <None Include="Resources\overtime-24.png" />
+    <None Include="Resources\organization-24.png" />
+    <None Include="Resources\org_unit-24.png" />
+    <None Include="Resources\opened_folder-24.png" />
+    <None Include="Resources\online_support-24.png" />
+    <None Include="Resources\old_time_camera-24.png" />
+    <None Include="Resources\ok-24.png" />
+    <None Include="Resources\numerical_sorting_21-24.png" />
+    <None Include="Resources\numerical_sorting_12-24.png" />
+    <None Include="Resources\nook-24.png" />
+    <None Include="Resources\no_video-24.png" />
+    <None Include="Resources\no_idea-24.png" />
+    <None Include="Resources\night_portrait-24.png" />
+    <None Include="Resources\night_landscape-24.png" />
+    <None Include="Resources\next-24.png" />
+    <None Include="Resources\news-24.png" />
+    <None Include="Resources\neutral_trading-24.png" />
+    <None Include="Resources\neutral_decision-24.png" />
+    <None Include="Resources\negative_dynamic-24.png" />
+    <None Include="Resources\music-24.png" />
+    <None Include="Resources\multiple_smartphones-24.png" />
+    <None Include="Resources\multiple_inputs-24.png" />
+    <None Include="Resources\multiple_devices-24.png" />
+    <None Include="Resources\multiple_cameras-24.png" />
+    <None Include="Resources\money_transfer-24.png" />
+    <None Include="Resources\mms-24.png" />
+    <None Include="Resources\missed_call-24.png" />
+    <None Include="Resources\minus-24.png" />
+    <None Include="Resources\mind_map-24.png" />
+    <None Include="Resources\middle_battery-24.png" />
+    <None Include="Resources\menu-24.png" />
+    <None Include="Resources\medium_priority-24.png" />
+    <None Include="Resources\manager-24.png" />
+    <None Include="Resources\make_decision-24.png" />
+    <None Include="Resources\low_priority-24.png" />
+    <None Include="Resources\low_battery-24.png" />
+    <None Include="Resources\lock-24.png" />
+    <None Include="Resources\lock_portrait-24.png" />
+    <None Include="Resources\lock_landscape-24.png" />
+    <None Include="Resources\list-24.png" />
+    <None Include="Resources\link-24.png" />
+    <None Include="Resources\line_chart-24.png" />
+    <None Include="Resources\like-24.png" />
+    <None Include="Resources\like_placeholder-24.png" />
+    <None Include="Resources\light_at_the_end_of_tunnel-24.png" />
+    <None Include="Resources\library-24.png" />
+    <None Include="Resources\left-24.png" />
+    <None Include="Resources\left_up-24.png" />
+    <None Include="Resources\left_up2-24.png" />
+    <None Include="Resources\left_down-24.png" />
+    <None Include="Resources\left_down2-24.png" />
+    <None Include="Resources\leave-24.png" />
+    <None Include="Resources\landscape-24.png" />
+    <None Include="Resources\kindle-24.png" />
+    <None Include="Resources\key-24.png" />
+    <None Include="Resources\iphone-24.png" />
+    <None Include="Resources\ipad-24.png" />
+    <None Include="Resources\invite-24.png" />
+    <None Include="Resources\internal-24.png" />
+    <None Include="Resources\integrated_webcam-24.png" />
+    <None Include="Resources\inspection-24.png" />
+    <None Include="Resources\info-24.png" />
+    <None Include="Resources\in_transit-24.png" />
+    <None Include="Resources\import-24.png" />
+    <None Include="Resources\image_file-24.png" />
+    <None Include="Resources\idea-24.png" />
+    <None Include="Resources\icons8_cup-24.png" />
+    <None Include="Resources\home-24.png" />
+    <None Include="Resources\high_priority-24.png" />
+    <None Include="Resources\high_battery-24.png" />
+    <None Include="Resources\heat_map-24.png" />
+    <None Include="Resources\headset-24.png" />
+    <None Include="Resources\grid-24.png" />
+    <None Include="Resources\graduation_cap-24.png" />
+    <None Include="Resources\good_decision-24.png" />
+    <None Include="Resources\globe-24.png" />
+    <None Include="Resources\generic_sorting_desc-24.png" />
+    <None Include="Resources\generic_sorting_asc-24.png" />
+    <None Include="Resources\genealogy-24.png" />
+    <None Include="Resources\gallery-24.png" />
+    <None Include="Resources\full_trash-24.png" />
+    <None Include="Resources\full_battery-24.png" />
+    <None Include="Resources\frame-24.png" />
+    <None Include="Resources\folder-24.png" />
+    <None Include="Resources\flow_chart-24.png" />
+    <None Include="Resources\flash_on-24.png" />
+    <None Include="Resources\flash_off-24.png" />
+    <None Include="Resources\flash_auto-24.png" />
+    <None Include="Resources\fine_print-24.png" />
+    <None Include="Resources\film-24.png" />
+    <None Include="Resources\film_reel-24.png" />
+    <None Include="Resources\filled_filter-24.png" />
+    <None Include="Resources\filing_cabinet-24.png" />
+    <None Include="Resources\file-24.png" />
+    <None Include="Resources\feedback-24.png" />
+    <None Include="Resources\feed_in-24.png" />
+    <None Include="Resources\faq-24.png" />
+    <None Include="Resources\factory-24.png" />
+    <None Include="Resources\factory_breakdown-24.png" />
+    <None Include="Resources\external-24.png" />
+    <None Include="Resources\export-24.png" />
+    <None Include="Resources\expired-24.png" />
+    <None Include="Resources\expand-24.png" />
+    <None Include="Resources\entering_heaven_alive-24.png" />
+    <None Include="Resources\engineering-24.png" />
+    <None Include="Resources\end_call-24.png" />
+    <None Include="Resources\empty_trash-24.png" />
+    <None Include="Resources\empty_filter-24.png" />
+    <None Include="Resources\empty_battery-24.png" />
+    <None Include="Resources\electronics-24.png" />
+    <None Include="Resources\electro_devices-24.png" />
+    <None Include="Resources\electricity-24.png" />
+    <None Include="Resources\electrical_threshold-24.png" />
+    <None Include="Resources\electrical_sensor-24.png" />
+    <None Include="Resources\edit_image-24.png" />
+    <None Include="Resources\download-24.png" />
+    <None Include="Resources\down-24.png" />
+    <None Include="Resources\down_right-24.png" />
+    <None Include="Resources\down_left-24.png" />
+    <None Include="Resources\doughnut_chart-24.png" />
+    <None Include="Resources\donate-24.png" />
+    <None Include="Resources\document-24.png" />
+    <None Include="Resources\do_not_mix-24.png" />
+    <None Include="Resources\do_not_insert-24.png" />
+    <None Include="Resources\do_not_inhale-24.png" />
+    <None Include="Resources\display-24.png" />
+    <None Include="Resources\dislike-24.png" />
+    <None Include="Resources\disclaimer-24.png" />
+    <None Include="Resources\disapprove-24.png" />
+    <None Include="Resources\diploma_2-24.png" />
+    <None Include="Resources\diploma_1-24.png" />
+    <None Include="Resources\deployment-24.png" />
+    <None Include="Resources\department-24.png" />
+    <None Include="Resources\delete_row-24.png" />
+    <None Include="Resources\delete_database-24.png" />
+    <None Include="Resources\delete_column-24.png" />
+    <None Include="Resources\decision-24.png" />
+    <None Include="Resources\debt-24.png" />
+    <None Include="Resources\database-24.png" />
+    <None Include="Resources\data_sheet-24.png" />
+    <None Include="Resources\data_recovery-24.png" />
+    <None Include="Resources\data_protection-24.png" />
+    <None Include="Resources\data_encryption-24.png" />
+    <None Include="Resources\data_configuration-24.png" />
+    <None Include="Resources\data_backup-24.png" />
+    <None Include="Resources\dam-24.png" />
+    <None Include="Resources\customer_support-24.png" />
+    <None Include="Resources\cursor-24.png" />
+    <None Include="Resources\currency_exchange-24.png" />
+    <None Include="Resources\crystal_oscillator-24.png" />
+    <None Include="Resources\copyright-24.png" />
+    <None Include="Resources\copyleft-24.png" />
+    <None Include="Resources\contacts-24.png" />
+    <None Include="Resources\conference_call-24.png" />
+    <None Include="Resources\compact_camera-24.png" />
+    <None Include="Resources\comments-24.png" />
+    <None Include="Resources\combo_chart-24.png" />
+    <None Include="Resources\collect-24.png" />
+    <None Include="Resources\collapse-24.png" />
+    <None Include="Resources\collaboration-24.png" />
+    <None Include="Resources\cloth-24.png" />
+    <None Include="Resources\close_up_mode-24.png" />
+    <None Include="Resources\clock-24.png" />
+    <None Include="Resources\clear_filters-24.png" />
+    <None Include="Resources\clapperboard-24.png" />
+    <None Include="Resources\circuit-24.png" />
+    <None Include="Resources\checkmark-24.png" />
+    <None Include="Resources\charge_battery-24.png" />
+    <None Include="Resources\cell_phone-24.png" />
+    <None Include="Resources\capacitor-24.png" />
+    <None Include="Resources\candle_sticks-24.png" />
+    <None Include="Resources\cancel-24.png" />
+    <None Include="Resources\camera-24.png" />
+    <None Include="Resources\camera_identification-24.png" />
+    <None Include="Resources\camera_addon-24.png" />
+    <None Include="Resources\camcorder-24.png" />
+    <None Include="Resources\camcorder_pro-24.png" />
+    <None Include="Resources\callback-24.png" />
+    <None Include="Resources\call_transfer-24.png" />
+    <None Include="Resources\calendar-24.png" />
+    <None Include="Resources\calculator-24.png" />
+    <None Include="Resources\cable_release-24.png" />
+    <None Include="Resources\butting_in-24.png" />
+    <None Include="Resources\businesswoman-24.png" />
+    <None Include="Resources\businessman-24.png" />
+    <None Include="Resources\business-24.png" />
+    <None Include="Resources\business_contact-24.png" />
+    <None Include="Resources\bullish-24.png" />
+    <None Include="Resources\broken_link-24.png" />
+    <None Include="Resources\briefcase-24.png" />
+    <None Include="Resources\bookmark-24.png" />
+    <None Include="Resources\biotech-24.png" />
+    <None Include="Resources\biomass-24.png" />
+    <None Include="Resources\biohazard-24.png" />
+    <None Include="Resources\binoculars-24.png" />
+    <None Include="Resources\bearish-24.png" />
+    <None Include="Resources\bar_chart-24.png" />
+    <None Include="Resources\bad_decision-24.png" />
+    <None Include="Resources\automotive-24.png" />
+    <None Include="Resources\automatic-24.png" />
+    <None Include="Resources\audio_file-24.png" />
+    <None Include="Resources\assistant-24.png" />
+    <None Include="Resources\area_chart-24.png" />
+    <None Include="Resources\approve-24.png" />
+    <None Include="Resources\approval-24.png" />
+    <None Include="Resources\answers-24.png" />
+    <None Include="Resources\alphabetical_sorting_za-24.png" />
+    <None Include="Resources\alphabetical_sorting_az-24.png" />
+    <None Include="Resources\alarm_clock-24.png" />
+    <None Include="Resources\advertising-24.png" />
+    <None Include="Resources\advance-24.png" />
+    <None Include="Resources\address_book-24.png" />
+    <None Include="Resources\add_row-24.png" />
+    <None Include="Resources\add_image-24.png" />
+    <None Include="Resources\add_database-24.png" />
+    <None Include="Resources\add_column-24.png" />
+    <None Include="Resources\accept_database-24.png" />
+    <None Include="Resources\about-24.png" />
+    <None Include="Resources\user_authentication_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

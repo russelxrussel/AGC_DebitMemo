@@ -1,0 +1,9 @@
+12:08 AM 06/13/2018 : Created new table for display of Reports : [UTIL].[spGET_DM_REPORTS_LIST]
+12:01 AM 06/13/2018 : Created new table for Report selection Name: UTIL.Reports_RF	
+11:50 PM 06/12/2018 : Create new sp for server date and time [xSys].[GET_SERVER_DATE_TIME]
+-----------------
+1:07 AM 06/08/2018 : Adding usercode parameter to Debit Memo Header Insert Method
+9:54 AM 6/8/2018 : Add new data in [TRANSACTION].[spGET_DM_FOR_APPROVAL_REQUEST] name: Requester_Notes
+2:15 PM 6/8/2018 : Add new store procedures spGET_DM_ALL_REQUEST_06082018, spGET_DM_USER_REQUESTED_LIST_06082018,
+		 spUPDATE_DM_POST_APPROVED_06082018
+2:16 PM 6/8/2018 : Update [TRANSACTION].[spUPDATE_DM_DEBIT_MEMO_HEADER_COMPLETE_STATUS]

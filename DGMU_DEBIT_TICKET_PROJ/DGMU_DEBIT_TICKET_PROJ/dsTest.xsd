@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsTest" targetNamespace="http://tempuri.org/dsTest.xsd" xmlns:mstns="http://tempuri.org/dsTest.xsd" xmlns="http://tempuri.org/dsTest.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="DGMUConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DGMUConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DGMU_DEBIT_TICKET_PROJ.My.MySettings.GlobalReference.Default.DGMUConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Request_Status_RFTableAdapter" GeneratorDataComponentClassName="Request_Status_RFTableAdapter" Name="Request_Status_RF" UserDataComponentName="Request_Status_RFTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DGMUConnectionString (MySettings)" DbObjectName="DGMU.DMT.Request_Status_RF" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        RequestStatus, RequestDescription
+FROM           DMT.Request_Status_RF</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="RequestStatus" DataSetColumn="RequestStatus" />
+              <Mapping SourceColumn="RequestDescription" DataSetColumn="RequestDescription" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsTest" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsTest" msprop:Generator_UserDSName="dsTest">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Request_Status_RF" msprop:Generator_TableClassName="Request_Status_RFDataTable" msprop:Generator_TableVarName="tableRequest_Status_RF" msprop:Generator_TablePropName="Request_Status_RF" msprop:Generator_RowDeletingName="Request_Status_RFRowDeleting" msprop:Generator_RowChangingName="Request_Status_RFRowChanging" msprop:Generator_RowEvHandlerName="Request_Status_RFRowChangeEventHandler" msprop:Generator_RowDeletedName="Request_Status_RFRowDeleted" msprop:Generator_UserTableName="Request_Status_RF" msprop:Generator_RowChangedName="Request_Status_RFRowChanged" msprop:Generator_RowEvArgName="Request_Status_RFRowChangeEvent" msprop:Generator_RowClassName="Request_Status_RFRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RequestStatus" msprop:Generator_ColumnVarNameInTable="columnRequestStatus" msprop:Generator_ColumnPropNameInRow="RequestStatus" msprop:Generator_ColumnPropNameInTable="RequestStatusColumn" msprop:Generator_UserColumnName="RequestStatus">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RequestDescription" msprop:Generator_ColumnVarNameInTable="columnRequestDescription" msprop:Generator_ColumnPropNameInRow="RequestDescription" msprop:Generator_ColumnPropNameInTable="RequestDescriptionColumn" msprop:Generator_UserColumnName="RequestDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Request_Status_RF" />
+      <xs:field xpath="mstns:RequestStatus" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
