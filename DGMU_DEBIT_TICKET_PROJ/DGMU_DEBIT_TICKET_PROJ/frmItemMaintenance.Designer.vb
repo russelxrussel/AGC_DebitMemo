@@ -32,10 +32,14 @@ Partial Class frmItemMaintenance
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.tsSave = New System.Windows.Forms.ToolStripButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.cmbItemGroup = New System.Windows.Forms.ComboBox()
         Me.cmbUOM = New System.Windows.Forms.ComboBox()
         Me.txtItemDescription = New System.Windows.Forms.TextBox()
         Me.tpItemGroup = New System.Windows.Forms.TabPage()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.tpItemUOM = New System.Windows.Forms.TabPage()
         Me.TabControl1.SuspendLayout()
         Me.tpItem.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -45,12 +49,13 @@ Partial Class frmItemMaintenance
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.tpItem)
+        Me.TabControl1.Controls.Add(Me.tpItemUOM)
         Me.TabControl1.Controls.Add(Me.tpItemGroup)
         Me.TabControl1.Location = New System.Drawing.Point(2, 13)
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(4)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(428, 268)
+        Me.TabControl1.Size = New System.Drawing.Size(428, 251)
         Me.TabControl1.TabIndex = 0
         '
         'tpItem
@@ -61,7 +66,7 @@ Partial Class frmItemMaintenance
         Me.tpItem.Margin = New System.Windows.Forms.Padding(4)
         Me.tpItem.Name = "tpItem"
         Me.tpItem.Padding = New System.Windows.Forms.Padding(4)
-        Me.tpItem.Size = New System.Drawing.Size(420, 237)
+        Me.tpItem.Size = New System.Drawing.Size(420, 220)
         Me.tpItem.TabIndex = 0
         Me.tpItem.Text = "Item Master"
         '
@@ -126,35 +131,47 @@ Partial Class frmItemMaintenance
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.cmbItemGroup)
         Me.GroupBox1.Controls.Add(Me.cmbUOM)
         Me.GroupBox1.Controls.Add(Me.txtItemDescription)
         Me.GroupBox1.Location = New System.Drawing.Point(4, 52)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(406, 165)
+        Me.GroupBox1.Size = New System.Drawing.Size(406, 153)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Item Details"
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(16, 39)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(77, 18)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Item Name"
+        '
         'cmbItemGroup
         '
         Me.cmbItemGroup.FormattingEnabled = True
-        Me.cmbItemGroup.Location = New System.Drawing.Point(120, 100)
+        Me.cmbItemGroup.Location = New System.Drawing.Point(133, 100)
         Me.cmbItemGroup.Name = "cmbItemGroup"
-        Me.cmbItemGroup.Size = New System.Drawing.Size(207, 26)
+        Me.cmbItemGroup.Size = New System.Drawing.Size(140, 26)
         Me.cmbItemGroup.TabIndex = 2
         '
         'cmbUOM
         '
         Me.cmbUOM.FormattingEnabled = True
-        Me.cmbUOM.Location = New System.Drawing.Point(120, 68)
+        Me.cmbUOM.Location = New System.Drawing.Point(133, 68)
         Me.cmbUOM.Name = "cmbUOM"
-        Me.cmbUOM.Size = New System.Drawing.Size(207, 26)
+        Me.cmbUOM.Size = New System.Drawing.Size(140, 26)
         Me.cmbUOM.TabIndex = 1
         '
         'txtItemDescription
         '
-        Me.txtItemDescription.Location = New System.Drawing.Point(120, 36)
+        Me.txtItemDescription.Location = New System.Drawing.Point(133, 36)
         Me.txtItemDescription.Name = "txtItemDescription"
         Me.txtItemDescription.Size = New System.Drawing.Size(240, 26)
         Me.txtItemDescription.TabIndex = 0
@@ -165,9 +182,37 @@ Partial Class frmItemMaintenance
         Me.tpItemGroup.Margin = New System.Windows.Forms.Padding(4)
         Me.tpItemGroup.Name = "tpItemGroup"
         Me.tpItemGroup.Padding = New System.Windows.Forms.Padding(4)
-        Me.tpItemGroup.Size = New System.Drawing.Size(420, 237)
+        Me.tpItemGroup.Size = New System.Drawing.Size(420, 220)
         Me.tpItemGroup.TabIndex = 1
         Me.tpItemGroup.Text = "Item Group"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(16, 71)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(107, 18)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "Unit of Measure"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(16, 103)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(77, 18)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "Item Name"
+        '
+        'tpItemUOM
+        '
+        Me.tpItemUOM.BackColor = System.Drawing.SystemColors.Control
+        Me.tpItemUOM.Location = New System.Drawing.Point(4, 27)
+        Me.tpItemUOM.Name = "tpItemUOM"
+        Me.tpItemUOM.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpItemUOM.Size = New System.Drawing.Size(420, 220)
+        Me.tpItemUOM.TabIndex = 2
+        Me.tpItemUOM.Text = "Item UOM"
         '
         'frmItemMaintenance
         '
@@ -204,4 +249,8 @@ Partial Class frmItemMaintenance
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents tsSearch As ToolStripButton
     Friend WithEvents ToolStripLabel1 As ToolStripLabel
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents tpItemUOM As System.Windows.Forms.TabPage
 End Class

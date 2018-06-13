@@ -12,4 +12,10 @@
             oItem.INSERT_NEW_ITEM(txtItemDescription.Text.ToUpper, cmbUOM.Text, cmbItemGroup.Text, "1")
         End If
     End Sub
+
+
+
+#Region "USER DEFINED FUNCTIONS"
+   
+#End Region
 End Class
