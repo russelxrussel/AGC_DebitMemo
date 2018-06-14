@@ -15,12 +15,6 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_033AEE40E39F4DB88E5171F706385757"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_03E6AF197AD81398CC8C1D626B986D4C"
         "OwnerKey" = "8:_D447BD1B00B248C08BEA728DD564A4EC"
         "MsmSig" = "8:_UNDEFINED"
@@ -81,12 +75,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_099E17F66C556E15B1836373DA5A2491"
-        "OwnerKey" = "8:_D447BD1B00B248C08BEA728DD564A4EC"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_0F7635E145C253F670BF4174A485F9F3"
         "OwnerKey" = "8:_53170E0F9DE5EB575DF97043DA4E53F8"
         "MsmSig" = "8:_UNDEFINED"
@@ -123,32 +111,8 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_199212E9F834F4B8E170F22B326CD773"
+        "MsmKey" = "8:_360DB3F71025D2BD7E42E0A4E8386B9B"
         "OwnerKey" = "8:_D447BD1B00B248C08BEA728DD564A4EC"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_1C1D785015C78B42F41EC617438CF12A"
-        "OwnerKey" = "8:_199212E9F834F4B8E170F22B326CD773"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_1C1D785015C78B42F41EC617438CF12A"
-        "OwnerKey" = "8:_099E17F66C556E15B1836373DA5A2491"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_1C1D785015C78B42F41EC617438CF12A"
-        "OwnerKey" = "8:_D447BD1B00B248C08BEA728DD564A4EC"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_22FFF922FE5F4470B2083B8EB78FA27A"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -207,6 +171,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_3A0863C88A0643C62FDE7952F1D28EDC"
+        "OwnerKey" = "8:_D447BD1B00B248C08BEA728DD564A4EC"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_400A70F0F4273226770C867CF4F62713"
         "OwnerKey" = "8:_D447BD1B00B248C08BEA728DD564A4EC"
         "MsmSig" = "8:_UNDEFINED"
@@ -249,12 +219,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_4F500DFF684548BABBFF73662FBBD177"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_53170E0F9DE5EB575DF97043DA4E53F8"
         "OwnerKey" = "8:_400A70F0F4273226770C867CF4F62713"
         "MsmSig" = "8:_UNDEFINED"
@@ -279,7 +243,19 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_6710B07457A0404EAB8A7D4DB84B8616"
+        "MsmKey" = "8:_5EF828C275F448939AB8CEF5CB6748D0"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_636D365C401A44BAB50ECDB1F4DEAC36"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_6DA00B7867B94C7CB2640A30F9C82892"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -297,6 +273,18 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_84DC9B676615EBBA368CB1B582847D05"
+        "OwnerKey" = "8:_C884172E01CAA41BE582ACAE2301C509"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_84DC9B676615EBBA368CB1B582847D05"
+        "OwnerKey" = "8:_D447BD1B00B248C08BEA728DD564A4EC"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_8DD7C8E69216B516AD520F4783460494"
         "OwnerKey" = "8:_CF082758643C6A15B740A903446B430F"
         "MsmSig" = "8:_UNDEFINED"
@@ -315,6 +303,24 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_903D4C93C21B4F31982E98290EA114AE"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_95F3FC7881D54434B25F8247F679F860"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9B65FD584A0B496FAAE63A27A63A8EE0"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_9BEAF38B34F084A737D7C3E87D477470"
         "OwnerKey" = "8:_53170E0F9DE5EB575DF97043DA4E53F8"
         "MsmSig" = "8:_UNDEFINED"
@@ -327,8 +333,32 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_9E61721A8BDC46B69BCF51D97F042433"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9FD9695507CB458FB5566BFAAD1C0C38"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A17AF301203A4F9B8070025636C31E11"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_A21F6E296A61ABBBE089E7A427248169"
         "OwnerKey" = "8:_7C7585BDB03B226E3E7E7017C200ABAD"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A52BA8AAAEC044C6ADC6BF89ECF5C2D6"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -365,18 +395,6 @@
         {
         "MsmKey" = "8:_B1A68E1F59DFCEED51F0F1220BA711AB"
         "OwnerKey" = "8:_400A70F0F4273226770C867CF4F62713"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_B8F61FAECAD75C893D74D44A5A79D087"
-        "OwnerKey" = "8:_C884172E01CAA41BE582ACAE2301C509"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_B8F61FAECAD75C893D74D44A5A79D087"
-        "OwnerKey" = "8:_D447BD1B00B248C08BEA728DD564A4EC"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -531,8 +549,20 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C31435B3AD8C9093D2F64057E0467F53"
+        "MsmKey" = "8:_EF2B1D50DBCE8E4042FF55AC2F938477"
+        "OwnerKey" = "8:_360DB3F71025D2BD7E42E0A4E8386B9B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_EF2B1D50DBCE8E4042FF55AC2F938477"
+        "OwnerKey" = "8:_3A0863C88A0643C62FDE7952F1D28EDC"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_EF2B1D50DBCE8E4042FF55AC2F938477"
+        "OwnerKey" = "8:_D447BD1B00B248C08BEA728DD564A4EC"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -544,19 +574,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_099E17F66C556E15B1836373DA5A2491"
+        "OwnerKey" = "8:_3A0863C88A0643C62FDE7952F1D28EDC"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_199212E9F834F4B8E170F22B326CD773"
+        "OwnerKey" = "8:_360DB3F71025D2BD7E42E0A4E8386B9B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_1C1D785015C78B42F41EC617438CF12A"
+        "OwnerKey" = "8:_EF2B1D50DBCE8E4042FF55AC2F938477"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -610,7 +640,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_B8F61FAECAD75C893D74D44A5A79D087"
+        "OwnerKey" = "8:_84DC9B676615EBBA368CB1B582847D05"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -673,6 +703,12 @@
         "OwnerKey" = "8:_37E387009BA26BC2E0CD06B04B25F3F4"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_C31435B3AD8C9093D2F64057E0467F53"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -691,6 +727,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -752,26 +796,6 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_033AEE40E39F4DB88E5171F706385757"
-            {
-            "SourcePath" = "8:..\\DGMU_DEBIT_TICKET_PROJ\\Reports\\repApprovedDM.rpt"
-            "TargetName" = "8:repApprovedDM.rpt"
-            "Tag" = "8:"
-            "Folder" = "8:_BD17F58119CB457587C0973EB50E65C8"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_03E6AF197AD81398CC8C1D626B986D4C"
             {
             "AssemblyRegister" = "3:1"
@@ -817,37 +841,6 @@
                     }
                 }
             "SourcePath" = "8:CrystalDecisions.ReportAppServer.DataDefModel.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_93C0FE3FC8FA46B49BF529CB57976F42"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_099E17F66C556E15B1836373DA5A2491"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_099E17F66C556E15B1836373DA5A2491"
-                    {
-                    "Name" = "8:MetroFramework.Fonts.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:MetroFramework.Fonts.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_93C0FE3FC8FA46B49BF529CB57976F42"
@@ -927,14 +920,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_199212E9F834F4B8E170F22B326CD773"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_360DB3F71025D2BD7E42E0A4E8386B9B"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_199212E9F834F4B8E170F22B326CD773"
+                    "_360DB3F71025D2BD7E42E0A4E8386B9B"
                     {
                     "Name" = "8:MetroFramework.Design.dll"
                     "Attributes" = "3:512"
@@ -958,20 +951,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1C1D785015C78B42F41EC617438CF12A"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_37E387009BA26BC2E0CD06B04B25F3F4"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_1C1D785015C78B42F41EC617438CF12A"
+                    "_37E387009BA26BC2E0CD06B04B25F3F4"
                     {
-                    "Name" = "8:MetroFramework.dll"
+                    "Name" = "8:CrystalDecisions.ReportAppServer.CommonObjectModel.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:MetroFramework.dll"
+            "SourcePath" = "8:CrystalDecisions.ReportAppServer.CommonObjectModel.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_93C0FE3FC8FA46B49BF529CB57976F42"
@@ -989,40 +982,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_22FFF922FE5F4470B2083B8EB78FA27A"
-            {
-            "SourcePath" = "8:..\\DGMU_DEBIT_TICKET_PROJ\\Reports\\repDebitMemoTotalSummary.vb"
-            "TargetName" = "8:repDebitMemoTotalSummary.vb"
-            "Tag" = "8:"
-            "Folder" = "8:_BD17F58119CB457587C0973EB50E65C8"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_37E387009BA26BC2E0CD06B04B25F3F4"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_3A0863C88A0643C62FDE7952F1D28EDC"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_37E387009BA26BC2E0CD06B04B25F3F4"
+                    "_3A0863C88A0643C62FDE7952F1D28EDC"
                     {
-                    "Name" = "8:CrystalDecisions.ReportAppServer.CommonObjectModel.dll"
+                    "Name" = "8:MetroFramework.Fonts.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:CrystalDecisions.ReportAppServer.CommonObjectModel.dll"
+            "SourcePath" = "8:MetroFramework.Fonts.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_93C0FE3FC8FA46B49BF529CB57976F42"
@@ -1102,26 +1075,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4F500DFF684548BABBFF73662FBBD177"
-            {
-            "SourcePath" = "8:..\\DGMU_DEBIT_TICKET_PROJ\\Reports\\repDebitMemoTotalSummary.rpt"
-            "TargetName" = "8:repDebitMemoTotalSummary.rpt"
-            "Tag" = "8:"
-            "Folder" = "8:_BD17F58119CB457587C0973EB50E65C8"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_53170E0F9DE5EB575DF97043DA4E53F8"
             {
             "AssemblyRegister" = "3:1"
@@ -1153,10 +1106,50 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6710B07457A0404EAB8A7D4DB84B8616"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5EF828C275F448939AB8CEF5CB6748D0"
             {
-            "SourcePath" = "8:..\\DGMU_DEBIT_TICKET_PROJ\\Reports\\repApprovedDM.vb"
-            "TargetName" = "8:repApprovedDM.vb"
+            "SourcePath" = "8:..\\DGMU_DEBIT_TICKET_PROJ\\Reports\\repDebitMemoTotalSummary_Details.rpt"
+            "TargetName" = "8:repDebitMemoTotalSummary_Details.rpt"
+            "Tag" = "8:"
+            "Folder" = "8:_BD17F58119CB457587C0973EB50E65C8"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_636D365C401A44BAB50ECDB1F4DEAC36"
+            {
+            "SourcePath" = "8:..\\DGMU_DEBIT_TICKET_PROJ\\Reports\\repDebitMemoTotalSummary_List_Supervisor.rpt"
+            "TargetName" = "8:repDebitMemoTotalSummary_List_Supervisor.rpt"
+            "Tag" = "8:"
+            "Folder" = "8:_BD17F58119CB457587C0973EB50E65C8"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6DA00B7867B94C7CB2640A30F9C82892"
+            {
+            "SourcePath" = "8:..\\DGMU_DEBIT_TICKET_PROJ\\Reports\\repDebitMemoTotalSummary_Details_Supervisor.vb"
+            "TargetName" = "8:repDebitMemoTotalSummary_Details_Supervisor.vb"
             "Tag" = "8:"
             "Folder" = "8:_BD17F58119CB457587C0973EB50E65C8"
             "Condition" = "8:"
@@ -1187,6 +1180,37 @@
                     }
                 }
             "SourcePath" = "8:ShockwaveFlashObjects.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_93C0FE3FC8FA46B49BF529CB57976F42"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_84DC9B676615EBBA368CB1B582847D05"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:TRUE"
+            "AssemblyAsmDisplayName" = "8:log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=x86"
+                "ScatterAssemblies"
+                {
+                    "_84DC9B676615EBBA368CB1B582847D05"
+                    {
+                    "Name" = "8:log4net.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:log4net.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_93C0FE3FC8FA46B49BF529CB57976F42"
@@ -1235,6 +1259,66 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_903D4C93C21B4F31982E98290EA114AE"
+            {
+            "SourcePath" = "8:..\\DGMU_DEBIT_TICKET_PROJ\\Reports\\repDebitMemoTotalSummary_List.rpt"
+            "TargetName" = "8:repDebitMemoTotalSummary_List.rpt"
+            "Tag" = "8:"
+            "Folder" = "8:_BD17F58119CB457587C0973EB50E65C8"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_95F3FC7881D54434B25F8247F679F860"
+            {
+            "SourcePath" = "8:..\\DGMU_DEBIT_TICKET_PROJ\\Reports\\repApprovedDM.vb"
+            "TargetName" = "8:repApprovedDM.vb"
+            "Tag" = "8:"
+            "Folder" = "8:_BD17F58119CB457587C0973EB50E65C8"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9B65FD584A0B496FAAE63A27A63A8EE0"
+            {
+            "SourcePath" = "8:..\\DGMU_DEBIT_TICKET_PROJ\\Reports\\repApprovedDM.rpt"
+            "TargetName" = "8:repApprovedDM.rpt"
+            "Tag" = "8:"
+            "Folder" = "8:_BD17F58119CB457587C0973EB50E65C8"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9BEAF38B34F084A737D7C3E87D477470"
             {
             "AssemblyRegister" = "3:1"
@@ -1266,6 +1350,66 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9E61721A8BDC46B69BCF51D97F042433"
+            {
+            "SourcePath" = "8:..\\DGMU_DEBIT_TICKET_PROJ\\Reports\\repDebitMemoTotalSummary_List.vb"
+            "TargetName" = "8:repDebitMemoTotalSummary_List.vb"
+            "Tag" = "8:"
+            "Folder" = "8:_BD17F58119CB457587C0973EB50E65C8"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9FD9695507CB458FB5566BFAAD1C0C38"
+            {
+            "SourcePath" = "8:..\\DGMU_DEBIT_TICKET_PROJ\\Reports\\repDebitMemoTotalSummary_Details.vb"
+            "TargetName" = "8:repDebitMemoTotalSummary_Details.vb"
+            "Tag" = "8:"
+            "Folder" = "8:_BD17F58119CB457587C0973EB50E65C8"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A17AF301203A4F9B8070025636C31E11"
+            {
+            "SourcePath" = "8:..\\DGMU_DEBIT_TICKET_PROJ\\Reports\\repDebitMemoTotalSummary_List_Supervisor.vb"
+            "TargetName" = "8:repDebitMemoTotalSummary_List_Supervisor.vb"
+            "Tag" = "8:"
+            "Folder" = "8:_BD17F58119CB457587C0973EB50E65C8"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A21F6E296A61ABBBE089E7A427248169"
             {
             "SourcePath" = "8:Flash.ocx"
@@ -1286,6 +1430,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A52BA8AAAEC044C6ADC6BF89ECF5C2D6"
+            {
+            "SourcePath" = "8:..\\DGMU_DEBIT_TICKET_PROJ\\Reports\\repDebitMemoTotalSummary_Details_Supervisor.rpt"
+            "TargetName" = "8:repDebitMemoTotalSummary_Details_Supervisor.rpt"
+            "Tag" = "8:"
+            "Folder" = "8:_BD17F58119CB457587C0973EB50E65C8"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B1A68E1F59DFCEED51F0F1220BA711AB"
             {
             "AssemblyRegister" = "3:1"
@@ -1300,37 +1464,6 @@
                     }
                 }
             "SourcePath" = "8:CrystalDecisions.ReportAppServer.Controllers.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_93C0FE3FC8FA46B49BF529CB57976F42"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B8F61FAECAD75C893D74D44A5A79D087"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:TRUE"
-            "AssemblyAsmDisplayName" = "8:log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64"
-                "ScatterAssemblies"
-                {
-                    "_B8F61FAECAD75C893D74D44A5A79D087"
-                    {
-                    "Name" = "8:log4net.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:log4net.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_93C0FE3FC8FA46B49BF529CB57976F42"
@@ -1548,6 +1681,37 @@
                     }
                 }
             "SourcePath" = "8:CrystalDecisions.ReportAppServer.XmlSerialize.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_93C0FE3FC8FA46B49BF529CB57976F42"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_EF2B1D50DBCE8E4042FF55AC2F938477"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_EF2B1D50DBCE8E4042FF55AC2F938477"
+                    {
+                    "Name" = "8:MetroFramework.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:MetroFramework.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_93C0FE3FC8FA46B49BF529CB57976F42"
@@ -2154,7 +2318,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_D447BD1B00B248C08BEA728DD564A4EC"
             {
-            "SourcePath" = "8:..\\DGMU_DEBIT_TICKET_PROJ\\obj\\Debug\\DGMU_DEBIT_TICKET_PROJ.exe"
+            "SourcePath" = "8:..\\DGMU_DEBIT_TICKET_PROJ\\obj\\x86\\Debug\\DGMU_DEBIT_TICKET_PROJ.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_93C0FE3FC8FA46B49BF529CB57976F42"
