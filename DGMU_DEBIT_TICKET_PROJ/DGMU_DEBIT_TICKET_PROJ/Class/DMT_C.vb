@@ -18,6 +18,20 @@ Public Class DMT_ITEM_C
         dt = queryCommandDT_SP("[MASTER].[spGET_DM_ITEM_LIST]")
         Return dt
     End Function
+
+    Public Function GET_UOM_LIST() As DataTable
+        Dim dt As New DataTable
+        dt = queryCommandDT_SP("[UTIL].[spGET_DM_UOM_LIST]")
+        Return dt
+    End Function
+
+    Public Function GET_GROUP_ITEM_LIST() As DataTable
+        Dim dt As New DataTable
+        dt = queryCommandDT_SP("[UTIL].[spGET_DM_ITEM_GROUP_LIST]")
+        Return dt
+    End Function
+
+
 #End Region
 
 

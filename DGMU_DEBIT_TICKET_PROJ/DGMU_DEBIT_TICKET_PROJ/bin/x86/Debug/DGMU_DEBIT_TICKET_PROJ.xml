@@ -6,6 +6,71 @@ DGMU_DEBIT_TICKET_PROJ
 </name>
 </assembly>
 <members>
+<member name="T:DGMU_DEBIT_TICKET_PROJ.dsItemList">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:DGMU_DEBIT_TICKET_PROJ.dsItemList.spGET_DM_ITEM_LISTDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:DGMU_DEBIT_TICKET_PROJ.dsItemList.spGET_DM_ITEM_LISTRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:DGMU_DEBIT_TICKET_PROJ.dsItemList.spGET_DM_ITEM_LISTRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.spGET_DM_ITEM_LISTTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.TableAdapterManager.UpdateUpdatedRows(DGMU_DEBIT_TICKET_PROJ.dsItemList,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.TableAdapterManager.UpdateInsertedRows(DGMU_DEBIT_TICKET_PROJ.dsItemList,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.TableAdapterManager.UpdateDeletedRows(DGMU_DEBIT_TICKET_PROJ.dsItemList,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.TableAdapterManager.UpdateAll(DGMU_DEBIT_TICKET_PROJ.dsItemList)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
 <member name="T:DGMU_DEBIT_TICKET_PROJ.dsRequestListItem">
 <summary>
 Represents a strongly typed in-memory cache of data.

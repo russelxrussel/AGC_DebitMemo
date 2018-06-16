@@ -63,6 +63,16 @@ Namespace My
                 Return CType(Me("DGMUConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Dsn=AGC_CON;uid=sa")>  _
+        Public ReadOnly Property odbcConnection() As String
+            Get
+                Return CType(Me("odbcConnection"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

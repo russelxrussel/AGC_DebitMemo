@@ -137,6 +137,11 @@
     <Compile Include="DMRequestStatus.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="dsItemList.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsItemList.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsRequestListItem.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -306,6 +311,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="dsItemList.xsc">
+      <DependentUpon>dsItemList.xsd</DependentUpon>
+    </None>
+    <None Include="dsItemList.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsItemList.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="dsItemList.xss">
+      <DependentUpon>dsItemList.xsd</DependentUpon>
+    </None>
     <None Include="dsRequestListItem.xsc">
       <DependentUpon>dsRequestListItem.xsd</DependentUpon>
     </None>
@@ -332,6 +348,7 @@
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
+    <None Include="My Project\DataSources\DMT_ITEM_C.datasource" />
     <None Include="My Project\DataSources\frmMain.datasource" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
