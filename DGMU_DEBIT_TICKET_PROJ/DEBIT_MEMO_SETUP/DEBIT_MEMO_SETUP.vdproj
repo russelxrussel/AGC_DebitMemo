@@ -189,6 +189,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_4794885271FA4610BF4C48D1FF1DFCB8"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_4F2DDDCA0BBD7B1D54817B8127B09EB8"
         "OwnerKey" = "8:_B1A68E1F59DFCEED51F0F1220BA711AB"
         "MsmSig" = "8:_UNDEFINED"
@@ -274,13 +280,13 @@
         "Entry"
         {
         "MsmKey" = "8:_84DC9B676615EBBA368CB1B582847D05"
-        "OwnerKey" = "8:_C884172E01CAA41BE582ACAE2301C509"
+        "OwnerKey" = "8:_D447BD1B00B248C08BEA728DD564A4EC"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_84DC9B676615EBBA368CB1B582847D05"
-        "OwnerKey" = "8:_D447BD1B00B248C08BEA728DD564A4EC"
+        "OwnerKey" = "8:_C884172E01CAA41BE582ACAE2301C509"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -574,6 +580,12 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_84DC9B676615EBBA368CB1B582847D05"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_3A0863C88A0643C62FDE7952F1D28EDC"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -635,12 +647,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_C884172E01CAA41BE582ACAE2301C509"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_84DC9B676615EBBA368CB1B582847D05"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -734,6 +740,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                }
             }
         }
         "Release"
@@ -1042,6 +1056,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4794885271FA4610BF4C48D1FF1DFCB8"
+            {
+            "SourcePath" = "8:..\\DGMU_DEBIT_TICKET_PROJ\\Images\\x1.png"
+            "TargetName" = "8:x1.png"
+            "Tag" = "8:"
+            "Folder" = "8:_84B03BD884B94612A79026EA64BAB909"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4F2DDDCA0BBD7B1D54817B8127B09EB8"
@@ -1767,6 +1801,17 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_84B03BD884B94612A79026EA64BAB909"
+                    {
+                    "Name" = "8:Images"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_B5974A742CD14AF0A880EF4293F95B2D"
+                        "Folders"
+                        {
+                        }
+                    }
                     "{9EF0B969-E518-4E46-987F-47570745A589}:_BD17F58119CB457587C0973EB50E65C8"
                     {
                     "Name" = "8:Reports"
@@ -1797,7 +1842,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:AGC Debit Memo"
         "ProductCode" = "8:{C505E2CB-FD59-444F-AE2B-EC4A6650899F}"
-        "PackageCode" = "8:{81C16ACF-18AF-4B4F-BC41-F3BFF9AE0E4B}"
+        "PackageCode" = "8:{62870C77-DB7E-4FF5-91C8-B0C2AC795DDC}"
         "UpgradeCode" = "8:{800B68D5-2351-4B5F-A755-091A72B9AB83}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
