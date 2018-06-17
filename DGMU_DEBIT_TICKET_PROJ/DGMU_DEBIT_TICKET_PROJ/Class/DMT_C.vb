@@ -56,6 +56,27 @@ Public Class DMT_ITEM_C
             End Using
         End Using
     End Sub
+
+    Public Sub UPDATE_ITEM(ByVal _itemID As Integer, ByVal _itemDescription As String, ByVal _uom As String, ByVal _itemGroupCode As String, ByVal _userCode As String)
+        Using cn As New SqlConnection(_CONSTRING)
+
+            Using cmd As New SqlCommand("[TRANSACTION].[spUPDATE_DM_ITEM]", cn)
+                With cmd
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.AddWithValue("@ITEM_DESCRIPTION", _itemDescription)
+                    .Parameters.AddWithValue("@UOM", _uom)
+                    .Parameters.AddWithValue("@ITEM_GROUP", _itemGroupCode)
+                    .Parameters.AddWithValue("@USER_CODE", _userCode)
+                    .Parameters.AddWithValue("@ITEM_ID", _itemID)
+
+
+                End With
+                cn.Open()
+                cmd.ExecuteNonQuery()
+
+            End Using
+        End Using
+    End Sub
 #End Region
 
 

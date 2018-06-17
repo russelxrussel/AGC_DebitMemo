@@ -34,6 +34,7 @@ Partial Class Login
         Me.MetroProgressSpinner1 = New MetroFramework.Controls.MetroProgressSpinner()
         Me.LoginToolTip = New MetroFramework.Components.MetroToolTip()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.MetroPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -203,11 +204,21 @@ Partial Class Login
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(96, 20)
+        Me.Label1.Location = New System.Drawing.Point(96, 13)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(198, 18)
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "ACES OF GRACE CORPORATION"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(96, 32)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(89, 18)
+        Me.Label2.TabIndex = 8
+        Me.Label2.Text = "DEBIT MEMO"
         '
         'Login
         '
@@ -215,6 +226,7 @@ Partial Class Login
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(317, 236)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MetroPanel1)
         Me.Controls.Add(Me.MetroProgressSpinner1)
@@ -239,4 +251,5 @@ Partial Class Login
     Friend WithEvents MetroTile1 As MetroFramework.Controls.MetroTile
     Friend WithEvents LoginToolTip As MetroFramework.Components.MetroToolTip
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class

@@ -13,9 +13,10 @@
               <DbSource ConnectionRef="DGMUConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData_ItemList" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData_ItemList" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData_ItemList" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        MASTER.DM_Item_MF.ItemID, MASTER.DM_Item_MF.ItemDescription, UTIL.UnitOfMeasurement_RF.uomCode, UTIL.UnitOfMeasurement_RF.uomDescription, UTIL.Item_Group_RF.groupName
+                    <CommandText>SELECT        MASTER.DM_Item_MF.ItemID, MASTER.DM_Item_MF.ItemDescription, UTIL.UnitOfMeasurement_RF.UomCode, UTIL.UnitOfMeasurement_RF.UomDescription, UTIL.Item_Group_RF.groupName, 
+                         MASTER.DM_Item_MF.ItemGroupCode
 FROM            MASTER.DM_Item_MF LEFT OUTER JOIN
-                         UTIL.UnitOfMeasurement_RF ON MASTER.DM_Item_MF.UOM = UTIL.UnitOfMeasurement_RF.uomCode LEFT OUTER JOIN
+                         UTIL.UnitOfMeasurement_RF ON MASTER.DM_Item_MF.UOM = UTIL.UnitOfMeasurement_RF.UomCode LEFT OUTER JOIN
                          UTIL.Item_Group_RF ON MASTER.DM_Item_MF.ItemGroupCode = UTIL.Item_Group_RF.ItemGroupCode</CommandText>
                     <Parameters />
                   </DbCommand>
@@ -25,9 +26,10 @@ FROM            MASTER.DM_Item_MF LEFT OUTER JOIN
             <Mappings>
               <Mapping SourceColumn="ItemID" DataSetColumn="ItemID" />
               <Mapping SourceColumn="ItemDescription" DataSetColumn="ItemDescription" />
-              <Mapping SourceColumn="uomCode" DataSetColumn="uomCode" />
-              <Mapping SourceColumn="uomDescription" DataSetColumn="uomDescription" />
               <Mapping SourceColumn="groupName" DataSetColumn="groupName" />
+              <Mapping SourceColumn="UomCode" DataSetColumn="UomCode" />
+              <Mapping SourceColumn="UomDescription" DataSetColumn="UomDescription" />
+              <Mapping SourceColumn="ItemGroupCode" DataSetColumn="ItemGroupCode" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -39,7 +41,7 @@ FROM            MASTER.DM_Item_MF LEFT OUTER JOIN
   <xs:element name="dsItemList" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsItemList" msprop:Generator_UserDSName="dsItemList">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="spGET_DM_ITEM_LIST" msprop:Generator_TableClassName="spGET_DM_ITEM_LISTDataTable" msprop:Generator_TableVarName="tablespGET_DM_ITEM_LIST" msprop:Generator_TablePropName="spGET_DM_ITEM_LIST" msprop:Generator_RowDeletingName="spGET_DM_ITEM_LISTRowDeleting" msprop:Generator_RowChangingName="spGET_DM_ITEM_LISTRowChanging" msprop:Generator_RowEvHandlerName="spGET_DM_ITEM_LISTRowChangeEventHandler" msprop:Generator_RowDeletedName="spGET_DM_ITEM_LISTRowDeleted" msprop:Generator_UserTableName="spGET_DM_ITEM_LIST" msprop:Generator_RowChangedName="spGET_DM_ITEM_LISTRowChanged" msprop:Generator_RowEvArgName="spGET_DM_ITEM_LISTRowChangeEvent" msprop:Generator_RowClassName="spGET_DM_ITEM_LISTRow">
+        <xs:element name="spGET_DM_ITEM_LIST" msprop:Generator_TableClassName="spGET_DM_ITEM_LISTDataTable" msprop:Generator_TableVarName="tablespGET_DM_ITEM_LIST" msprop:Generator_RowChangedName="spGET_DM_ITEM_LISTRowChanged" msprop:Generator_TablePropName="spGET_DM_ITEM_LIST" msprop:Generator_RowDeletingName="spGET_DM_ITEM_LISTRowDeleting" msprop:Generator_RowChangingName="spGET_DM_ITEM_LISTRowChanging" msprop:Generator_RowEvHandlerName="spGET_DM_ITEM_LISTRowChangeEventHandler" msprop:Generator_RowDeletedName="spGET_DM_ITEM_LISTRowDeleted" msprop:Generator_RowClassName="spGET_DM_ITEM_LISTRow" msprop:Generator_UserTableName="spGET_DM_ITEM_LIST" msprop:Generator_RowEvArgName="spGET_DM_ITEM_LISTRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ItemID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnItemID" msprop:Generator_ColumnPropNameInRow="ItemID" msprop:Generator_ColumnPropNameInTable="ItemIDColumn" msprop:Generator_UserColumnName="ItemID" type="xs:int" />
@@ -50,24 +52,31 @@ FROM            MASTER.DM_Item_MF LEFT OUTER JOIN
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="uomCode" msprop:Generator_ColumnVarNameInTable="columnuomCode" msprop:Generator_ColumnPropNameInRow="uomCode" msprop:Generator_ColumnPropNameInTable="uomCodeColumn" msprop:Generator_UserColumnName="uomCode" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="4" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="uomDescription" msprop:Generator_ColumnVarNameInTable="columnuomDescription" msprop:Generator_ColumnPropNameInRow="uomDescription" msprop:Generator_ColumnPropNameInTable="uomDescriptionColumn" msprop:Generator_UserColumnName="uomDescription" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="80" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
               <xs:element name="groupName" msprop:Generator_ColumnVarNameInTable="columngroupName" msprop:Generator_ColumnPropNameInRow="groupName" msprop:Generator_ColumnPropNameInTable="groupNameColumn" msprop:Generator_UserColumnName="groupName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UomCode" msprop:Generator_ColumnVarNameInTable="columnUomCode" msprop:Generator_ColumnPropNameInRow="UomCode" msprop:Generator_ColumnPropNameInTable="UomCodeColumn" msprop:Generator_UserColumnName="UomCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UomDescription" msprop:Generator_ColumnVarNameInTable="columnUomDescription" msprop:Generator_ColumnPropNameInRow="UomDescription" msprop:Generator_ColumnPropNameInTable="UomDescriptionColumn" msprop:Generator_UserColumnName="UomDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemGroupCode" msprop:Generator_ColumnVarNameInTable="columnItemGroupCode" msprop:Generator_ColumnPropNameInRow="ItemGroupCode" msprop:Generator_ColumnPropNameInTable="ItemGroupCodeColumn" msprop:Generator_UserColumnName="ItemGroupCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

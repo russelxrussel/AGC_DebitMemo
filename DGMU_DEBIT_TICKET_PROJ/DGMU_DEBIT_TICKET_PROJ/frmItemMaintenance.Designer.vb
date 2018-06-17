@@ -33,9 +33,9 @@ Partial Class frmItemMaintenance
         Me.tsSave = New System.Windows.Forms.ToolStripButton()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgItemList = New System.Windows.Forms.DataGridView()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cmbItemGroup = New System.Windows.Forms.ComboBox()
         Me.txtItemDescription = New System.Windows.Forms.TextBox()
@@ -44,18 +44,23 @@ Partial Class frmItemMaintenance
         Me.tpItemGroup = New System.Windows.Forms.TabPage()
         Me.DsItemList = New DGMU_DEBIT_TICKET_PROJ.dsItemList()
         Me.SpGETDMITEMLISTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SpGET_DM_ITEM_LISTTableAdapter = New DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.spGET_DM_ITEM_LISTTableAdapter()
-        Me.ItemIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ItemDescriptionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UomDescriptionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GroupNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SpGET_DM_ITEM_LISTTableAdapter2 = New DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.spGET_DM_ITEM_LISTTableAdapter()
+        Me.dgEdit = New System.Windows.Forms.DataGridViewLinkColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UomCodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.gbCreateItem = New System.Windows.Forms.GroupBox()
         Me.TabControl1.SuspendLayout()
         Me.tpItem.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgItemList, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DsItemList, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpGETDMITEMLISTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.gbCreateItem.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -67,31 +72,26 @@ Partial Class frmItemMaintenance
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(4)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(400, 408)
+        Me.TabControl1.Size = New System.Drawing.Size(840, 408)
         Me.TabControl1.TabIndex = 0
         '
         'tpItem
         '
-        Me.tpItem.Controls.Add(Me.Label3)
+        Me.tpItem.Controls.Add(Me.gbCreateItem)
         Me.tpItem.Controls.Add(Me.ToolStrip1)
-        Me.tpItem.Controls.Add(Me.Label2)
         Me.tpItem.Controls.Add(Me.GroupBox1)
-        Me.tpItem.Controls.Add(Me.Label1)
-        Me.tpItem.Controls.Add(Me.cmbItemGroup)
-        Me.tpItem.Controls.Add(Me.txtItemDescription)
-        Me.tpItem.Controls.Add(Me.cmbUOM)
         Me.tpItem.Location = New System.Drawing.Point(4, 27)
         Me.tpItem.Margin = New System.Windows.Forms.Padding(4)
         Me.tpItem.Name = "tpItem"
         Me.tpItem.Padding = New System.Windows.Forms.Padding(4)
-        Me.tpItem.Size = New System.Drawing.Size(392, 377)
+        Me.tpItem.Size = New System.Drawing.Size(832, 377)
         Me.tpItem.TabIndex = 0
         Me.tpItem.Text = "Item Master"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(16, 118)
+        Me.Label3.Location = New System.Drawing.Point(16, 95)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(78, 18)
         Me.Label3.TabIndex = 5
@@ -103,7 +103,7 @@ Partial Class frmItemMaintenance
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsCreate, Me.ToolStripSeparator1, Me.ToolStripLabel1, Me.tsSave})
         Me.ToolStrip1.Location = New System.Drawing.Point(4, 4)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(384, 31)
+        Me.ToolStrip1.Size = New System.Drawing.Size(824, 31)
         Me.ToolStrip1.TabIndex = 1
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -141,7 +141,7 @@ Partial Class frmItemMaintenance
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(16, 86)
+        Me.Label2.Location = New System.Drawing.Point(16, 63)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(107, 18)
         Me.Label2.TabIndex = 4
@@ -149,29 +149,29 @@ Partial Class frmItemMaintenance
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.DataGridView1)
+        Me.GroupBox1.Controls.Add(Me.dgItemList)
         Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
-        Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.GroupBox1.Location = New System.Drawing.Point(4, 156)
+        Me.GroupBox1.Controls.Add(Me.txtSearch)
+        Me.GroupBox1.Location = New System.Drawing.Point(6, 38)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(384, 217)
+        Me.GroupBox1.Size = New System.Drawing.Size(460, 331)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Item Details"
         '
-        'DataGridView1
+        'dgItemList
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ItemIDDataGridViewTextBoxColumn, Me.ItemDescriptionDataGridViewTextBoxColumn, Me.UomDescriptionDataGridViewTextBoxColumn, Me.GroupNameDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.SpGETDMITEMLISTBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(9, 63)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(372, 150)
-        Me.DataGridView1.TabIndex = 5
+        Me.dgItemList.AllowUserToAddRows = False
+        Me.dgItemList.AllowUserToDeleteRows = False
+        Me.dgItemList.AutoGenerateColumns = False
+        Me.dgItemList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgItemList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dgEdit, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.UomCodeDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn9})
+        Me.dgItemList.DataSource = Me.SpGETDMITEMLISTBindingSource
+        Me.dgItemList.Location = New System.Drawing.Point(9, 63)
+        Me.dgItemList.Name = "dgItemList"
+        Me.dgItemList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgItemList.Size = New System.Drawing.Size(429, 262)
+        Me.dgItemList.TabIndex = 5
         '
         'Label4
         '
@@ -182,17 +182,17 @@ Partial Class frmItemMaintenance
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Search"
         '
-        'TextBox1
+        'txtSearch
         '
-        Me.TextBox1.Location = New System.Drawing.Point(67, 20)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(308, 26)
-        Me.TextBox1.TabIndex = 1
+        Me.txtSearch.Location = New System.Drawing.Point(67, 25)
+        Me.txtSearch.Name = "txtSearch"
+        Me.txtSearch.Size = New System.Drawing.Size(371, 26)
+        Me.txtSearch.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(16, 54)
+        Me.Label1.Location = New System.Drawing.Point(16, 31)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(77, 18)
         Me.Label1.TabIndex = 3
@@ -201,24 +201,24 @@ Partial Class frmItemMaintenance
         'cmbItemGroup
         '
         Me.cmbItemGroup.FormattingEnabled = True
-        Me.cmbItemGroup.Location = New System.Drawing.Point(133, 115)
+        Me.cmbItemGroup.Location = New System.Drawing.Point(133, 92)
         Me.cmbItemGroup.Name = "cmbItemGroup"
-        Me.cmbItemGroup.Size = New System.Drawing.Size(240, 26)
+        Me.cmbItemGroup.Size = New System.Drawing.Size(216, 26)
         Me.cmbItemGroup.TabIndex = 2
         '
         'txtItemDescription
         '
-        Me.txtItemDescription.Location = New System.Drawing.Point(133, 51)
+        Me.txtItemDescription.Location = New System.Drawing.Point(133, 28)
         Me.txtItemDescription.Name = "txtItemDescription"
-        Me.txtItemDescription.Size = New System.Drawing.Size(240, 26)
+        Me.txtItemDescription.Size = New System.Drawing.Size(216, 26)
         Me.txtItemDescription.TabIndex = 0
         '
         'cmbUOM
         '
         Me.cmbUOM.FormattingEnabled = True
-        Me.cmbUOM.Location = New System.Drawing.Point(133, 83)
+        Me.cmbUOM.Location = New System.Drawing.Point(133, 60)
         Me.cmbUOM.Name = "cmbUOM"
-        Me.cmbUOM.Size = New System.Drawing.Size(240, 26)
+        Me.cmbUOM.Size = New System.Drawing.Size(216, 26)
         Me.cmbUOM.TabIndex = 1
         '
         'tpItemUOM
@@ -227,7 +227,7 @@ Partial Class frmItemMaintenance
         Me.tpItemUOM.Location = New System.Drawing.Point(4, 27)
         Me.tpItemUOM.Name = "tpItemUOM"
         Me.tpItemUOM.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpItemUOM.Size = New System.Drawing.Size(392, 377)
+        Me.tpItemUOM.Size = New System.Drawing.Size(468, 377)
         Me.tpItemUOM.TabIndex = 2
         Me.tpItemUOM.Text = "Item UOM"
         '
@@ -237,7 +237,7 @@ Partial Class frmItemMaintenance
         Me.tpItemGroup.Margin = New System.Windows.Forms.Padding(4)
         Me.tpItemGroup.Name = "tpItemGroup"
         Me.tpItemGroup.Padding = New System.Windows.Forms.Padding(4)
-        Me.tpItemGroup.Size = New System.Drawing.Size(392, 377)
+        Me.tpItemGroup.Size = New System.Drawing.Size(468, 377)
         Me.tpItemGroup.TabIndex = 1
         Me.tpItemGroup.Text = "Item Group"
         '
@@ -251,40 +251,79 @@ Partial Class frmItemMaintenance
         Me.SpGETDMITEMLISTBindingSource.DataMember = "spGET_DM_ITEM_LIST"
         Me.SpGETDMITEMLISTBindingSource.DataSource = Me.DsItemList
         '
-        'SpGET_DM_ITEM_LISTTableAdapter
+        'SpGET_DM_ITEM_LISTTableAdapter2
         '
-        Me.SpGET_DM_ITEM_LISTTableAdapter.ClearBeforeFill = True
+        Me.SpGET_DM_ITEM_LISTTableAdapter2.ClearBeforeFill = True
         '
-        'ItemIDDataGridViewTextBoxColumn
+        'dgEdit
         '
-        Me.ItemIDDataGridViewTextBoxColumn.DataPropertyName = "ItemID"
-        Me.ItemIDDataGridViewTextBoxColumn.HeaderText = "ItemID"
-        Me.ItemIDDataGridViewTextBoxColumn.Name = "ItemIDDataGridViewTextBoxColumn"
-        Me.ItemIDDataGridViewTextBoxColumn.ReadOnly = True
+        Me.dgEdit.HeaderText = "Edit"
+        Me.dgEdit.Name = "dgEdit"
+        Me.dgEdit.Text = "Edit"
+        Me.dgEdit.UseColumnTextForLinkValue = True
+        Me.dgEdit.Width = 60
         '
-        'ItemDescriptionDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn5
         '
-        Me.ItemDescriptionDataGridViewTextBoxColumn.DataPropertyName = "ItemDescription"
-        Me.ItemDescriptionDataGridViewTextBoxColumn.HeaderText = "ItemDescription"
-        Me.ItemDescriptionDataGridViewTextBoxColumn.Name = "ItemDescriptionDataGridViewTextBoxColumn"
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "ItemID"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "ID"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
+        Me.DataGridViewTextBoxColumn5.Width = 25
         '
-        'UomDescriptionDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn6
         '
-        Me.UomDescriptionDataGridViewTextBoxColumn.DataPropertyName = "uomDescription"
-        Me.UomDescriptionDataGridViewTextBoxColumn.HeaderText = "uomDescription"
-        Me.UomDescriptionDataGridViewTextBoxColumn.Name = "UomDescriptionDataGridViewTextBoxColumn"
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "ItemDescription"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Item Description"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         '
-        'GroupNameDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn7
         '
-        Me.GroupNameDataGridViewTextBoxColumn.DataPropertyName = "groupName"
-        Me.GroupNameDataGridViewTextBoxColumn.HeaderText = "groupName"
-        Me.GroupNameDataGridViewTextBoxColumn.Name = "GroupNameDataGridViewTextBoxColumn"
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "groupName"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Item Group"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "UomDescription"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "UomDescription"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        '
+        'UomCodeDataGridViewTextBoxColumn
+        '
+        Me.UomCodeDataGridViewTextBoxColumn.DataPropertyName = "UomCode"
+        Me.UomCodeDataGridViewTextBoxColumn.HeaderText = "UomCode"
+        Me.UomCodeDataGridViewTextBoxColumn.Name = "UomCodeDataGridViewTextBoxColumn"
+        Me.UomCodeDataGridViewTextBoxColumn.Visible = False
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.DataPropertyName = "ItemGroupCode"
+        Me.DataGridViewTextBoxColumn9.HeaderText = "ItemGroupCode"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.Visible = False
+        '
+        'gbCreateItem
+        '
+        Me.gbCreateItem.Controls.Add(Me.Label3)
+        Me.gbCreateItem.Controls.Add(Me.Label1)
+        Me.gbCreateItem.Controls.Add(Me.cmbItemGroup)
+        Me.gbCreateItem.Controls.Add(Me.txtItemDescription)
+        Me.gbCreateItem.Controls.Add(Me.Label2)
+        Me.gbCreateItem.Controls.Add(Me.cmbUOM)
+        Me.gbCreateItem.Enabled = False
+        Me.gbCreateItem.Location = New System.Drawing.Point(472, 38)
+        Me.gbCreateItem.Name = "gbCreateItem"
+        Me.gbCreateItem.Size = New System.Drawing.Size(355, 127)
+        Me.gbCreateItem.TabIndex = 2
+        Me.gbCreateItem.TabStop = False
+        Me.gbCreateItem.Text = "Create New Item"
         '
         'frmItemMaintenance
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(408, 421)
+        Me.ClientSize = New System.Drawing.Size(855, 421)
         Me.Controls.Add(Me.TabControl1)
         Me.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(4)
@@ -297,9 +336,11 @@ Partial Class frmItemMaintenance
         Me.ToolStrip1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgItemList, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DsItemList, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpGETDMITEMLISTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.gbCreateItem.ResumeLayout(False)
+        Me.gbCreateItem.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -320,14 +361,30 @@ Partial Class frmItemMaintenance
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents tpItemUOM As System.Windows.Forms.TabPage
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtSearch As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents DsItemList As dsItemList
-    Friend WithEvents SpGETDMITEMLISTBindingSource As BindingSource
+    Friend WithEvents dgItemList As DataGridView
     Friend WithEvents SpGET_DM_ITEM_LISTTableAdapter As dsItemListTableAdapters.spGET_DM_ITEM_LISTTableAdapter
-    Friend WithEvents ItemIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ItemDescriptionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents UomDescriptionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents GroupNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ItemIDDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ItemDescriptionDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents UomDescriptionDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents GroupNameDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DsItemList1 As DGMU_DEBIT_TICKET_PROJ.dsItemList
+    Friend WithEvents SpGET_DM_ITEM_LISTTableAdapter1 As DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.spGET_DM_ITEM_LISTTableAdapter
+    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ItemGroupCodeDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DsItemList As DGMU_DEBIT_TICKET_PROJ.dsItemList
+    Friend WithEvents SpGETDMITEMLISTBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents SpGET_DM_ITEM_LISTTableAdapter2 As DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.spGET_DM_ITEM_LISTTableAdapter
+    Friend WithEvents dgEdit As System.Windows.Forms.DataGridViewLinkColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents UomCodeDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn9 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents gbCreateItem As System.Windows.Forms.GroupBox
 End Class

@@ -194,4 +194,16 @@
         Dim frmReport As New repDMTotalSummary
         frmReport.Show()
     End Sub
+
+    Private Sub lnkMaintenance_Click(sender As Object, e As EventArgs) Handles lnkMaintenance.Click
+        With frmItemMaintenance
+            .TopLevel = False
+            .Left = 0
+            .Top = 0
+        End With
+
+        frmItemMaintenance.Show()
+        Me.scPage.Panel2.Controls.Add(frmItemMaintenance)
+        frmItemMaintenance.BringToFront()
+    End Sub
 End Class

@@ -142,6 +142,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsItemList.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dsItemList.vb">
+      <DependentUpon>dsItemList.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsRequestListItem.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
