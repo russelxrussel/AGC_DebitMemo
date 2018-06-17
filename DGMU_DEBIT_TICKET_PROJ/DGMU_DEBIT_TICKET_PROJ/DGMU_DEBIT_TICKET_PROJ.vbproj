@@ -167,6 +167,12 @@
     <Compile Include="frmDebitMemoRequest.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmSupervisorMaintenance.Designer.vb">
+      <DependentUpon>frmSupervisorMaintenance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSupervisorMaintenance.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmItemMaintenance.Designer.vb">
       <DependentUpon>frmItemMaintenance.vb</DependentUpon>
     </Compile>
@@ -264,6 +270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDebitMemoRequest.resx">
       <DependentUpon>frmDebitMemoRequest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSupervisorMaintenance.resx">
+      <DependentUpon>frmSupervisorMaintenance.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmItemMaintenance.resx">
       <DependentUpon>frmItemMaintenance.vb</DependentUpon>
