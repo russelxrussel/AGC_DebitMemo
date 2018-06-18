@@ -105,6 +105,27 @@ Public Class UTILITY
         dt = queryCommandDT_SP("[UTIL].[spGET_DM_REPORTS_LIST]")
         Return dt
     End Function
+
+
+#Region "CREATE / UPDATE TRANS"
+
+    Public Sub INSERT_SUPERVISOR(ByVal _supervisorName As String, ByVal _userCode As String)
+        Using cn As New SqlConnection(_CONSTRING)
+
+            Using cmd As New SqlCommand("[UTIL].[spINSERT_DM_SUPERVISOR]", cn)
+                With cmd
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.AddWithValue("@SUPERVISOR_NAME", _supervisorName)
+                    .Parameters.AddWithValue("@USER_CODE", _userCode)
+
+                End With
+                cn.Open()
+                cmd.ExecuteNonQuery()
+
+            End Using
+        End Using
+    End Sub
+#End Region
 End Class
 
 

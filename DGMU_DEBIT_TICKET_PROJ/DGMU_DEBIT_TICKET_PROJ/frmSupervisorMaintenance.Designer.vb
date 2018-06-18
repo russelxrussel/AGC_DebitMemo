@@ -22,16 +22,21 @@ Partial Class frmSupervisorMaintenance
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tpItem = New System.Windows.Forms.TabPage()
-        Me.gbCreateSupervisor = New System.Windows.Forms.GroupBox()
+        Me.gbCreateItem = New System.Windows.Forms.GroupBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.cmbItemGroup = New System.Windows.Forms.ComboBox()
         Me.txtSupervisorName = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.cmbUOM = New System.Windows.Forms.ComboBox()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.tsCreate = New System.Windows.Forms.ToolStripButton()
+        Me.tsCreateSupervisor = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
-        Me.tsSave = New System.Windows.Forms.ToolStripButton()
+        Me.tsSaveSupervisor = New System.Windows.Forms.ToolStripButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.dgSupervisorList = New System.Windows.Forms.DataGridView()
         Me.dgEdit = New System.Windows.Forms.DataGridViewLinkColumn()
@@ -39,12 +44,17 @@ Partial Class frmSupervisorMaintenance
         Me.txtSearchSupervisor = New System.Windows.Forms.TextBox()
         Me.tpItemUOM = New System.Windows.Forms.TabPage()
         Me.tpItemGroup = New System.Windows.Forms.TabPage()
+        Me.SpGETDMITEMLISTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DsItemList = New DGMU_DEBIT_TICKET_PROJ.dsItemList()
+        Me.SpGET_DM_ITEM_LISTTableAdapter2 = New DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.spGET_DM_ITEM_LISTTableAdapter()
         Me.TabControl1.SuspendLayout()
         Me.tpItem.SuspendLayout()
-        Me.gbCreateSupervisor.SuspendLayout()
+        Me.gbCreateItem.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgSupervisorList, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpGETDMITEMLISTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DsItemList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -61,7 +71,7 @@ Partial Class frmSupervisorMaintenance
         '
         'tpItem
         '
-        Me.tpItem.Controls.Add(Me.gbCreateSupervisor)
+        Me.tpItem.Controls.Add(Me.gbCreateItem)
         Me.tpItem.Controls.Add(Me.ToolStrip1)
         Me.tpItem.Controls.Add(Me.GroupBox1)
         Me.tpItem.Location = New System.Drawing.Point(4, 27)
@@ -72,17 +82,30 @@ Partial Class frmSupervisorMaintenance
         Me.tpItem.TabIndex = 0
         Me.tpItem.Text = "Supervisor"
         '
-        'gbCreateSupervisor
+        'gbCreateItem
         '
-        Me.gbCreateSupervisor.Controls.Add(Me.Label1)
-        Me.gbCreateSupervisor.Controls.Add(Me.txtSupervisorName)
-        Me.gbCreateSupervisor.Enabled = False
-        Me.gbCreateSupervisor.Location = New System.Drawing.Point(472, 38)
-        Me.gbCreateSupervisor.Name = "gbCreateSupervisor"
-        Me.gbCreateSupervisor.Size = New System.Drawing.Size(355, 127)
-        Me.gbCreateSupervisor.TabIndex = 2
-        Me.gbCreateSupervisor.TabStop = False
-        Me.gbCreateSupervisor.Text = "Create New Supervisor"
+        Me.gbCreateItem.Controls.Add(Me.Label3)
+        Me.gbCreateItem.Controls.Add(Me.Label1)
+        Me.gbCreateItem.Controls.Add(Me.cmbItemGroup)
+        Me.gbCreateItem.Controls.Add(Me.txtSupervisorName)
+        Me.gbCreateItem.Controls.Add(Me.Label2)
+        Me.gbCreateItem.Controls.Add(Me.cmbUOM)
+        Me.gbCreateItem.Enabled = False
+        Me.gbCreateItem.Location = New System.Drawing.Point(472, 38)
+        Me.gbCreateItem.Name = "gbCreateItem"
+        Me.gbCreateItem.Size = New System.Drawing.Size(355, 127)
+        Me.gbCreateItem.TabIndex = 2
+        Me.gbCreateItem.TabStop = False
+        Me.gbCreateItem.Text = "Create New Item"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(16, 95)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(78, 18)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "Item Group"
         '
         'Label1
         '
@@ -93,6 +116,14 @@ Partial Class frmSupervisorMaintenance
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Supervisor Name"
         '
+        'cmbItemGroup
+        '
+        Me.cmbItemGroup.FormattingEnabled = True
+        Me.cmbItemGroup.Location = New System.Drawing.Point(133, 92)
+        Me.cmbItemGroup.Name = "cmbItemGroup"
+        Me.cmbItemGroup.Size = New System.Drawing.Size(216, 26)
+        Me.cmbItemGroup.TabIndex = 2
+        '
         'txtSupervisorName
         '
         Me.txtSupervisorName.Location = New System.Drawing.Point(133, 28)
@@ -100,25 +131,42 @@ Partial Class frmSupervisorMaintenance
         Me.txtSupervisorName.Size = New System.Drawing.Size(216, 26)
         Me.txtSupervisorName.TabIndex = 0
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(16, 63)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(107, 18)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "Unit of Measure"
+        '
+        'cmbUOM
+        '
+        Me.cmbUOM.FormattingEnabled = True
+        Me.cmbUOM.Location = New System.Drawing.Point(133, 60)
+        Me.cmbUOM.Name = "cmbUOM"
+        Me.cmbUOM.Size = New System.Drawing.Size(216, 26)
+        Me.cmbUOM.TabIndex = 1
+        '
         'ToolStrip1
         '
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsCreate, Me.ToolStripSeparator1, Me.ToolStripLabel1, Me.tsSave})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsCreateSupervisor, Me.ToolStripSeparator1, Me.ToolStripLabel1, Me.tsSaveSupervisor})
         Me.ToolStrip1.Location = New System.Drawing.Point(4, 4)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(824, 31)
         Me.ToolStrip1.TabIndex = 1
         Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'tsCreate
+        'tsCreateSupervisor
         '
-        Me.tsCreate.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.tsCreate.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.add_image_24
-        Me.tsCreate.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.tsCreate.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsCreate.Name = "tsCreate"
-        Me.tsCreate.Size = New System.Drawing.Size(28, 28)
-        Me.tsCreate.Text = "Create"
+        Me.tsCreateSupervisor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsCreateSupervisor.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.add_image_24
+        Me.tsCreateSupervisor.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsCreateSupervisor.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsCreateSupervisor.Name = "tsCreateSupervisor"
+        Me.tsCreateSupervisor.Size = New System.Drawing.Size(28, 28)
+        Me.tsCreateSupervisor.Text = "Create"
         '
         'ToolStripSeparator1
         '
@@ -131,15 +179,15 @@ Partial Class frmSupervisorMaintenance
         Me.ToolStripLabel1.Size = New System.Drawing.Size(73, 28)
         Me.ToolStripLabel1.Text = "                      "
         '
-        'tsSave
+        'tsSaveSupervisor
         '
-        Me.tsSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.tsSave.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.approval_24
-        Me.tsSave.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.tsSave.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsSave.Name = "tsSave"
-        Me.tsSave.Size = New System.Drawing.Size(28, 28)
-        Me.tsSave.Text = "Update"
+        Me.tsSaveSupervisor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsSaveSupervisor.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.approval_24
+        Me.tsSaveSupervisor.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsSaveSupervisor.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsSaveSupervisor.Name = "tsSaveSupervisor"
+        Me.tsSaveSupervisor.Size = New System.Drawing.Size(28, 28)
+        Me.tsSaveSupervisor.Text = "Update"
         '
         'GroupBox1
         '
@@ -209,6 +257,20 @@ Partial Class frmSupervisorMaintenance
         Me.tpItemGroup.TabIndex = 1
         Me.tpItemGroup.Text = "Item Group"
         '
+        'SpGETDMITEMLISTBindingSource
+        '
+        Me.SpGETDMITEMLISTBindingSource.DataMember = "spGET_DM_ITEM_LIST"
+        Me.SpGETDMITEMLISTBindingSource.DataSource = Me.DsItemList
+        '
+        'DsItemList
+        '
+        Me.DsItemList.DataSetName = "dsItemList"
+        Me.DsItemList.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'SpGET_DM_ITEM_LISTTableAdapter2
+        '
+        Me.SpGET_DM_ITEM_LISTTableAdapter2.ClearBeforeFill = True
+        '
         'frmSupervisorMaintenance
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 18.0!)
@@ -222,13 +284,15 @@ Partial Class frmSupervisorMaintenance
         Me.TabControl1.ResumeLayout(False)
         Me.tpItem.ResumeLayout(False)
         Me.tpItem.PerformLayout()
-        Me.gbCreateSupervisor.ResumeLayout(False)
-        Me.gbCreateSupervisor.PerformLayout()
+        Me.gbCreateItem.ResumeLayout(False)
+        Me.gbCreateItem.PerformLayout()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.dgSupervisorList, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpGETDMITEMLISTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DsItemList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -237,13 +301,17 @@ Partial Class frmSupervisorMaintenance
     Friend WithEvents tpItem As TabPage
     Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents cmbItemGroup As ComboBox
+    Friend WithEvents cmbUOM As ComboBox
     Friend WithEvents txtSupervisorName As TextBox
     Friend WithEvents tpItemGroup As TabPage
-    Friend WithEvents tsCreate As ToolStripButton
-    Friend WithEvents tsSave As ToolStripButton
+    Friend WithEvents tsCreateSupervisor As ToolStripButton
+    Friend WithEvents tsSaveSupervisor As ToolStripButton
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents ToolStripLabel1 As ToolStripLabel
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents tpItemUOM As System.Windows.Forms.TabPage
     Friend WithEvents txtSearchSupervisor As TextBox
     Friend WithEvents Label4 As Label
@@ -260,6 +328,9 @@ Partial Class frmSupervisorMaintenance
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ItemGroupCodeDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DsItemList As DGMU_DEBIT_TICKET_PROJ.dsItemList
+    Friend WithEvents SpGETDMITEMLISTBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents SpGET_DM_ITEM_LISTTableAdapter2 As DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.spGET_DM_ITEM_LISTTableAdapter
     Friend WithEvents dgEdit As System.Windows.Forms.DataGridViewLinkColumn
-    Friend WithEvents gbCreateSupervisor As System.Windows.Forms.GroupBox
+    Friend WithEvents gbCreateItem As System.Windows.Forms.GroupBox
 End Class

@@ -1,3 +1,7 @@
+4:45 PM 6/18/2018 : Create SP for Creation of Supervisor
+-------------------
+11:59 AM 6/16/2018 : Created table for UOM and Item Group together with Stored Procedures
+-------------------
 12:08 AM 06/13/2018 : Created new table for display of Reports : [UTIL].[spGET_DM_REPORTS_LIST]
 12:01 AM 06/13/2018 : Created new table for Report selection Name: UTIL.Reports_RF	
 11:50 PM 06/12/2018 : Create new sp for server date and time [xSys].[GET_SERVER_DATE_TIME]
