@@ -125,6 +125,24 @@ Public Class UTILITY
             End Using
         End Using
     End Sub
+
+    Public Sub UPDATE_SUPERVISOR(ByVal _supervisorID As Integer, ByVal _supervisorName As String, ByVal _IsActive As Boolean, ByVal _userCode As String)
+        Using cn As New SqlConnection(_CONSTRING)
+
+            Using cmd As New SqlCommand("[UTIL].[spUPDATE_DM_SUPERVISOR]", cn)
+                With cmd
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.AddWithValue("@SUPERVISORID", _supervisorID)
+                    .Parameters.AddWithValue("@SUPERVISOR_NAME", _supervisorName)
+                    .Parameters.AddWithValue("@IS_ACTIVE", _IsActive)
+                    .Parameters.AddWithValue("@USER_CODE", _userCode)
+                End With
+                cn.Open()
+                cmd.ExecuteNonQuery()
+
+            End Using
+        End Using
+    End Sub
 #End Region
 End Class
 

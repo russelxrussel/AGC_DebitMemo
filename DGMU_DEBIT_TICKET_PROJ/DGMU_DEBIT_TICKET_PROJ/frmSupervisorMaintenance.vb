@@ -4,12 +4,9 @@
 
     Dim oItem As New DMT_ITEM_C
     Private G_ACTION As Boolean = True
-    Private G_ITEMID As Integer = 0
+    Private G_SUPERVISORID As Integer = 0
 
     Private Sub frmItemMaintenance_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-
-        LoadToCombo()
 
         Display_Supervisor_List()
 
@@ -20,13 +17,12 @@
 
         If Not IsNothing(txtSupervisorName.Text) Then
             If (G_ACTION = False) Then
-                'oItem.INSERT_NEW_ITEM(txtItemDescription.Text.ToUpper, cmbUOM.SelectedValue, cmbItemGroup.SelectedValue, frmMain.tsUserCode.Text)
-                oUtility.INSERT_SUPERVISOR(txtSupervisorName.Text, "1")
+                oUtility.INSERT_SUPERVISOR(txtSupervisorName.Text, frmMain.tsUserCode.Text)
                 MsgBox("New Supervisor successfully created.", vbInformation)
 
             ElseIf (G_ACTION = True) Then
                 'UPDATE
-                ' oItem.UPDATE_ITEM(G_ITEMID, txtSupervisorName.Text.ToUpper, cmbUOM.SelectedValue, cmbItemGroup.SelectedValue, frmMain.tsUserCode.Text)
+                oUtility.UPDATE_SUPERVISOR(G_SUPERVISORID, txtSupervisorName.Text, chkIsActive.Checked, frmMain.tsUserCode.Text)
                 MsgBox(txtSupervisorName.Text & " successfully updated!", vbInformation)
 
             End If
@@ -45,46 +41,7 @@
 #Region "USER DEFINED FUNCTIONS"
     'LOAD TO COMBO BOX
 
-    Private Sub LoadToCombo()
-        Dim dt As DataTable = oItem.GET_UOM_LIST
-
-        Dim dr As DataRow = dt.NewRow()
-        dr("uomDescription") = "---Select Measurement---"
-        dr("uomCode") = 0
-        dt.Rows.InsertAt(dr, 0)
-
-        With cmbUOM
-            .DataSource = dt
-            .DisplayMember = dt.Columns("uomDescription").ToString()
-            .ValueMember = dt.Columns("uomCode").ToString()
-            .AutoCompleteMode = AutoCompleteMode.SuggestAppend
-            .AutoCompleteSource = AutoCompleteSource.ListItems
-            .SelectedIndex = 0
-
-        End With
-
-        Dim dt2 As DataTable = oItem.GET_GROUP_ITEM_LIST
-
-        Dim dr2 As DataRow = dt2.NewRow()
-        dr2("groupName") = "---Select Item Group---"
-        dr2("ItemgroupCode") = 0
-        dt2.Rows.InsertAt(dr2, 0)
-
-        With cmbItemGroup
-            .DataSource = dt2
-            .DisplayMember = dt2.Columns("groupName").ToString()
-            .ValueMember = dt2.Columns("ItemgroupCode").ToString()
-            .AutoCompleteMode = AutoCompleteMode.SuggestAppend
-            .AutoCompleteSource = AutoCompleteSource.ListItems
-            .SelectedIndex = 0
-
-        End With
-
-
-
-
-    End Sub
-
+   
     Private Sub displaySupervisorForEdit(ByVal _supervisorID As Integer)
         Dim dt As New DataTable
         dt = oUtility.GET_SUPERVISORS
@@ -98,12 +55,12 @@
                 txtSupervisorName.Text = drv("SupervisorName").ToString()
                 'cmbItemGroup.SelectedValue = drv("ItemGroupCode").ToString()
                 'cmbUOM.SelectedValue = drv("UomCode").ToString()
-
+                chkIsActive.Checked = Convert.ToBoolean(drv("IsActive"))
                 gbCreateItem.Enabled = True
 
 
                 G_ACTION = True
-                '  G_ITEMID = _itemID
+                G_SUPERVISORID = _supervisorID
 
             Next
         End If
@@ -111,8 +68,6 @@
 
     Private Sub clearInputs()
         txtSupervisorName.Text = ""
-        cmbUOM.SelectedIndex = 0
-        cmbItemGroup.SelectedIndex = 0
     End Sub
 
     'Display list of Supervisor
@@ -159,5 +114,7 @@
         gbCreateItem.Enabled = True
         clearInputs()
         G_ACTION = False
+        txtSupervisorName.Focus()
+        chkIsActive.Checked = True
     End Sub
 End Class

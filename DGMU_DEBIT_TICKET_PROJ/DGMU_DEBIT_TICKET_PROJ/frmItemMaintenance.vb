@@ -145,5 +145,6 @@
         gbCreateItem.Enabled = True
         clearInputs()
         G_ACTION = False
+        txtItemDescription.Focus()
     End Sub
 End Class

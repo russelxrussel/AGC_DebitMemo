@@ -206,4 +206,16 @@
         Me.scPage.Panel2.Controls.Add(frmItemMaintenance)
         frmItemMaintenance.BringToFront()
     End Sub
+
+    Private Sub lnkPersonnelMaintenance_Click(sender As Object, e As EventArgs) Handles lnkPersonnelMaintenance.Click
+        With frmSupervisorMaintenance
+            .TopLevel = False
+            .Left = 0
+            .Top = 0
+        End With
+
+        frmSupervisorMaintenance.Show()
+        Me.scPage.Panel2.Controls.Add(frmSupervisorMaintenance)
+        frmSupervisorMaintenance.BringToFront()
+    End Sub
 End Class

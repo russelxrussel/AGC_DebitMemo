@@ -65,6 +65,7 @@ Partial Class frmMain
         Me.Label5 = New System.Windows.Forms.Label()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.lnkPersonnelMaintenance = New MetroFramework.Controls.MetroLink()
         CType(Me.scPage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.scPage.Panel1.SuspendLayout()
         Me.scPage.Panel2.SuspendLayout()
@@ -119,6 +120,7 @@ Partial Class frmMain
         Me.FlowLayoutPanel1.Controls.Add(Me.lnkApproval)
         Me.FlowLayoutPanel1.Controls.Add(Me.lnkReports)
         Me.FlowLayoutPanel1.Controls.Add(Me.lnkMaintenance)
+        Me.FlowLayoutPanel1.Controls.Add(Me.lnkPersonnelMaintenance)
         Me.FlowLayoutPanel1.Controls.Add(Me.lnkLogOut)
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(12, 8)
@@ -249,7 +251,7 @@ Partial Class frmMain
         Me.lnkLogOut.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.lock_24
         Me.lnkLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lnkLogOut.ImageSize = 24
-        Me.lnkLogOut.Location = New System.Drawing.Point(3, 204)
+        Me.lnkLogOut.Location = New System.Drawing.Point(3, 233)
         Me.lnkLogOut.Name = "lnkLogOut"
         Me.lnkLogOut.Size = New System.Drawing.Size(119, 23)
         Me.lnkLogOut.Style = MetroFramework.MetroColorStyle.Purple
@@ -571,6 +573,24 @@ Partial Class frmMain
         '
         Me.Timer1.Enabled = True
         '
+        'lnkPersonnelMaintenance
+        '
+        Me.lnkPersonnelMaintenance.BackColor = System.Drawing.Color.Transparent
+        Me.lnkPersonnelMaintenance.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lnkPersonnelMaintenance.DisplayFocus = True
+        Me.lnkPersonnelMaintenance.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.flow_chart_24
+        Me.lnkPersonnelMaintenance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lnkPersonnelMaintenance.ImageSize = 24
+        Me.lnkPersonnelMaintenance.Location = New System.Drawing.Point(3, 204)
+        Me.lnkPersonnelMaintenance.Name = "lnkPersonnelMaintenance"
+        Me.lnkPersonnelMaintenance.Size = New System.Drawing.Size(168, 23)
+        Me.lnkPersonnelMaintenance.Style = MetroFramework.MetroColorStyle.Purple
+        Me.lnkPersonnelMaintenance.TabIndex = 108
+        Me.lnkPersonnelMaintenance.Text = "Personnel / Branch"
+        Me.lnkPersonnelMaintenance.UseCustomBackColor = True
+        Me.lnkPersonnelMaintenance.UseSelectable = True
+        Me.lnkPersonnelMaintenance.UseStyleColors = True
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -657,4 +677,5 @@ Partial Class frmMain
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label5 As Label
     Friend WithEvents lnkMaintenance As MetroFramework.Controls.MetroLink
+    Friend WithEvents lnkPersonnelMaintenance As MetroFramework.Controls.MetroLink
 End Class

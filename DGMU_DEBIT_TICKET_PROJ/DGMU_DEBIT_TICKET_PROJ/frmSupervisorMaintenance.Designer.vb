@@ -26,12 +26,8 @@ Partial Class frmSupervisorMaintenance
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tpItem = New System.Windows.Forms.TabPage()
         Me.gbCreateItem = New System.Windows.Forms.GroupBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.cmbItemGroup = New System.Windows.Forms.ComboBox()
         Me.txtSupervisorName = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.cmbUOM = New System.Windows.Forms.ComboBox()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.tsCreateSupervisor = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
@@ -42,11 +38,12 @@ Partial Class frmSupervisorMaintenance
         Me.dgEdit = New System.Windows.Forms.DataGridViewLinkColumn()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtSearchSupervisor = New System.Windows.Forms.TextBox()
-        Me.tpItemUOM = New System.Windows.Forms.TabPage()
-        Me.tpItemGroup = New System.Windows.Forms.TabPage()
+        Me.tpBranch = New System.Windows.Forms.TabPage()
+        Me.tpPartners = New System.Windows.Forms.TabPage()
         Me.SpGETDMITEMLISTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DsItemList = New DGMU_DEBIT_TICKET_PROJ.dsItemList()
         Me.SpGET_DM_ITEM_LISTTableAdapter2 = New DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.spGET_DM_ITEM_LISTTableAdapter()
+        Me.chkIsActive = New System.Windows.Forms.CheckBox()
         Me.TabControl1.SuspendLayout()
         Me.tpItem.SuspendLayout()
         Me.gbCreateItem.SuspendLayout()
@@ -60,8 +57,8 @@ Partial Class frmSupervisorMaintenance
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.tpItem)
-        Me.TabControl1.Controls.Add(Me.tpItemUOM)
-        Me.TabControl1.Controls.Add(Me.tpItemGroup)
+        Me.TabControl1.Controls.Add(Me.tpBranch)
+        Me.TabControl1.Controls.Add(Me.tpPartners)
         Me.TabControl1.Location = New System.Drawing.Point(2, 13)
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(4)
         Me.TabControl1.Name = "TabControl1"
@@ -84,28 +81,16 @@ Partial Class frmSupervisorMaintenance
         '
         'gbCreateItem
         '
-        Me.gbCreateItem.Controls.Add(Me.Label3)
+        Me.gbCreateItem.Controls.Add(Me.chkIsActive)
         Me.gbCreateItem.Controls.Add(Me.Label1)
-        Me.gbCreateItem.Controls.Add(Me.cmbItemGroup)
         Me.gbCreateItem.Controls.Add(Me.txtSupervisorName)
-        Me.gbCreateItem.Controls.Add(Me.Label2)
-        Me.gbCreateItem.Controls.Add(Me.cmbUOM)
         Me.gbCreateItem.Enabled = False
         Me.gbCreateItem.Location = New System.Drawing.Point(472, 38)
         Me.gbCreateItem.Name = "gbCreateItem"
-        Me.gbCreateItem.Size = New System.Drawing.Size(355, 127)
+        Me.gbCreateItem.Size = New System.Drawing.Size(355, 104)
         Me.gbCreateItem.TabIndex = 2
         Me.gbCreateItem.TabStop = False
-        Me.gbCreateItem.Text = "Create New Item"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(16, 95)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(78, 18)
-        Me.Label3.TabIndex = 5
-        Me.Label3.Text = "Item Group"
+        Me.gbCreateItem.Text = "Supervisor Data Entry"
         '
         'Label1
         '
@@ -116,37 +101,12 @@ Partial Class frmSupervisorMaintenance
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Supervisor Name"
         '
-        'cmbItemGroup
-        '
-        Me.cmbItemGroup.FormattingEnabled = True
-        Me.cmbItemGroup.Location = New System.Drawing.Point(133, 92)
-        Me.cmbItemGroup.Name = "cmbItemGroup"
-        Me.cmbItemGroup.Size = New System.Drawing.Size(216, 26)
-        Me.cmbItemGroup.TabIndex = 2
-        '
         'txtSupervisorName
         '
         Me.txtSupervisorName.Location = New System.Drawing.Point(133, 28)
         Me.txtSupervisorName.Name = "txtSupervisorName"
         Me.txtSupervisorName.Size = New System.Drawing.Size(216, 26)
         Me.txtSupervisorName.TabIndex = 0
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(16, 63)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(107, 18)
-        Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Unit of Measure"
-        '
-        'cmbUOM
-        '
-        Me.cmbUOM.FormattingEnabled = True
-        Me.cmbUOM.Location = New System.Drawing.Point(133, 60)
-        Me.cmbUOM.Name = "cmbUOM"
-        Me.cmbUOM.Size = New System.Drawing.Size(216, 26)
-        Me.cmbUOM.TabIndex = 1
         '
         'ToolStrip1
         '
@@ -237,25 +197,25 @@ Partial Class frmSupervisorMaintenance
         Me.txtSearchSupervisor.Size = New System.Drawing.Size(371, 26)
         Me.txtSearchSupervisor.TabIndex = 1
         '
-        'tpItemUOM
+        'tpBranch
         '
-        Me.tpItemUOM.BackColor = System.Drawing.SystemColors.Control
-        Me.tpItemUOM.Location = New System.Drawing.Point(4, 27)
-        Me.tpItemUOM.Name = "tpItemUOM"
-        Me.tpItemUOM.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpItemUOM.Size = New System.Drawing.Size(832, 377)
-        Me.tpItemUOM.TabIndex = 2
-        Me.tpItemUOM.Text = "Item UOM"
+        Me.tpBranch.BackColor = System.Drawing.SystemColors.Control
+        Me.tpBranch.Location = New System.Drawing.Point(4, 27)
+        Me.tpBranch.Name = "tpBranch"
+        Me.tpBranch.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpBranch.Size = New System.Drawing.Size(832, 377)
+        Me.tpBranch.TabIndex = 2
+        Me.tpBranch.Text = "Branch"
         '
-        'tpItemGroup
+        'tpPartners
         '
-        Me.tpItemGroup.Location = New System.Drawing.Point(4, 27)
-        Me.tpItemGroup.Margin = New System.Windows.Forms.Padding(4)
-        Me.tpItemGroup.Name = "tpItemGroup"
-        Me.tpItemGroup.Padding = New System.Windows.Forms.Padding(4)
-        Me.tpItemGroup.Size = New System.Drawing.Size(832, 377)
-        Me.tpItemGroup.TabIndex = 1
-        Me.tpItemGroup.Text = "Item Group"
+        Me.tpPartners.Location = New System.Drawing.Point(4, 27)
+        Me.tpPartners.Margin = New System.Windows.Forms.Padding(4)
+        Me.tpPartners.Name = "tpPartners"
+        Me.tpPartners.Padding = New System.Windows.Forms.Padding(4)
+        Me.tpPartners.Size = New System.Drawing.Size(832, 377)
+        Me.tpPartners.TabIndex = 1
+        Me.tpPartners.Text = "Business Partner"
         '
         'SpGETDMITEMLISTBindingSource
         '
@@ -270,6 +230,16 @@ Partial Class frmSupervisorMaintenance
         'SpGET_DM_ITEM_LISTTableAdapter2
         '
         Me.SpGET_DM_ITEM_LISTTableAdapter2.ClearBeforeFill = True
+        '
+        'chkIsActive
+        '
+        Me.chkIsActive.AutoSize = True
+        Me.chkIsActive.Location = New System.Drawing.Point(133, 63)
+        Me.chkIsActive.Name = "chkIsActive"
+        Me.chkIsActive.Size = New System.Drawing.Size(65, 22)
+        Me.chkIsActive.TabIndex = 4
+        Me.chkIsActive.Text = "Active"
+        Me.chkIsActive.UseVisualStyleBackColor = True
         '
         'frmSupervisorMaintenance
         '
@@ -301,18 +271,14 @@ Partial Class frmSupervisorMaintenance
     Friend WithEvents tpItem As TabPage
     Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents cmbItemGroup As ComboBox
-    Friend WithEvents cmbUOM As ComboBox
     Friend WithEvents txtSupervisorName As TextBox
-    Friend WithEvents tpItemGroup As TabPage
+    Friend WithEvents tpPartners As TabPage
     Friend WithEvents tsCreateSupervisor As ToolStripButton
     Friend WithEvents tsSaveSupervisor As ToolStripButton
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents ToolStripLabel1 As ToolStripLabel
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents tpItemUOM As System.Windows.Forms.TabPage
+    Friend WithEvents tpBranch As System.Windows.Forms.TabPage
     Friend WithEvents txtSearchSupervisor As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents dgSupervisorList As DataGridView
@@ -333,4 +299,5 @@ Partial Class frmSupervisorMaintenance
     Friend WithEvents SpGET_DM_ITEM_LISTTableAdapter2 As DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.spGET_DM_ITEM_LISTTableAdapter
     Friend WithEvents dgEdit As System.Windows.Forms.DataGridViewLinkColumn
     Friend WithEvents gbCreateItem As System.Windows.Forms.GroupBox
+    Friend WithEvents chkIsActive As System.Windows.Forms.CheckBox
 End Class

@@ -6,1785 +6,1430 @@ DGMU_DEBIT_TICKET_PROJ
 </name>
 </assembly>
 <members>
-<member name="T:DGMU_DEBIT_TICKET_PROJ.dsItemList">
-<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member>
 <member name="T:DGMU_DEBIT_TICKET_PROJ.dsItemList.spGET_DM_ITEM_LISTDataTable">
-<summary>
+	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member>
-<member name="T:DGMU_DEBIT_TICKET_PROJ.dsItemList.spGET_DM_ITEM_LISTRow">
-<summary>
+</member><member name="T:DGMU_DEBIT_TICKET_PROJ.dsItemList.spGET_DM_ITEM_LISTRow">
+	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member>
-<member name="T:DGMU_DEBIT_TICKET_PROJ.dsItemList.spGET_DM_ITEM_LISTRowChangeEvent">
-<summary>
+</member><member name="T:DGMU_DEBIT_TICKET_PROJ.dsItemList.spGET_DM_ITEM_LISTRowChangeEvent">
+	<summary>
 Row event argument class
 </summary>
-</member>
-<member name="T:DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.spGET_DM_ITEM_LISTTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.TableAdapterManager">
-<summary>
-TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
-</summary>
-</member>
-<member name="M:DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.TableAdapterManager.UpdateUpdatedRows(DGMU_DEBIT_TICKET_PROJ.dsItemList,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
-<summary>
-Update rows in top-down order.
-</summary>
-</member>
-<member name="M:DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.TableAdapterManager.UpdateInsertedRows(DGMU_DEBIT_TICKET_PROJ.dsItemList,System.Collections.Generic.List{System.Data.DataRow})">
-<summary>
-Insert rows in top-down order.
-</summary>
-</member>
-<member name="M:DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.TableAdapterManager.UpdateDeletedRows(DGMU_DEBIT_TICKET_PROJ.dsItemList,System.Collections.Generic.List{System.Data.DataRow})">
-<summary>
-Delete rows in bottom-up order.
-</summary>
-</member>
-<member name="M:DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
-<summary>
-Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
-</summary>
-</member>
-<member name="M:DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.TableAdapterManager.UpdateAll(DGMU_DEBIT_TICKET_PROJ.dsItemList)">
-<summary>
-Update all changes to the dataset.
-</summary>
-</member>
-<member name="T:DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.TableAdapterManager.UpdateOrderOption">
-<summary>
-Update Order Option
-</summary>
-</member>
-<member name="T:DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.TableAdapterManager.SelfReferenceComparer">
-<summary>
-Used to sort self-referenced table's rows
-</summary>
-</member>
-<member name="T:DGMU_DEBIT_TICKET_PROJ.dsRequestListItem">
-<summary>
+</member><member name="T:DGMU_DEBIT_TICKET_PROJ.dsItemList">
+	<summary>
 Represents a strongly typed in-memory cache of data.
 </summary>
-</member>
-<member name="T:DGMU_DEBIT_TICKET_PROJ.dsRequestListItem.spGET_ITEM_FOR_APPROVALDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:DGMU_DEBIT_TICKET_PROJ.dsRequestListItem.spGET_ITEM_FOR_APPROVALRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:DGMU_DEBIT_TICKET_PROJ.dsRequestListItem.spGET_ITEM_FOR_APPROVALRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:DGMU_DEBIT_TICKET_PROJ.dsRequestListItemTableAdapters.spGET_ITEM_FOR_APPROVALTableAdapter">
-<summary>
+</member><member name="T:DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.spGET_DM_ITEM_LISTTableAdapter">
+	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member>
-<member name="T:DGMU_DEBIT_TICKET_PROJ.dsRequestListItemTableAdapters.TableAdapterManager">
-<summary>
-TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
-</summary>
-</member>
-<member name="M:DGMU_DEBIT_TICKET_PROJ.dsRequestListItemTableAdapters.TableAdapterManager.UpdateUpdatedRows(DGMU_DEBIT_TICKET_PROJ.dsRequestListItem,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
-<summary>
+</member><member name="M:DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.TableAdapterManager.UpdateUpdatedRows(DGMU_DEBIT_TICKET_PROJ.dsItemList,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
 Update rows in top-down order.
 </summary>
-</member>
-<member name="M:DGMU_DEBIT_TICKET_PROJ.dsRequestListItemTableAdapters.TableAdapterManager.UpdateInsertedRows(DGMU_DEBIT_TICKET_PROJ.dsRequestListItem,System.Collections.Generic.List{System.Data.DataRow})">
-<summary>
+</member><member name="M:DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.TableAdapterManager.UpdateInsertedRows(DGMU_DEBIT_TICKET_PROJ.dsItemList,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
 Insert rows in top-down order.
 </summary>
-</member>
-<member name="M:DGMU_DEBIT_TICKET_PROJ.dsRequestListItemTableAdapters.TableAdapterManager.UpdateDeletedRows(DGMU_DEBIT_TICKET_PROJ.dsRequestListItem,System.Collections.Generic.List{System.Data.DataRow})">
-<summary>
+</member><member name="M:DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.TableAdapterManager.UpdateDeletedRows(DGMU_DEBIT_TICKET_PROJ.dsItemList,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
 Delete rows in bottom-up order.
 </summary>
-</member>
-<member name="M:DGMU_DEBIT_TICKET_PROJ.dsRequestListItemTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
-<summary>
+</member><member name="M:DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
 Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
 </summary>
-</member>
-<member name="M:DGMU_DEBIT_TICKET_PROJ.dsRequestListItemTableAdapters.TableAdapterManager.UpdateAll(DGMU_DEBIT_TICKET_PROJ.dsRequestListItem)">
-<summary>
+</member><member name="M:DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.TableAdapterManager.UpdateAll(DGMU_DEBIT_TICKET_PROJ.dsItemList)">
+	<summary>
 Update all changes to the dataset.
 </summary>
-</member>
-<member name="T:DGMU_DEBIT_TICKET_PROJ.dsRequestListItemTableAdapters.TableAdapterManager.UpdateOrderOption">
-<summary>
+</member><member name="T:DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
 Update Order Option
 </summary>
-</member>
-<member name="T:DGMU_DEBIT_TICKET_PROJ.dsRequestListItemTableAdapters.TableAdapterManager.SelfReferenceComparer">
-<summary>
+</member><member name="T:DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
 Used to sort self-referenced table's rows
 </summary>
-</member>
-<member name="T:DGMU_DEBIT_TICKET_PROJ.dsTest">
-<summary>
+</member><member name="T:DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:DGMU_DEBIT_TICKET_PROJ.dsTest.Request_Status_RFDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DGMU_DEBIT_TICKET_PROJ.dsTest.Request_Status_RFRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DGMU_DEBIT_TICKET_PROJ.dsTest.Request_Status_RFRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DGMU_DEBIT_TICKET_PROJ.dsTest">
+	<summary>
 Represents a strongly typed in-memory cache of data.
 </summary>
-</member>
-<member name="T:DGMU_DEBIT_TICKET_PROJ.dsTest.Request_Status_RFDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:DGMU_DEBIT_TICKET_PROJ.dsTest.Request_Status_RFRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:DGMU_DEBIT_TICKET_PROJ.dsTest.Request_Status_RFRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:DGMU_DEBIT_TICKET_PROJ.dsTestTableAdapters.Request_Status_RFTableAdapter">
-<summary>
+</member><member name="T:DGMU_DEBIT_TICKET_PROJ.dsTestTableAdapters.Request_Status_RFTableAdapter">
+	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member>
-<member name="T:DGMU_DEBIT_TICKET_PROJ.dsTestTableAdapters.TableAdapterManager">
-<summary>
-TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
-</summary>
-</member>
-<member name="M:DGMU_DEBIT_TICKET_PROJ.dsTestTableAdapters.TableAdapterManager.UpdateUpdatedRows(DGMU_DEBIT_TICKET_PROJ.dsTest,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
-<summary>
+</member><member name="M:DGMU_DEBIT_TICKET_PROJ.dsTestTableAdapters.TableAdapterManager.UpdateUpdatedRows(DGMU_DEBIT_TICKET_PROJ.dsTest,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
 Update rows in top-down order.
 </summary>
-</member>
-<member name="M:DGMU_DEBIT_TICKET_PROJ.dsTestTableAdapters.TableAdapterManager.UpdateInsertedRows(DGMU_DEBIT_TICKET_PROJ.dsTest,System.Collections.Generic.List{System.Data.DataRow})">
-<summary>
+</member><member name="M:DGMU_DEBIT_TICKET_PROJ.dsTestTableAdapters.TableAdapterManager.UpdateInsertedRows(DGMU_DEBIT_TICKET_PROJ.dsTest,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
 Insert rows in top-down order.
 </summary>
-</member>
-<member name="M:DGMU_DEBIT_TICKET_PROJ.dsTestTableAdapters.TableAdapterManager.UpdateDeletedRows(DGMU_DEBIT_TICKET_PROJ.dsTest,System.Collections.Generic.List{System.Data.DataRow})">
-<summary>
+</member><member name="M:DGMU_DEBIT_TICKET_PROJ.dsTestTableAdapters.TableAdapterManager.UpdateDeletedRows(DGMU_DEBIT_TICKET_PROJ.dsTest,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
 Delete rows in bottom-up order.
 </summary>
-</member>
-<member name="M:DGMU_DEBIT_TICKET_PROJ.dsTestTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
-<summary>
+</member><member name="M:DGMU_DEBIT_TICKET_PROJ.dsTestTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
 Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
 </summary>
-</member>
-<member name="M:DGMU_DEBIT_TICKET_PROJ.dsTestTableAdapters.TableAdapterManager.UpdateAll(DGMU_DEBIT_TICKET_PROJ.dsTest)">
-<summary>
+</member><member name="M:DGMU_DEBIT_TICKET_PROJ.dsTestTableAdapters.TableAdapterManager.UpdateAll(DGMU_DEBIT_TICKET_PROJ.dsTest)">
+	<summary>
 Update all changes to the dataset.
 </summary>
-</member>
-<member name="T:DGMU_DEBIT_TICKET_PROJ.dsTestTableAdapters.TableAdapterManager.UpdateOrderOption">
-<summary>
+</member><member name="T:DGMU_DEBIT_TICKET_PROJ.dsTestTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
 Update Order Option
 </summary>
-</member>
-<member name="T:DGMU_DEBIT_TICKET_PROJ.dsTestTableAdapters.TableAdapterManager.SelfReferenceComparer">
-<summary>
+</member><member name="T:DGMU_DEBIT_TICKET_PROJ.dsTestTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
 Used to sort self-referenced table's rows
 </summary>
-</member>
-<member name="T:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources">
-<summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
+</member><member name="T:DGMU_DEBIT_TICKET_PROJ.dsTestTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.ResourceManager">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.ResourceManager">
+	<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.Culture">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.Culture">
+	<summary>
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.about_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.about_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.accept_database_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.accept_database_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.add_column_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.add_column_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.add_database_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.add_database_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.add_image_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.add_image_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.add_row_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.add_row_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.address_book_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.address_book_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.advance_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.advance_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.advertising_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.advertising_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.alarm_clock_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.alarm_clock_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.alphabetical_sorting_az_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.alphabetical_sorting_az_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.alphabetical_sorting_za_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.alphabetical_sorting_za_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.answers_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.answers_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.approval_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.approval_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.approve_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.approve_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.area_chart_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.area_chart_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.assistant_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.assistant_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.audio_file_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.audio_file_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.automatic_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.automatic_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.automotive_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.automotive_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.bad_decision_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.bad_decision_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.bar_chart_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.bar_chart_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.bearish_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.bearish_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.binoculars_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.binoculars_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.biohazard_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.biohazard_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.biomass_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.biomass_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.biotech_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.biotech_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.bookmark_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.bookmark_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.briefcase_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.briefcase_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.broken_link_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.broken_link_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.bullish_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.bullish_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.business_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.business_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.business_contact_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.business_contact_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.businessman_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.businessman_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.businesswoman_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.businesswoman_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.butting_in_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.butting_in_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.cable_release_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.cable_release_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.calculator_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.calculator_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.calendar_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.calendar_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.call_transfer_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.call_transfer_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.callback_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.callback_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.camcorder_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.camcorder_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.camcorder_pro_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.camcorder_pro_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.camera_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.camera_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.camera_addon_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.camera_addon_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.camera_identification_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.camera_identification_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.cancel_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.cancel_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.candle_sticks_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.candle_sticks_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.capacitor_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.capacitor_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.cell_phone_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.cell_phone_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.charge_battery_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.charge_battery_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.checkmark_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.checkmark_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.circuit_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.circuit_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.clapperboard_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.clapperboard_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.clear_filters_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.clear_filters_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.clock_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.clock_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.close_up_mode_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.close_up_mode_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.cloth_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.cloth_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.collaboration_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.collaboration_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.collapse_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.collapse_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.collect_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.collect_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.combo_chart_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.combo_chart_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.comments_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.comments_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.compact_camera_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.compact_camera_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.conference_call_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.conference_call_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.contacts_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.contacts_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.copyleft_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.copyleft_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.copyright_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.copyright_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.crystal_oscillator_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.crystal_oscillator_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.currency_exchange_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.currency_exchange_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.cursor_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.cursor_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.customer_support_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.customer_support_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.dam_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.dam_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.data_backup_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.data_backup_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.data_configuration_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.data_configuration_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.data_encryption_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.data_encryption_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.data_protection_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.data_protection_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.data_recovery_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.data_recovery_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.data_sheet_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.data_sheet_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.database_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.database_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.debt_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.debt_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.decision_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.decision_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.delete_column_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.delete_column_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.delete_database_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.delete_database_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.delete_row_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.delete_row_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.department_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.department_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.deployment_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.deployment_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.DGMU_logo_700x385px">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.DGMU_logo_700x385px">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.diploma_1_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.diploma_1_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.diploma_2_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.diploma_2_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.disapprove_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.disapprove_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.disclaimer_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.disclaimer_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.dislike_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.dislike_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.display_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.display_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.do_not_inhale_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.do_not_inhale_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.do_not_insert_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.do_not_insert_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.do_not_mix_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.do_not_mix_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.document_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.document_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.donate_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.donate_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.doughnut_chart_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.doughnut_chart_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.down_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.down_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.down_left_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.down_left_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.down_right_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.down_right_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.download_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.download_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.edit_image_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.edit_image_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.electrical_sensor_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.electrical_sensor_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.electrical_threshold_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.electrical_threshold_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.electricity_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.electricity_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.electro_devices_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.electro_devices_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.electronics_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.electronics_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.empty_battery_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.empty_battery_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.empty_filter_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.empty_filter_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.empty_trash_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.empty_trash_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.end_call_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.end_call_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.engineering_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.engineering_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.entering_heaven_alive_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.entering_heaven_alive_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.expand_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.expand_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.expired_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.expired_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.export_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.export_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.external_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.external_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.factory_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.factory_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.factory_breakdown_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.factory_breakdown_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.faq_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.faq_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.feed_in_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.feed_in_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.feedback_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.feedback_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.file_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.file_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.filing_cabinet_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.filing_cabinet_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.filled_filter_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.filled_filter_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.film_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.film_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.film_reel_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.film_reel_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.fine_print_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.fine_print_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.flash_auto_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.flash_auto_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.flash_off_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.flash_off_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.flash_on_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.flash_on_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.flow_chart_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.flow_chart_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.folder_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.folder_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.frame_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.frame_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.full_battery_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.full_battery_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.full_trash_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.full_trash_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.gallery_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.gallery_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.genealogy_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.genealogy_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.generic_sorting_asc_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.generic_sorting_asc_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.generic_sorting_desc_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.generic_sorting_desc_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.globe_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.globe_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.good_decision_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.good_decision_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.graduation_cap_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.graduation_cap_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.grid_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.grid_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.headset_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.headset_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.heat_map_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.heat_map_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.high_battery_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.high_battery_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.high_priority_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.high_priority_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.home_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.home_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.icons8_cup_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.icons8_cup_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.idea_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.idea_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.image_file_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.image_file_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.import_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.import_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.in_transit_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.in_transit_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.info_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.info_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.inspection_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.inspection_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.integrated_webcam_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.integrated_webcam_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.internal_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.internal_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.invite_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.invite_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.ipad_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.ipad_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.iphone_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.iphone_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.key_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.key_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.kindle_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.kindle_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.landscape_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.landscape_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.leave_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.leave_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.left_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.left_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.left_down_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.left_down_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.left_down2_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.left_down2_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.left_up_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.left_up_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.left_up2_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.left_up2_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.library_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.library_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.light_at_the_end_of_tunnel_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.light_at_the_end_of_tunnel_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.like_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.like_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.like_placeholder_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.like_placeholder_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.line_chart_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.line_chart_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.link_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.link_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.list_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.list_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.lock_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.lock_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.lock_landscape_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.lock_landscape_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.lock_portrait_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.lock_portrait_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.low_battery_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.low_battery_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.low_priority_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.low_priority_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.make_decision_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.make_decision_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.manager_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.manager_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.medium_priority_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.medium_priority_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.menu_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.menu_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.middle_battery_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.middle_battery_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.mind_map_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.mind_map_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.minus_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.minus_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.missed_call_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.missed_call_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.mms_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.mms_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.money_transfer_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.money_transfer_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.multiple_cameras_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.multiple_cameras_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.multiple_devices_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.multiple_devices_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.multiple_inputs_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.multiple_inputs_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.multiple_smartphones_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.multiple_smartphones_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.music_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.music_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.negative_dynamic_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.negative_dynamic_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.neutral_decision_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.neutral_decision_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.neutral_trading_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.neutral_trading_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.news_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.news_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.next_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.next_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.night_landscape_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.night_landscape_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.night_portrait_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.night_portrait_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.no_idea_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.no_idea_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.no_video_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.no_video_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.nook_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.nook_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.numerical_sorting_12_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.numerical_sorting_12_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.numerical_sorting_21_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.numerical_sorting_21_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.ok_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.ok_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.old_time_camera_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.old_time_camera_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.online_support_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.online_support_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.opened_folder_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.opened_folder_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.org_unit_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.org_unit_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.organization_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.organization_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.overtime_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.overtime_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.package_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.package_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.paid_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.paid_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.panorama_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.panorama_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.parallel_tasks_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.parallel_tasks_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.phone_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.phone_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.phone_android_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.phone_android_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.photo_reel_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.photo_reel_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.picture_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.picture_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.pie_chart_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.pie_chart_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.planner_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.planner_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.plus_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.plus_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.podium_with_audience_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.podium_with_audience_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.podium_with_speaker_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.podium_with_speaker_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.podium_without_speaker_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.podium_without_speaker_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.portrait_mode_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.portrait_mode_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.positive_dynamic_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.positive_dynamic_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.previous_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.previous_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.print_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.print_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.privacy_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.privacy_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.process_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.process_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.puzzle_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.puzzle_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.questions_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.questions_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.radar_plot_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.radar_plot_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.rating_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.rating_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.ratings_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.ratings_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.reading_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.reading_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.reading_ebook_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.reading_ebook_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.redo_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.redo_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.refresh_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.refresh_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.registered_trademark_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.registered_trademark_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.remove_image_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.remove_image_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.reuse_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.reuse_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.right_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.right_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.right_down_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.right_down_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.right_down2_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.right_down2_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.right_up_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.right_up_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.right_up2_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.right_up2_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.rotate_camera_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.rotate_camera_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.rotate_to_landscape_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.rotate_to_landscape_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.rotate_to_portrait_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.rotate_to_portrait_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.ruler_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.ruler_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.rules_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.rules_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.safe_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.safe_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.sales_performance_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.sales_performance_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.scatter_plot_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.scatter_plot_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.search_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.search_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.self_service_kiosk_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.self_service_kiosk_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.selfie_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.selfie_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.serial_tasks_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.serial_tasks_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.service_mark_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.service_mark_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.services_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.services_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.settings_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.settings_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.share_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.share_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.shipped_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.shipped_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.shop_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.shop_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.signature_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.signature_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.sim_card_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.sim_card_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.sim_card_chip_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.sim_card_chip_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.slr_back_side_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.slr_back_side_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.smartphone_tablet_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.smartphone_tablet_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.sms_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.sms_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.sound_recording_copyright_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.sound_recording_copyright_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.speaker_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.speaker_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.sports_mode_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.sports_mode_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.stack_of_photos_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.stack_of_photos_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.start_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.start_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.statistics_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.statistics_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.support_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.support_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.survey_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.survey_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.switch_camera_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.switch_camera_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.synchronize_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.synchronize_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.tablet_android_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.tablet_android_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.template_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.template_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.timeline_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.timeline_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.todo_list_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.todo_list_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.touchscreen_smartphone_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.touchscreen_smartphone_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.trademark_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.trademark_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.tree_structure_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.tree_structure_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.two_smartphones_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.two_smartphones_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.undo_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.undo_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.unlock_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.unlock_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.up_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.up_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.up_left_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.up_left_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.up_right_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.up_right_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.upload_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.upload_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.user_authentication_01">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.user_authentication_01">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.video_call_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.video_call_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.video_file_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.video_file_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.video_projector_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.video_projector_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.view_details_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.view_details_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.vip_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.vip_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.voice_presentation_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.voice_presentation_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.voicemail_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.voicemail_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.webcam_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.webcam_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.workflow_24">
-<summary>
+</member><member name="P:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.workflow_24">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="T:DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="T:DGMU_DEBIT_TICKET_PROJ.dsRequestListItem.spGET_ITEM_FOR_APPROVALDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DGMU_DEBIT_TICKET_PROJ.dsRequestListItem.spGET_ITEM_FOR_APPROVALRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DGMU_DEBIT_TICKET_PROJ.dsRequestListItem.spGET_ITEM_FOR_APPROVALRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DGMU_DEBIT_TICKET_PROJ.dsRequestListItem">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:DGMU_DEBIT_TICKET_PROJ.dsRequestListItemTableAdapters.spGET_ITEM_FOR_APPROVALTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:DGMU_DEBIT_TICKET_PROJ.dsRequestListItemTableAdapters.TableAdapterManager.UpdateUpdatedRows(DGMU_DEBIT_TICKET_PROJ.dsRequestListItem,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:DGMU_DEBIT_TICKET_PROJ.dsRequestListItemTableAdapters.TableAdapterManager.UpdateInsertedRows(DGMU_DEBIT_TICKET_PROJ.dsRequestListItem,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:DGMU_DEBIT_TICKET_PROJ.dsRequestListItemTableAdapters.TableAdapterManager.UpdateDeletedRows(DGMU_DEBIT_TICKET_PROJ.dsRequestListItem,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:DGMU_DEBIT_TICKET_PROJ.dsRequestListItemTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:DGMU_DEBIT_TICKET_PROJ.dsRequestListItemTableAdapters.TableAdapterManager.UpdateAll(DGMU_DEBIT_TICKET_PROJ.dsRequestListItem)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:DGMU_DEBIT_TICKET_PROJ.dsRequestListItemTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:DGMU_DEBIT_TICKET_PROJ.dsRequestListItemTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:DGMU_DEBIT_TICKET_PROJ.dsRequestListItemTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>
 </member>
 </members>
