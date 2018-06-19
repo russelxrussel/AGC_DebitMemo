@@ -103,6 +103,8 @@ Public Class frmApprover
             Next
         End If
 
+        computeTotalAmountRequest()
+
 
 
 
@@ -189,5 +191,19 @@ Public Class frmApprover
     Private Sub lnkViewAttachment_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lnkViewAttachment.LinkClicked
         frmViewAttachment.lblDMRNum.Text = lblDebitMemoNumber.Text
         frmViewAttachment.ShowDialog()
+    End Sub
+
+    Private Sub computeTotalAmountRequest()
+        Dim total As Double
+        'Dim totalItems As Integer
+        For i As Integer = 0 To dgListOfRequestItems.RowCount - 1
+            total += Double.Parse(dgListOfRequestItems.Rows(i).Cells(3).Value)
+            'totalItems += Integer.Parse(dgListOfRequestItems.Rows(i).Cells(2).Value)
+            'Change the number 2 to your column index number (The first column has a 0 index column)
+            'In this example the column index of Price is 2
+        Next
+
+        'lblTotalItems.Text = totalItems.ToString()
+        lblTotalAmount.Text = String.Format("{0:n}", total)
     End Sub
 End Class

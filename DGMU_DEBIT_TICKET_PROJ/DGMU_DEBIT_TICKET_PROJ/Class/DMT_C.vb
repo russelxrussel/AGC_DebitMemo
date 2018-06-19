@@ -19,17 +19,7 @@ Public Class DMT_ITEM_C
         Return dt
     End Function
 
-    Public Function GET_UOM_LIST() As DataTable
-        Dim dt As New DataTable
-        dt = queryCommandDT_SP("[UTIL].[spGET_DM_UOM_LIST]")
-        Return dt
-    End Function
 
-    Public Function GET_GROUP_ITEM_LIST() As DataTable
-        Dim dt As New DataTable
-        dt = queryCommandDT_SP("[UTIL].[spGET_DM_ITEM_GROUP_LIST]")
-        Return dt
-    End Function
 
 
 #End Region
@@ -94,6 +84,18 @@ Public Class UTILITY
         Return dt
     End Function
 
+    Public Function GET_UOM_LIST() As DataTable
+        Dim dt As New DataTable
+        dt = queryCommandDT_SP("[UTIL].[spGET_DM_UOM_LIST]")
+        Return dt
+    End Function
+
+    Public Function GET_GROUP_ITEM_LIST() As DataTable
+        Dim dt As New DataTable
+        dt = queryCommandDT_SP("[UTIL].[spGET_DM_ITEM_GROUP_LIST]")
+        Return dt
+    End Function
+
     Public Function GET_BRANCHES() As DataTable
         Dim dt As New DataTable
         dt = queryCommandDT_SP("[TRANSACTION].[GET_DM_BRANCH_LIST]")
@@ -136,6 +138,43 @@ Public Class UTILITY
                     .Parameters.AddWithValue("@SUPERVISOR_NAME", _supervisorName)
                     .Parameters.AddWithValue("@IS_ACTIVE", _IsActive)
                     .Parameters.AddWithValue("@USER_CODE", _userCode)
+                End With
+                cn.Open()
+                cmd.ExecuteNonQuery()
+
+            End Using
+        End Using
+    End Sub
+
+    'UNIT OF MEASUREMENT
+    Public Sub INSERT_UOM(ByVal _uomCode As String, ByVal _uomDescription As String, ByVal _userCode As String)
+        Using cn As New SqlConnection(_CONSTRING)
+
+            Using cmd As New SqlCommand("[UTIL].[spINSERT_DM_UOM]", cn)
+                With cmd
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.AddWithValue("@UOM_CODE", _uomCode)
+                    .Parameters.AddWithValue("@UOM_DESCRIPTION", _uomDescription)
+                    .Parameters.AddWithValue("@USER_CODE", _userCode)
+
+                End With
+                cn.Open()
+                cmd.ExecuteNonQuery()
+
+            End Using
+        End Using
+    End Sub
+
+    Public Sub UPDATE_UOM(ByVal _uomID As Integer, ByVal _uomDescription As String, ByVal _userCode As String)
+        Using cn As New SqlConnection(_CONSTRING)
+
+            Using cmd As New SqlCommand("[UTIL].[spUPDATE_DM_UOM]", cn)
+                With cmd
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.AddWithValue("@UOM_ID", _uomID)
+                    .Parameters.AddWithValue("@UOM_DESCRIPTION", _uomDescription)
+                    .Parameters.AddWithValue("@USER_CODE", _userCode)
+
                 End With
                 cn.Open()
                 cmd.ExecuteNonQuery()

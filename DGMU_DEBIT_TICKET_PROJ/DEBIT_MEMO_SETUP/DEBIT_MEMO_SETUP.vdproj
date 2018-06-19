@@ -99,6 +99,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_121A2E90833F4D1C8648B13CB568B9DF"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_1301A03602EBB94C3F60DD06A91889B1"
         "OwnerKey" = "8:_400A70F0F4273226770C867CF4F62713"
         "MsmSig" = "8:_UNDEFINED"
@@ -107,6 +113,18 @@
         {
         "MsmKey" = "8:_1301A03602EBB94C3F60DD06A91889B1"
         "OwnerKey" = "8:_D447BD1B00B248C08BEA728DD564A4EC"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_1508353B68D14B68B2A2BE6939974643"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_20F78B9F903C405797FD25A5F0B16973"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -225,6 +243,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_51802B1D43EF4FAF976B7F6F1EF81E92"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_53170E0F9DE5EB575DF97043DA4E53F8"
         "OwnerKey" = "8:_400A70F0F4273226770C867CF4F62713"
         "MsmSig" = "8:_UNDEFINED"
@@ -245,24 +269,6 @@
         {
         "MsmKey" = "8:_53170E0F9DE5EB575DF97043DA4E53F8"
         "OwnerKey" = "8:_CF082758643C6A15B740A903446B430F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_5EF828C275F448939AB8CEF5CB6748D0"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_636D365C401A44BAB50ECDB1F4DEAC36"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_6DA00B7867B94C7CB2640A30F9C82892"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -309,19 +315,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_903D4C93C21B4F31982E98290EA114AE"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_95F3FC7881D54434B25F8247F679F860"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_9B65FD584A0B496FAAE63A27A63A8EE0"
+        "MsmKey" = "8:_97A8F4FD37C3417386F5DFB7CBF58595"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -339,32 +333,8 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_9E61721A8BDC46B69BCF51D97F042433"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_9FD9695507CB458FB5566BFAAD1C0C38"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A17AF301203A4F9B8070025636C31E11"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_A21F6E296A61ABBBE089E7A427248169"
         "OwnerKey" = "8:_7C7585BDB03B226E3E7E7017C200ABAD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A52BA8AAAEC044C6ADC6BF89ECF5C2D6"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -903,6 +873,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_121A2E90833F4D1C8648B13CB568B9DF"
+            {
+            "SourcePath" = "8:..\\DGMU_DEBIT_TICKET_PROJ\\Reports\\repDebitMemoTotalSummary_List.rpt"
+            "TargetName" = "8:repDebitMemoTotalSummary_List.rpt"
+            "Tag" = "8:"
+            "Folder" = "8:_BD17F58119CB457587C0973EB50E65C8"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1301A03602EBB94C3F60DD06A91889B1"
             {
             "AssemblyRegister" = "3:1"
@@ -932,6 +922,46 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1508353B68D14B68B2A2BE6939974643"
+            {
+            "SourcePath" = "8:..\\DGMU_DEBIT_TICKET_PROJ\\Reports\\repApprovedDM.rpt"
+            "TargetName" = "8:repApprovedDM.rpt"
+            "Tag" = "8:"
+            "Folder" = "8:_BD17F58119CB457587C0973EB50E65C8"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_20F78B9F903C405797FD25A5F0B16973"
+            {
+            "SourcePath" = "8:..\\DGMU_DEBIT_TICKET_PROJ\\Reports\\repDebitMemoTotalSummary_List_Supervisor.rpt"
+            "TargetName" = "8:repDebitMemoTotalSummary_List_Supervisor.rpt"
+            "Tag" = "8:"
+            "Folder" = "8:_BD17F58119CB457587C0973EB50E65C8"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_360DB3F71025D2BD7E42E0A4E8386B9B"
@@ -1109,6 +1139,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_51802B1D43EF4FAF976B7F6F1EF81E92"
+            {
+            "SourcePath" = "8:..\\DGMU_DEBIT_TICKET_PROJ\\Reports\\repDebitMemoTotalSummary_Details_Supervisor.rpt"
+            "TargetName" = "8:repDebitMemoTotalSummary_Details_Supervisor.rpt"
+            "Tag" = "8:"
+            "Folder" = "8:_BD17F58119CB457587C0973EB50E65C8"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_53170E0F9DE5EB575DF97043DA4E53F8"
             {
             "AssemblyRegister" = "3:1"
@@ -1138,66 +1188,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5EF828C275F448939AB8CEF5CB6748D0"
-            {
-            "SourcePath" = "8:..\\DGMU_DEBIT_TICKET_PROJ\\Reports\\repDebitMemoTotalSummary_Details.rpt"
-            "TargetName" = "8:repDebitMemoTotalSummary_Details.rpt"
-            "Tag" = "8:"
-            "Folder" = "8:_BD17F58119CB457587C0973EB50E65C8"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_636D365C401A44BAB50ECDB1F4DEAC36"
-            {
-            "SourcePath" = "8:..\\DGMU_DEBIT_TICKET_PROJ\\Reports\\repDebitMemoTotalSummary_List_Supervisor.rpt"
-            "TargetName" = "8:repDebitMemoTotalSummary_List_Supervisor.rpt"
-            "Tag" = "8:"
-            "Folder" = "8:_BD17F58119CB457587C0973EB50E65C8"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6DA00B7867B94C7CB2640A30F9C82892"
-            {
-            "SourcePath" = "8:..\\DGMU_DEBIT_TICKET_PROJ\\Reports\\repDebitMemoTotalSummary_Details_Supervisor.vb"
-            "TargetName" = "8:repDebitMemoTotalSummary_Details_Supervisor.vb"
-            "Tag" = "8:"
-            "Folder" = "8:_BD17F58119CB457587C0973EB50E65C8"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7C7585BDB03B226E3E7E7017C200ABAD"
@@ -1293,50 +1283,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_903D4C93C21B4F31982E98290EA114AE"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_97A8F4FD37C3417386F5DFB7CBF58595"
             {
-            "SourcePath" = "8:..\\DGMU_DEBIT_TICKET_PROJ\\Reports\\repDebitMemoTotalSummary_List.rpt"
-            "TargetName" = "8:repDebitMemoTotalSummary_List.rpt"
-            "Tag" = "8:"
-            "Folder" = "8:_BD17F58119CB457587C0973EB50E65C8"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_95F3FC7881D54434B25F8247F679F860"
-            {
-            "SourcePath" = "8:..\\DGMU_DEBIT_TICKET_PROJ\\Reports\\repApprovedDM.vb"
-            "TargetName" = "8:repApprovedDM.vb"
-            "Tag" = "8:"
-            "Folder" = "8:_BD17F58119CB457587C0973EB50E65C8"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9B65FD584A0B496FAAE63A27A63A8EE0"
-            {
-            "SourcePath" = "8:..\\DGMU_DEBIT_TICKET_PROJ\\Reports\\repApprovedDM.rpt"
-            "TargetName" = "8:repApprovedDM.rpt"
+            "SourcePath" = "8:..\\DGMU_DEBIT_TICKET_PROJ\\Reports\\repDebitMemoTotalSummary_Details.rpt"
+            "TargetName" = "8:repDebitMemoTotalSummary_Details.rpt"
             "Tag" = "8:"
             "Folder" = "8:_BD17F58119CB457587C0973EB50E65C8"
             "Condition" = "8:"
@@ -1384,66 +1334,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9E61721A8BDC46B69BCF51D97F042433"
-            {
-            "SourcePath" = "8:..\\DGMU_DEBIT_TICKET_PROJ\\Reports\\repDebitMemoTotalSummary_List.vb"
-            "TargetName" = "8:repDebitMemoTotalSummary_List.vb"
-            "Tag" = "8:"
-            "Folder" = "8:_BD17F58119CB457587C0973EB50E65C8"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9FD9695507CB458FB5566BFAAD1C0C38"
-            {
-            "SourcePath" = "8:..\\DGMU_DEBIT_TICKET_PROJ\\Reports\\repDebitMemoTotalSummary_Details.vb"
-            "TargetName" = "8:repDebitMemoTotalSummary_Details.vb"
-            "Tag" = "8:"
-            "Folder" = "8:_BD17F58119CB457587C0973EB50E65C8"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A17AF301203A4F9B8070025636C31E11"
-            {
-            "SourcePath" = "8:..\\DGMU_DEBIT_TICKET_PROJ\\Reports\\repDebitMemoTotalSummary_List_Supervisor.vb"
-            "TargetName" = "8:repDebitMemoTotalSummary_List_Supervisor.vb"
-            "Tag" = "8:"
-            "Folder" = "8:_BD17F58119CB457587C0973EB50E65C8"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A21F6E296A61ABBBE089E7A427248169"
             {
             "SourcePath" = "8:Flash.ocx"
@@ -1462,26 +1352,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A52BA8AAAEC044C6ADC6BF89ECF5C2D6"
-            {
-            "SourcePath" = "8:..\\DGMU_DEBIT_TICKET_PROJ\\Reports\\repDebitMemoTotalSummary_Details_Supervisor.rpt"
-            "TargetName" = "8:repDebitMemoTotalSummary_Details_Supervisor.rpt"
-            "Tag" = "8:"
-            "Folder" = "8:_BD17F58119CB457587C0973EB50E65C8"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B1A68E1F59DFCEED51F0F1220BA711AB"
@@ -1842,7 +1712,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:AGC Debit Memo"
         "ProductCode" = "8:{C505E2CB-FD59-444F-AE2B-EC4A6650899F}"
-        "PackageCode" = "8:{62870C77-DB7E-4FF5-91C8-B0C2AC795DDC}"
+        "PackageCode" = "8:{0E98C4A7-5A6A-47FD-BB8A-E78F3D1C73DD}"
         "UpgradeCode" = "8:{800B68D5-2351-4B5F-A755-091A72B9AB83}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

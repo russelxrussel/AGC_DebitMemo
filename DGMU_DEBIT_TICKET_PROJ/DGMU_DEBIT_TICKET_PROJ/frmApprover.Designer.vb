@@ -45,6 +45,8 @@ Partial Class frmApprover
         Me.btnProcessDecision = New System.Windows.Forms.Button()
         Me.dgListOfRequestItems = New System.Windows.Forms.DataGridView()
         Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.lblTotalAmount = New System.Windows.Forms.Label()
         Me.gpDMRequest.SuspendLayout()
         CType(Me.dgListOfDM, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.FlowLayoutPanel1.SuspendLayout()
@@ -59,7 +61,7 @@ Partial Class frmApprover
         Me.gpDMRequest.Font = New System.Drawing.Font("Calibri", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gpDMRequest.Location = New System.Drawing.Point(3, 3)
         Me.gpDMRequest.Name = "gpDMRequest"
-        Me.gpDMRequest.Size = New System.Drawing.Size(687, 306)
+        Me.gpDMRequest.Size = New System.Drawing.Size(687, 408)
         Me.gpDMRequest.TabIndex = 0
         Me.gpDMRequest.TabStop = False
         Me.gpDMRequest.Text = "List of Open Debit Request"
@@ -77,7 +79,7 @@ Partial Class frmApprover
         Me.dgListOfDM.Location = New System.Drawing.Point(3, 20)
         Me.dgListOfDM.Name = "dgListOfDM"
         Me.dgListOfDM.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgListOfDM.Size = New System.Drawing.Size(681, 283)
+        Me.dgListOfDM.Size = New System.Drawing.Size(681, 385)
         Me.dgListOfDM.TabIndex = 0
         '
         'FlowLayoutPanel1
@@ -87,11 +89,13 @@ Partial Class frmApprover
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(12, 12)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(704, 747)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(704, 883)
         Me.FlowLayoutPanel1.TabIndex = 1
         '
         'gpListOfRequest
         '
+        Me.gpListOfRequest.Controls.Add(Me.lblTotalAmount)
+        Me.gpListOfRequest.Controls.Add(Me.Label7)
         Me.gpListOfRequest.Controls.Add(Me.txtApproverNotes)
         Me.gpListOfRequest.Controls.Add(Me.Label5)
         Me.gpListOfRequest.Controls.Add(Me.gbDMRDetails)
@@ -100,7 +104,7 @@ Partial Class frmApprover
         Me.gpListOfRequest.Controls.Add(Me.Button2)
         Me.gpListOfRequest.Controls.Add(Me.btnProcessDecision)
         Me.gpListOfRequest.Controls.Add(Me.dgListOfRequestItems)
-        Me.gpListOfRequest.Location = New System.Drawing.Point(3, 315)
+        Me.gpListOfRequest.Location = New System.Drawing.Point(3, 417)
         Me.gpListOfRequest.Name = "gpListOfRequest"
         Me.gpListOfRequest.Size = New System.Drawing.Size(699, 400)
         Me.gpListOfRequest.TabIndex = 1
@@ -110,7 +114,7 @@ Partial Class frmApprover
         'txtApproverNotes
         '
         Me.txtApproverNotes.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtApproverNotes.Location = New System.Drawing.Point(10, 312)
+        Me.txtApproverNotes.Location = New System.Drawing.Point(10, 329)
         Me.txtApproverNotes.Multiline = True
         Me.txtApproverNotes.Name = "txtApproverNotes"
         Me.txtApproverNotes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
@@ -120,7 +124,7 @@ Partial Class frmApprover
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(7, 295)
+        Me.Label5.Location = New System.Drawing.Point(7, 312)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(154, 14)
         Me.Label5.TabIndex = 8
@@ -261,7 +265,7 @@ Partial Class frmApprover
         '
         Me.Button2.BackColor = System.Drawing.Color.Red
         Me.Button2.Font = New System.Drawing.Font("Calibri", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(612, 335)
+        Me.Button2.Location = New System.Drawing.Point(612, 352)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 37)
         Me.Button2.TabIndex = 2
@@ -272,7 +276,7 @@ Partial Class frmApprover
         '
         Me.btnProcessDecision.BackColor = System.Drawing.Color.LightGreen
         Me.btnProcessDecision.Font = New System.Drawing.Font("Calibri", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnProcessDecision.Location = New System.Drawing.Point(531, 335)
+        Me.btnProcessDecision.Location = New System.Drawing.Point(531, 352)
         Me.btnProcessDecision.Name = "btnProcessDecision"
         Me.btnProcessDecision.Size = New System.Drawing.Size(75, 37)
         Me.btnProcessDecision.TabIndex = 1
@@ -299,11 +303,33 @@ Partial Class frmApprover
         Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
         Me.DataGridViewImageColumn1.Width = 638
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(7, 289)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(85, 15)
+        Me.Label7.TabIndex = 11
+        Me.Label7.Text = "Total Amount: "
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblTotalAmount
+        '
+        Me.lblTotalAmount.AutoSize = True
+        Me.lblTotalAmount.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalAmount.Location = New System.Drawing.Point(98, 289)
+        Me.lblTotalAmount.Name = "lblTotalAmount"
+        Me.lblTotalAmount.Size = New System.Drawing.Size(15, 18)
+        Me.lblTotalAmount.TabIndex = 12
+        Me.lblTotalAmount.Text = "*"
+        Me.lblTotalAmount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'frmApprover
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(726, 423)
+        Me.ClientSize = New System.Drawing.Size(726, 431)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MaximizeBox = False
@@ -344,4 +370,6 @@ Partial Class frmApprover
     Friend WithEvents txtApproverNotes As System.Windows.Forms.TextBox
     Friend WithEvents txtRequesteeNotes As TextBox
     Friend WithEvents Label6 As Label
+    Friend WithEvents lblTotalAmount As Label
+    Friend WithEvents Label7 As Label
 End Class

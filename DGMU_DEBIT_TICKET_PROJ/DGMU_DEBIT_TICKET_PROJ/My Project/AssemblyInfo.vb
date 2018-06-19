@@ -10,7 +10,7 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("DGMU_DEBIT_TICKET")>
 <Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("Ace of Grace Corporation")>
+<Assembly: AssemblyCompany("Aces of Grace Corporation")>
 <Assembly: AssemblyProduct("DGMU DEBIT MEMO AND TICKETING")> 
 <Assembly: AssemblyCopyright("Russel Vasquez ©  2018")> 
 <Assembly: AssemblyTrademark("")> 

@@ -3,7 +3,7 @@ Imports System.Data.SqlClient
 Public Class Base_C
 
 
-    Public _CONSTRING As String = "Data Source=.;Initial Catalog=AGC;Persist Security Info=True;User ID=sa;Password=p@ssw0rd"
+    Public _CONSTRING As String = "Data Source=192.168.3.55;Initial Catalog=AGC;Persist Security Info=True;User ID=sa;Password=p@ssw0rd"
     'Public _CONSTRING As String = "Data Source=.;Initial Catalog=AGC;Persist Security Info=True;User ID=sa;Password=p@ssw0rd"
     Public _SQLCON As New SqlConnection(_CONSTRING)
 

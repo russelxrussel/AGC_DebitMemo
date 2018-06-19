@@ -26,6 +26,7 @@ Partial Class frmSupervisorMaintenance
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tpItem = New System.Windows.Forms.TabPage()
         Me.gbCreateItem = New System.Windows.Forms.GroupBox()
+        Me.chkIsActive = New System.Windows.Forms.CheckBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtSupervisorName = New System.Windows.Forms.TextBox()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
@@ -43,7 +44,6 @@ Partial Class frmSupervisorMaintenance
         Me.SpGETDMITEMLISTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DsItemList = New DGMU_DEBIT_TICKET_PROJ.dsItemList()
         Me.SpGET_DM_ITEM_LISTTableAdapter2 = New DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.spGET_DM_ITEM_LISTTableAdapter()
-        Me.chkIsActive = New System.Windows.Forms.CheckBox()
         Me.TabControl1.SuspendLayout()
         Me.tpItem.SuspendLayout()
         Me.gbCreateItem.SuspendLayout()
@@ -91,6 +91,16 @@ Partial Class frmSupervisorMaintenance
         Me.gbCreateItem.TabIndex = 2
         Me.gbCreateItem.TabStop = False
         Me.gbCreateItem.Text = "Supervisor Data Entry"
+        '
+        'chkIsActive
+        '
+        Me.chkIsActive.AutoSize = True
+        Me.chkIsActive.Location = New System.Drawing.Point(133, 63)
+        Me.chkIsActive.Name = "chkIsActive"
+        Me.chkIsActive.Size = New System.Drawing.Size(65, 22)
+        Me.chkIsActive.TabIndex = 4
+        Me.chkIsActive.Text = "Active"
+        Me.chkIsActive.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -169,6 +179,7 @@ Partial Class frmSupervisorMaintenance
         Me.dgSupervisorList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dgEdit})
         Me.dgSupervisorList.Location = New System.Drawing.Point(9, 63)
         Me.dgSupervisorList.Name = "dgSupervisorList"
+        Me.dgSupervisorList.ReadOnly = True
         Me.dgSupervisorList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgSupervisorList.Size = New System.Drawing.Size(429, 262)
         Me.dgSupervisorList.TabIndex = 5
@@ -177,6 +188,7 @@ Partial Class frmSupervisorMaintenance
         '
         Me.dgEdit.HeaderText = "Edit"
         Me.dgEdit.Name = "dgEdit"
+        Me.dgEdit.ReadOnly = True
         Me.dgEdit.Text = "Edit"
         Me.dgEdit.UseColumnTextForLinkValue = True
         Me.dgEdit.Width = 60
@@ -231,16 +243,6 @@ Partial Class frmSupervisorMaintenance
         '
         Me.SpGET_DM_ITEM_LISTTableAdapter2.ClearBeforeFill = True
         '
-        'chkIsActive
-        '
-        Me.chkIsActive.AutoSize = True
-        Me.chkIsActive.Location = New System.Drawing.Point(133, 63)
-        Me.chkIsActive.Name = "chkIsActive"
-        Me.chkIsActive.Size = New System.Drawing.Size(65, 22)
-        Me.chkIsActive.TabIndex = 4
-        Me.chkIsActive.Text = "Active"
-        Me.chkIsActive.UseVisualStyleBackColor = True
-        '
         'frmSupervisorMaintenance
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 18.0!)
@@ -250,7 +252,7 @@ Partial Class frmSupervisorMaintenance
         Me.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmSupervisorMaintenance"
-        Me.Text = "Supervisor Maintenance"
+        Me.Text = "Personnel / Branch Maintenance"
         Me.TabControl1.ResumeLayout(False)
         Me.tpItem.ResumeLayout(False)
         Me.tpItem.PerformLayout()
