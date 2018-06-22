@@ -16,7 +16,7 @@ Public Class frmDebitMemoRequest
 
     Private Sub btnAddRequestItem_Click(sender As Object, e As EventArgs) Handles btnAddRequestItem.Click
         'Condition
-        If (cmbItem.SelectedIndex = 0 Or String.IsNullOrEmpty(txtAmount.Text) Or txtAmount.Text = "0" Or nudQuantity.Value = 0) Then
+        If (cmbItem.SelectedIndex = 0 Or String.IsNullOrEmpty(txtUnitPrice.Text) Or txtUnitPrice.Text = "0" Or nudQuantity.Value = 0) Then
             MetroMessageBox.Show(Me, "Required Input needed.", "Debit Memo", MessageBoxButtons.OK, MessageBoxIcon.Stop)
             Exit Sub
         Else
@@ -84,14 +84,15 @@ Public Class frmDebitMemoRequest
 
 
         With dgRequestList
-            .ColumnCount = 7
+            .ColumnCount = 8
             .Columns(0).Name = "Item Description"
             .Columns(1).Name = "Qty"
-            .Columns(2).Name = "Amount"
-            .Columns(3).Name = "Purpose / Remarks"
-            .Columns(4).Name = "Image Location"
-            .Columns(5).Name = "Attach"
-            .Columns(6).Name = "ItemID"
+            .Columns(2).Name = "U_Price"
+            .Columns(3).Name = "Amount"
+            .Columns(4).Name = "Purpose / Remarks"
+            .Columns(5).Name = "Image Location"
+            .Columns(6).Name = "Attach"
+            .Columns(7).Name = "ItemID"
         End With
 
         Dim btn As New DataGridViewButtonColumn()
@@ -109,7 +110,9 @@ Public Class frmDebitMemoRequest
             fName = pbAttachment.ImageLocation
         End If
 
-        Dim row As String() = New String() {cmbItem.Text, nudQuantity.Value, txtAmount.Text, txtOthers.Text, fName, lblFileName.Text, cmbItem.SelectedValue.ToString()}
+        Dim itemAmount As Double = Double.Parse(nudQuantity.Value * txtUnitPrice.Text)
+
+        Dim row As String() = New String() {cmbItem.Text, nudQuantity.Value, txtUnitPrice.Text, itemAmount, txtOthers.Text, fName, lblFileName.Text, cmbItem.SelectedValue.ToString()}
         dgRequestList.Rows.Add(row)
 
         computeTotalPrice()
@@ -119,7 +122,7 @@ Public Class frmDebitMemoRequest
 
 
     Private Sub dgRequestList_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgRequestList.CellClick
-        If e.ColumnIndex = 6 Then
+        If e.ColumnIndex = 8 Then
             'Confirmation
             If (MetroMessageBox.Show(Me, "Are you sure you want to remove selected item?", "Debit Memo Request", MessageBoxButtons.YesNo, MessageBoxIcon.Stop) = Windows.Forms.DialogResult.Yes) Then
                 'REMOVE Selected Item
@@ -205,7 +208,7 @@ Public Class frmDebitMemoRequest
     Private Sub clearRequestItems()
         cmbItem.SelectedIndex = 0
         nudQuantity.Value = 1
-        txtAmount.Text = "0"
+        txtUnitPrice.Text = "0"
         txtOthers.Text = ""
 
         pbAttachment.ImageLocation = Nothing
@@ -216,10 +219,10 @@ Public Class frmDebitMemoRequest
 
     Private Sub computeTotalPrice()
         Dim total As Double
-        Dim totalItems As Integer
+        'Dim totalItems As Integer
         For i As Integer = 0 To dgRequestList.RowCount - 1
-            total += Double.Parse(dgRequestList.Rows(i).Cells(2).Value)
-            totalItems += Integer.Parse(dgRequestList.Rows(i).Cells(1).Value)
+            total += Double.Parse(dgRequestList.Rows(i).Cells(3).Value)
+            'totalItems += Integer.Parse(dgRequestList.Rows(i).Cells(2).Value)
             'Change the number 2 to your column index number (The first column has a 0 index column)
             'In this example the column index of Price is 2
         Next
@@ -268,24 +271,25 @@ Public Class frmDebitMemoRequest
                 If dgRequestList.Rows.Count > 0 Then
                     For i As Integer = 0 To dgRequestList.RowCount - 1
                         'Dim sDMRNum As String = dgRequestList.Rows(i).Cells(0).Value.ToString()
-                        Dim iItemID As Integer = Int32.Parse(dgRequestList.Rows(i).Cells(6).Value)
+                        Dim iItemID As Integer = Int32.Parse(dgRequestList.Rows(i).Cells(7).Value)
                         Dim sItemDescription As String = dgRequestList.Rows(i).Cells(0).Value.ToString()
 
                         Dim dQuantity As Double = Double.Parse(dgRequestList.Rows(i).Cells(1).Value)
-                        Dim dAmount As Double = Double.Parse(dgRequestList.Rows(i).Cells(2).Value)
-                        Dim sPurposeRemarks As String = dgRequestList.Rows(i).Cells(3).Value.ToString()
+                        Dim dUnitPrice As Double = Double.Parse(dgRequestList.Rows(i).Cells(2).Value)
+                        Dim dAmount As Double = Double.Parse(dgRequestList.Rows(i).Cells(3).Value)
+                        Dim sPurposeRemarks As String = dgRequestList.Rows(i).Cells(4).Value.ToString()
 
-                        Dim bAttachment As Byte() = IO.File.ReadAllBytes(dgRequestList.Rows(i).Cells(4).Value.ToString())
+                        Dim bAttachment As Byte() = IO.File.ReadAllBytes(dgRequestList.Rows(i).Cells(5).Value.ToString())
 
                         Dim fIsAttachment As Boolean
-                        If String.IsNullOrEmpty(dgRequestList.Rows(i).Cells(5).Value.ToString()) Then
+                        If String.IsNullOrEmpty(dgRequestList.Rows(i).Cells(6).Value.ToString()) Then
                             fIsAttachment = False
                         Else
                             fIsAttachment = True
                         End If
                         'SAVE TO TABLE
 
-                        oDMR.INSERT_DEBIT_MEMO_REQUEST(lblDMRSeries.Text, cmbBranch.SelectedValue, Convert.ToInt32(cmbSupervisor.SelectedValue), iItemID, sItemDescription, dQuantity,
+                        oDMR.INSERT_DEBIT_MEMO_REQUEST(lblDMRSeries.Text, cmbBranch.SelectedValue, Convert.ToInt32(cmbSupervisor.SelectedValue), iItemID, sItemDescription, dQuantity, dUnitPrice,
                                                        dAmount, sPurposeRemarks, txtDocumentRemarks.Text, fIsAttachment, bAttachment, DateTime.Parse(dtRequest.Text), frmMain.tsUserCode.Text)
                     Next
 
@@ -316,7 +320,7 @@ Public Class frmDebitMemoRequest
     End Sub
 
 
-    Private Sub txtAmount_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtAmount.KeyPress
+    Private Sub txtAmount_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtUnitPrice.KeyPress
         If Asc(e.KeyChar) <> 8 Then
             If Asc(e.KeyChar) < 46 Or Asc(e.KeyChar) > 57 Then
                 e.Handled = True

@@ -99,7 +99,7 @@ Public Class frmApprover
         If dgListOfRequestItems.Rows.Count > 0 Then
             For x As Integer = 0 To dgListOfRequestItems.RowCount - 1
                 'Dim sDMRNum As String = dgRequestList.Rows(i).Cells(0).Value.ToString()
-                dgListOfRequestItems.Rows(x).Cells(6).Value = "P"
+                dgListOfRequestItems.Rows(x).Cells(7).Value = "P"
             Next
         End If
 
@@ -138,7 +138,7 @@ Public Class frmApprover
             If dgListOfRequestItems.Rows.Count > 0 Then
                 For i As Integer = 0 To dgListOfRequestItems.RowCount - 1
                     'Dim sDMRNum As String = dgRequestList.Rows(i).Cells(0).Value.ToString()
-                    dgListOfRequestItems.Rows(i).Cells(6).Value = "A"
+                    dgListOfRequestItems.Rows(i).Cells(7).Value = "A"
                 Next
             End If
 
@@ -146,7 +146,7 @@ Public Class frmApprover
             If dgListOfRequestItems.Rows.Count > 0 Then
                 For i As Integer = 0 To dgListOfRequestItems.RowCount - 1
                     'Dim sDMRNum As String = dgRequestList.Rows(i).Cells(0).Value.ToString()
-                    dgListOfRequestItems.Rows(i).Cells(6).Value = "P"
+                    dgListOfRequestItems.Rows(i).Cells(7).Value = "P"
                 Next
             End If
         End If
@@ -160,7 +160,7 @@ Public Class frmApprover
                 For i As Integer = 0 To dgListOfRequestItems.RowCount - 1
 
                     Dim id As Integer = dgListOfRequestItems.Rows(i).Cells(0).Value
-                    Dim requeststatus = dgListOfRequestItems.Rows(i).Cells(6).Value.ToString()
+                    Dim requeststatus = dgListOfRequestItems.Rows(i).Cells(7).Value.ToString()
 
 
                     'UPDATE ALL REQUEST ITEM STATUS
@@ -197,7 +197,7 @@ Public Class frmApprover
         Dim total As Double
         'Dim totalItems As Integer
         For i As Integer = 0 To dgListOfRequestItems.RowCount - 1
-            total += Double.Parse(dgListOfRequestItems.Rows(i).Cells(3).Value)
+            total += Double.Parse(dgListOfRequestItems.Rows(i).Cells(4).Value)
             'totalItems += Integer.Parse(dgListOfRequestItems.Rows(i).Cells(2).Value)
             'Change the number 2 to your column index number (The first column has a 0 index column)
             'In this example the column index of Price is 2

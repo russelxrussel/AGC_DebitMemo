@@ -39,7 +39,7 @@ Partial Class frmDebitMemoRequest
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.nudQuantity = New System.Windows.Forms.NumericUpDown()
-        Me.txtAmount = New System.Windows.Forms.TextBox()
+        Me.txtUnitPrice = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.txtOthers = New System.Windows.Forms.TextBox()
@@ -229,22 +229,22 @@ Partial Class frmDebitMemoRequest
         Me.nudQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.nudQuantity.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
-        'txtAmount
+        'txtUnitPrice
         '
-        Me.txtAmount.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAmount.Location = New System.Drawing.Point(107, 175)
-        Me.txtAmount.Name = "txtAmount"
-        Me.txtAmount.Size = New System.Drawing.Size(112, 23)
-        Me.txtAmount.TabIndex = 8
+        Me.txtUnitPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUnitPrice.Location = New System.Drawing.Point(107, 175)
+        Me.txtUnitPrice.Name = "txtUnitPrice"
+        Me.txtUnitPrice.Size = New System.Drawing.Size(112, 23)
+        Me.txtUnitPrice.TabIndex = 8
         '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(13, 184)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(55, 14)
+        Me.Label9.Size = New System.Drawing.Size(62, 14)
         Me.Label9.TabIndex = 24
-        Me.Label9.Text = "Amount :"
+        Me.Label9.Text = "Unit Price:"
         '
         'Label10
         '
@@ -366,7 +366,7 @@ Partial Class frmDebitMemoRequest
         Me.Controls.Add(Me.btnAddRequestItem)
         Me.Controls.Add(Me.dgRequestList)
         Me.Controls.Add(Me.btnAttachImage)
-        Me.Controls.Add(Me.txtAmount)
+        Me.Controls.Add(Me.txtUnitPrice)
         Me.Controls.Add(Me.nudQuantity)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
@@ -408,7 +408,7 @@ Partial Class frmDebitMemoRequest
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents nudQuantity As System.Windows.Forms.NumericUpDown
-    Friend WithEvents txtAmount As System.Windows.Forms.TextBox
+    Friend WithEvents txtUnitPrice As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents txtOthers As System.Windows.Forms.TextBox

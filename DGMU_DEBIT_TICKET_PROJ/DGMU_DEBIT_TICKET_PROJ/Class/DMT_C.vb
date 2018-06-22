@@ -78,6 +78,13 @@ End Class
 Public Class UTILITY
     Inherits Base_C
 
+    Public Function GET_PARTNERS() As DataTable
+        Dim dt As New DataTable
+        dt = queryCommandDT_SP("[MASTER].[spGET_PARTNERS_LIST]")
+        Return dt
+    End Function
+
+
     Public Function GET_SUPERVISORS() As DataTable
         Dim dt As New DataTable
         dt = queryCommandDT_SP("[UTIL].[spGET_SUPERVISOR_LIST]")
@@ -296,9 +303,9 @@ Public Class DMT_DEBITMEMO_C
 
 #Region "TRANSACTION"
     Public Sub INSERT_DEBIT_MEMO_REQUEST(ByVal _dmrNum As String, ByVal _branchCode As String, ByVal _supervisorID As Integer,
-                                         ByVal _itemID As Integer, ByVal _ItemDescription As String, ByVal _quantity As Double, ByVal _amount As Double,
+                                         ByVal _itemID As Integer, ByVal _ItemDescription As String, ByVal _quantity As Double, ByVal _unitPrice As Double, ByVal _amount As Double,
                                          ByVal _othersDetail As String, ByVal _requesterNotes As String,
-                                         ByVal _isAttachment As Boolean, ByVal _attachment As Byte(), ByVal _dateRequest As DateTime, _
+                                         ByVal _isAttachment As Boolean, ByVal _attachment As Byte(), ByVal _dateRequest As DateTime,
                                          ByVal _userCode As String)
 
         Using cn As New SqlConnection(_CONSTRING)
@@ -312,6 +319,7 @@ Public Class DMT_DEBITMEMO_C
                     .Parameters.AddWithValue("@ITEMID", _itemID)
                     .Parameters.AddWithValue("@ITEMDESCRIPTION", _ItemDescription)
                     .Parameters.AddWithValue("@QUANTITY", _quantity)
+                    .Parameters.AddWithValue("@UNITPRICE", _unitPrice)
                     .Parameters.AddWithValue("@AMOUNT", _amount)
                     .Parameters.AddWithValue("@OTHERS_DETAIL", _othersDetail)
                     .Parameters.AddWithValue("@REQUESTER_NOTES", _requesterNotes)
