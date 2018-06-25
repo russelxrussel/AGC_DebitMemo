@@ -236,17 +236,17 @@
       <DependentUpon>repApprovedDM.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reports\repDebitMemoTotalSummary_Details_Branch.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>repDebitMemoTotalSummary_Details_Branch.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reports\repDebitMemoTotalSummary_Details_Supervisor.vb">
       <DependentUpon>repDebitMemoTotalSummary_Details_Supervisor.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Reports\repDebitMemoTotalSummary_Details.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>repDebitMemoTotalSummary_Details.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\repDebitMemoTotalSummary_List.vb">
       <DependentUpon>repDebitMemoTotalSummary_List.rpt</DependentUpon>
@@ -305,13 +305,13 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>repApprovedDM.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\repDebitMemoTotalSummary_Details_Branch.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>repDebitMemoTotalSummary_Details_Branch.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\repDebitMemoTotalSummary_Details_Supervisor.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>repDebitMemoTotalSummary_Details_Supervisor.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\repDebitMemoTotalSummary_Details.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>repDebitMemoTotalSummary_Details.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\repDebitMemoTotalSummary_List.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
