@@ -29,6 +29,8 @@ Partial Class frmMyDMRequest
         Me.flayoutControl = New System.Windows.Forms.FlowLayoutPanel()
         Me.lnkPost = New MetroFramework.Controls.MetroLink()
         Me.lnkPrint = New MetroFramework.Controls.MetroLink()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgUserRequestList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -39,7 +41,7 @@ Partial Class frmMyDMRequest
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.dgUserRequestList)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 24)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 56)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(581, 226)
         Me.GroupBox1.TabIndex = 0
@@ -68,7 +70,7 @@ Partial Class frmMyDMRequest
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.dgUser_Requested_List_Item)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 258)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 296)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(708, 210)
         Me.GroupBox2.TabIndex = 1
@@ -98,7 +100,7 @@ Partial Class frmMyDMRequest
         '
         Me.flayoutControl.Controls.Add(Me.lnkPost)
         Me.flayoutControl.Controls.Add(Me.lnkPrint)
-        Me.flayoutControl.Location = New System.Drawing.Point(603, 33)
+        Me.flayoutControl.Location = New System.Drawing.Point(603, 65)
         Me.flayoutControl.Name = "flayoutControl"
         Me.flayoutControl.Size = New System.Drawing.Size(117, 148)
         Me.flayoutControl.TabIndex = 6
@@ -131,19 +133,37 @@ Partial Class frmMyDMRequest
         Me.lnkPrint.ImageSize = 24
         Me.lnkPrint.Location = New System.Drawing.Point(3, 32)
         Me.lnkPrint.Name = "lnkPrint"
-        Me.lnkPrint.Size = New System.Drawing.Size(102, 23)
+        Me.lnkPrint.Size = New System.Drawing.Size(110, 23)
         Me.lnkPrint.Style = MetroFramework.MetroColorStyle.Purple
         Me.lnkPrint.TabIndex = 106
-        Me.lnkPrint.Text = "PRINT"
+        Me.lnkPrint.Text = "RE-PRINT"
         Me.lnkPrint.UseCustomBackColor = True
         Me.lnkPrint.UseSelectable = True
         Me.lnkPrint.UseStyleColors = True
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(16, 30)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(44, 15)
+        Me.Label4.TabIndex = 8
+        Me.Label4.Text = "Search"
+        '
+        'txtSearch
+        '
+        Me.txtSearch.Location = New System.Drawing.Point(71, 27)
+        Me.txtSearch.Name = "txtSearch"
+        Me.txtSearch.Size = New System.Drawing.Size(349, 23)
+        Me.txtSearch.TabIndex = 7
         '
         'frmMyDMRequest
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(728, 472)
+        Me.ClientSize = New System.Drawing.Size(728, 532)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.txtSearch)
         Me.Controls.Add(Me.flayoutControl)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -156,6 +176,7 @@ Partial Class frmMyDMRequest
         CType(Me.dgUser_Requested_List_Item, System.ComponentModel.ISupportInitialize).EndInit()
         Me.flayoutControl.ResumeLayout(False)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -166,4 +187,6 @@ Partial Class frmMyDMRequest
     Friend WithEvents flayoutControl As FlowLayoutPanel
     Friend WithEvents lnkPost As MetroFramework.Controls.MetroLink
     Friend WithEvents lnkPrint As MetroFramework.Controls.MetroLink
+    Friend WithEvents Label4 As Label
+    Friend WithEvents txtSearch As TextBox
 End Class

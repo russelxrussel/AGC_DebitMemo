@@ -30,9 +30,11 @@ Partial Class frmMain
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.lnkMyRequest = New MetroFramework.Controls.MetroLink()
         Me.lnkDBR = New MetroFramework.Controls.MetroLink()
+        Me.lnkDispatching = New MetroFramework.Controls.MetroLink()
         Me.lnkApproval = New MetroFramework.Controls.MetroLink()
         Me.lnkReports = New MetroFramework.Controls.MetroLink()
         Me.lnkMaintenance = New MetroFramework.Controls.MetroLink()
+        Me.lnkPersonnelMaintenance = New MetroFramework.Controls.MetroLink()
         Me.lnkLogOut = New MetroFramework.Controls.MetroLink()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
@@ -65,7 +67,6 @@ Partial Class frmMain
         Me.Label5 = New System.Windows.Forms.Label()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.lnkPersonnelMaintenance = New MetroFramework.Controls.MetroLink()
         CType(Me.scPage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.scPage.Panel1.SuspendLayout()
         Me.scPage.Panel2.SuspendLayout()
@@ -117,6 +118,7 @@ Partial Class frmMain
         Me.FlowLayoutPanel1.Controls.Add(Me.Panel5)
         Me.FlowLayoutPanel1.Controls.Add(Me.lnkMyRequest)
         Me.FlowLayoutPanel1.Controls.Add(Me.lnkDBR)
+        Me.FlowLayoutPanel1.Controls.Add(Me.lnkDispatching)
         Me.FlowLayoutPanel1.Controls.Add(Me.lnkApproval)
         Me.FlowLayoutPanel1.Controls.Add(Me.lnkReports)
         Me.FlowLayoutPanel1.Controls.Add(Me.lnkMaintenance)
@@ -189,6 +191,24 @@ Partial Class frmMain
         Me.lnkDBR.UseSelectable = True
         Me.lnkDBR.UseStyleColors = True
         '
+        'lnkDispatching
+        '
+        Me.lnkDispatching.BackColor = System.Drawing.Color.Transparent
+        Me.lnkDispatching.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lnkDispatching.DisplayFocus = True
+        Me.lnkDispatching.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.in_transit_24
+        Me.lnkDispatching.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lnkDispatching.ImageSize = 24
+        Me.lnkDispatching.Location = New System.Drawing.Point(3, 117)
+        Me.lnkDispatching.Name = "lnkDispatching"
+        Me.lnkDispatching.Size = New System.Drawing.Size(133, 23)
+        Me.lnkDispatching.Style = MetroFramework.MetroColorStyle.Purple
+        Me.lnkDispatching.TabIndex = 109
+        Me.lnkDispatching.Text = "Dispatching"
+        Me.lnkDispatching.UseCustomBackColor = True
+        Me.lnkDispatching.UseSelectable = True
+        Me.lnkDispatching.UseStyleColors = True
+        '
         'lnkApproval
         '
         Me.lnkApproval.BackColor = System.Drawing.Color.Transparent
@@ -197,7 +217,7 @@ Partial Class frmMain
         Me.lnkApproval.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.about_24
         Me.lnkApproval.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lnkApproval.ImageSize = 24
-        Me.lnkApproval.Location = New System.Drawing.Point(3, 117)
+        Me.lnkApproval.Location = New System.Drawing.Point(3, 146)
         Me.lnkApproval.Name = "lnkApproval"
         Me.lnkApproval.Size = New System.Drawing.Size(168, 23)
         Me.lnkApproval.Style = MetroFramework.MetroColorStyle.Purple
@@ -215,7 +235,7 @@ Partial Class frmMain
         Me.lnkReports.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.print_24
         Me.lnkReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lnkReports.ImageSize = 24
-        Me.lnkReports.Location = New System.Drawing.Point(3, 146)
+        Me.lnkReports.Location = New System.Drawing.Point(3, 175)
         Me.lnkReports.Name = "lnkReports"
         Me.lnkReports.Size = New System.Drawing.Size(146, 23)
         Me.lnkReports.Style = MetroFramework.MetroColorStyle.Purple
@@ -233,7 +253,7 @@ Partial Class frmMain
         Me.lnkMaintenance.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.folder_24
         Me.lnkMaintenance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lnkMaintenance.ImageSize = 24
-        Me.lnkMaintenance.Location = New System.Drawing.Point(3, 175)
+        Me.lnkMaintenance.Location = New System.Drawing.Point(3, 204)
         Me.lnkMaintenance.Name = "lnkMaintenance"
         Me.lnkMaintenance.Size = New System.Drawing.Size(159, 23)
         Me.lnkMaintenance.Style = MetroFramework.MetroColorStyle.Purple
@@ -243,6 +263,24 @@ Partial Class frmMain
         Me.lnkMaintenance.UseSelectable = True
         Me.lnkMaintenance.UseStyleColors = True
         '
+        'lnkPersonnelMaintenance
+        '
+        Me.lnkPersonnelMaintenance.BackColor = System.Drawing.Color.Transparent
+        Me.lnkPersonnelMaintenance.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lnkPersonnelMaintenance.DisplayFocus = True
+        Me.lnkPersonnelMaintenance.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.flow_chart_24
+        Me.lnkPersonnelMaintenance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lnkPersonnelMaintenance.ImageSize = 24
+        Me.lnkPersonnelMaintenance.Location = New System.Drawing.Point(3, 233)
+        Me.lnkPersonnelMaintenance.Name = "lnkPersonnelMaintenance"
+        Me.lnkPersonnelMaintenance.Size = New System.Drawing.Size(168, 23)
+        Me.lnkPersonnelMaintenance.Style = MetroFramework.MetroColorStyle.Purple
+        Me.lnkPersonnelMaintenance.TabIndex = 108
+        Me.lnkPersonnelMaintenance.Text = "Personnel / Branch"
+        Me.lnkPersonnelMaintenance.UseCustomBackColor = True
+        Me.lnkPersonnelMaintenance.UseSelectable = True
+        Me.lnkPersonnelMaintenance.UseStyleColors = True
+        '
         'lnkLogOut
         '
         Me.lnkLogOut.BackColor = System.Drawing.Color.Transparent
@@ -251,7 +289,7 @@ Partial Class frmMain
         Me.lnkLogOut.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.lock_24
         Me.lnkLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lnkLogOut.ImageSize = 24
-        Me.lnkLogOut.Location = New System.Drawing.Point(3, 233)
+        Me.lnkLogOut.Location = New System.Drawing.Point(3, 262)
         Me.lnkLogOut.Name = "lnkLogOut"
         Me.lnkLogOut.Size = New System.Drawing.Size(119, 23)
         Me.lnkLogOut.Style = MetroFramework.MetroColorStyle.Purple
@@ -573,24 +611,6 @@ Partial Class frmMain
         '
         Me.Timer1.Enabled = True
         '
-        'lnkPersonnelMaintenance
-        '
-        Me.lnkPersonnelMaintenance.BackColor = System.Drawing.Color.Transparent
-        Me.lnkPersonnelMaintenance.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lnkPersonnelMaintenance.DisplayFocus = True
-        Me.lnkPersonnelMaintenance.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.flow_chart_24
-        Me.lnkPersonnelMaintenance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lnkPersonnelMaintenance.ImageSize = 24
-        Me.lnkPersonnelMaintenance.Location = New System.Drawing.Point(3, 204)
-        Me.lnkPersonnelMaintenance.Name = "lnkPersonnelMaintenance"
-        Me.lnkPersonnelMaintenance.Size = New System.Drawing.Size(168, 23)
-        Me.lnkPersonnelMaintenance.Style = MetroFramework.MetroColorStyle.Purple
-        Me.lnkPersonnelMaintenance.TabIndex = 108
-        Me.lnkPersonnelMaintenance.Text = "Personnel / Branch"
-        Me.lnkPersonnelMaintenance.UseCustomBackColor = True
-        Me.lnkPersonnelMaintenance.UseSelectable = True
-        Me.lnkPersonnelMaintenance.UseStyleColors = True
-        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -678,4 +698,5 @@ Partial Class frmMain
     Friend WithEvents Label5 As Label
     Friend WithEvents lnkMaintenance As MetroFramework.Controls.MetroLink
     Friend WithEvents lnkPersonnelMaintenance As MetroFramework.Controls.MetroLink
+    Friend WithEvents lnkDispatching As MetroFramework.Controls.MetroLink
 End Class

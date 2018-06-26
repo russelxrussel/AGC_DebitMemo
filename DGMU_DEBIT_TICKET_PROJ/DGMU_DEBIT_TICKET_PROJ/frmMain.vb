@@ -99,7 +99,7 @@
 
     End Sub
     Public Sub countApproveDBR_ForPosting()
-        Dim i As Integer = countDebitMemoStatus("IsPosted = 0 and IsCompleted = 1")
+        Dim i As Integer = countDebitMemoStatus("IsPosted = 0 and IsCompleted = 1 and usercode = '" + tsUserCode.Text + "'")
         If i <> 0 Then
 
             lnkMyRequest.Text = "My Request (" + i.ToString + ")"
@@ -174,14 +174,8 @@
 
 
     Private Sub ControlUserAccess()
-        If (ACCESSTYPE = "A") Then
-            lnkApproval.Visible = True
-            lnkMyRequest.Visible = False
-            lnkDBR.Visible = False
-        Else
+        If (ACCESSTYPE = "O") Then
             lnkApproval.Visible = False
-            lnkDBR.Visible = True
-            lnkMyRequest.Visible = True
         End If
     End Sub
 
@@ -217,5 +211,17 @@
         frmSupervisorMaintenance.Show()
         Me.scPage.Panel2.Controls.Add(frmSupervisorMaintenance)
         frmSupervisorMaintenance.BringToFront()
+    End Sub
+
+    Private Sub lnkDispatching_Click(sender As Object, e As EventArgs) Handles lnkDispatching.Click
+        With frmDMDispatch
+            .TopLevel = False
+            .Left = 0
+            .Top = 0
+        End With
+
+        frmDMDispatch.Show()
+        Me.scPage.Panel2.Controls.Add(frmDMDispatch)
+        frmDMDispatch.BringToFront()
     End Sub
 End Class

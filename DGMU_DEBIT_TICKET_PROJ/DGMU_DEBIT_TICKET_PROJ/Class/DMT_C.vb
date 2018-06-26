@@ -241,6 +241,25 @@ Public Class DMT_DEBITMEMO_C
         Return dt
     End Function
 
+    Public Function GET_USER_REQUEST_LIST_FOR_DISPATCH(ByVal _usercode As String) As DataTable
+        Dim dt As New DataTable
+        Using cn As New SqlConnection(_CONSTRING)
+            Dim cmd As New SqlCommand("[TRANSACTION].[spGET_DM_USER_REQUESTED_LIST_FOR_DISPATCH]", cn)
+            Dim sqlDA As New SqlDataAdapter(cmd)
+            With cmd
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@USERCODE", _usercode)
+            End With
+
+            sqlDA.Fill(dt)
+
+            cn.Open()
+
+        End Using
+
+        Return dt
+    End Function
+
     Public Function GET_USER_ITEM_REQUEST_LIST(ByVal _dmrNum As String) As DataTable
         Dim dt As New DataTable
         Using cn As New SqlConnection(_CONSTRING)
@@ -401,6 +420,23 @@ Public Class DMT_DEBITMEMO_C
         End Using
     End Sub
 
+
+    Public Sub UPDATE_DISPATCHED(ByVal _dmrNum As String, ByVal _dispatchDate As DateTime, ByVal _dispatchPerson As String)
+        Using cn As New SqlConnection(_CONSTRING)
+
+            Using cmd As New SqlCommand("[TRANSACTION].[spUPDATE_DM_DISPATCHED]", cn)
+                With cmd
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.AddWithValue("@DMRNUM", _dmrNum)
+                    .Parameters.AddWithValue("@DISPATCH_DATE", _dispatchDate)
+                    .Parameters.AddWithValue("@DISPATCH_PERSON", _dispatchPerson)
+                End With
+                cn.Open()
+                cmd.ExecuteNonQuery()
+
+            End Using
+        End Using
+    End Sub
 #End Region
 
 End Class

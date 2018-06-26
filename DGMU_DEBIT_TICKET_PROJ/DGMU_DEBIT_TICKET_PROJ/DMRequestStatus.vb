@@ -112,7 +112,28 @@ Public Class frmMyDMRequest
             flayoutControl.Visible = False
             lnkPost.Visible = False
             lnkPrint.Visible = True
+
+            Dim frmReport As New repDebitMemoApproved
+
+            'UPDATE ISPRINT TO true
+            oDebitMemo.UPDATE_APPROVE_PRINTED(sDMRNum)
+
+            'GET DEBIT MEMO NUMBER FOR PRINTING
+            frmReport.DEBIT_NUMBER = sDMRNum
+            frmReport.Show()
         End If
+    End Sub
+
+    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
+        Dim dt As New DataTable
+        dt = oDebitMemo.GET_USER_REQUEST_LIST(frmMain.tsUserCode.Text)
+
+        Dim dv As New DataView
+        dv = dt.DefaultView
+
+        dv.RowFilter = "BranchName like '%" + txtSearch.Text + "%'"
+
+        dgUserRequestList.DataSource = dv
     End Sub
 
 
