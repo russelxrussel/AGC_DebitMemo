@@ -15,7 +15,7 @@ Public Class repDMTotalSummary
     End Sub
 
     Private Sub displayReport()
-      
+
         Dim RptDocument As New ReportDocument
 
         Dim reportPath As String = cmbReports.SelectedValue.ToString()
@@ -56,12 +56,12 @@ Public Class repDMTotalSummary
         Dim dt As DataTable = oUtil.GET_REPORTS
 
 
-    
+
         With cmbReports
             .DataSource = dt
             .DisplayMember = dt.Columns("reportDescription").ToString()
             .ValueMember = dt.Columns("reportFileName").ToString()
-          
+
         End With
 
     End Sub

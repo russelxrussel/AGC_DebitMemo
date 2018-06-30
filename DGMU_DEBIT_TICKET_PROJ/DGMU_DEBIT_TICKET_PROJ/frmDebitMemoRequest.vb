@@ -147,9 +147,9 @@ Public Class frmDebitMemoRequest
             .DataSource = dt
             .DisplayMember = dt.Columns("BranchName").ToString()
             .ValueMember = dt.Columns("BranchCode").ToString()
-            .AutoCompleteMode = AutoCompleteMode.SuggestAppend
-            .AutoCompleteSource = AutoCompleteSource.ListItems
-            .SelectedIndex = 0
+            '.AutoCompleteMode = AutoCompleteMode.SuggestAppend
+            '.AutoCompleteSource = AutoCompleteSource.ListItems
+            '.SelectedIndex = 0
 
         End With
 
@@ -171,9 +171,9 @@ Public Class frmDebitMemoRequest
             .DataSource = dt
             .DisplayMember = dt.Columns("SupervisorName").ToString()
             .ValueMember = dt.Columns("supervisorID").ToString()
-            .AutoCompleteMode = AutoCompleteMode.SuggestAppend
-            .AutoCompleteSource = AutoCompleteSource.ListItems
-            .SelectedIndex = 0
+            '.AutoCompleteMode = AutoCompleteMode.SuggestAppend
+            '.AutoCompleteSource = AutoCompleteSource.ListItems
+            '.SelectedIndex = 0
 
         End With
 
@@ -195,9 +195,9 @@ Public Class frmDebitMemoRequest
             .DataSource = dt
             .DisplayMember = dt.Columns("ItemDescription").ToString()
             .ValueMember = dt.Columns("ItemID").ToString()
-            .AutoCompleteMode = AutoCompleteMode.SuggestAppend
-            .AutoCompleteSource = AutoCompleteSource.ListItems
-            .SelectedIndex = 0
+            '.AutoCompleteMode = AutoCompleteMode.SuggestAppend
+            '.AutoCompleteSource = AutoCompleteSource.ListItems
+            '.SelectedIndex = 0
 
         End With
 

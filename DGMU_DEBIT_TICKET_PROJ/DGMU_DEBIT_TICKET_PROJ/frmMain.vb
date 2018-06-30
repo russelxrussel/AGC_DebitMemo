@@ -224,4 +224,60 @@
         Me.scPage.Panel2.Controls.Add(frmDMDispatch)
         frmDMDispatch.BringToFront()
     End Sub
+
+    Private Sub lblOnProcessCount_Click(sender As Object, e As EventArgs) Handles lblOnProcessCount.Click
+        repDMItemRequestMonitoring._STATUSCODE = "F"
+
+        With repDMItemRequestMonitoring
+            .TopLevel = False
+            .Left = 0
+            .Top = 0
+        End With
+
+        repDMItemRequestMonitoring.Show()
+        Me.scPage.Panel2.Controls.Add(repDMItemRequestMonitoring)
+        repDMItemRequestMonitoring.BringToFront()
+    End Sub
+
+    Private Sub lblTotalApproveCount_Click(sender As Object, e As EventArgs) Handles lblTotalApproveCount.Click
+        repDMItemRequestMonitoring._STATUSCODE = "A"
+
+        With repDMItemRequestMonitoring
+            .TopLevel = False
+            .Left = 0
+            .Top = 0
+        End With
+
+        repDMItemRequestMonitoring.Show()
+        Me.scPage.Panel2.Controls.Add(repDMItemRequestMonitoring)
+        repDMItemRequestMonitoring.BringToFront()
+    End Sub
+
+    Private Sub lblTotalPendingCount_Click(sender As Object, e As EventArgs) Handles lblTotalPendingCount.Click
+        repDMItemRequestMonitoring._STATUSCODE = "P"
+
+        With repDMItemRequestMonitoring
+            .TopLevel = False
+            .Left = 0
+            .Top = 0
+        End With
+
+        repDMItemRequestMonitoring.Show()
+        Me.scPage.Panel2.Controls.Add(repDMItemRequestMonitoring)
+        repDMItemRequestMonitoring.BringToFront()
+    End Sub
+
+    Private Sub lblTotalRejectCount_Click(sender As Object, e As EventArgs) Handles lblTotalRejectCount.Click
+        repDMItemRequestMonitoring._STATUSCODE = "R"
+
+        With repDMItemRequestMonitoring
+            .TopLevel = False
+            .Left = 0
+            .Top = 0
+        End With
+
+        repDMItemRequestMonitoring.Show()
+        Me.scPage.Panel2.Controls.Add(repDMItemRequestMonitoring)
+        repDMItemRequestMonitoring.BringToFront()
+    End Sub
 End Class

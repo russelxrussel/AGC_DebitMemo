@@ -394,13 +394,14 @@ Partial Class frmMain
         '
         'lblOnProcessCount
         '
+        Me.lblOnProcessCount.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblOnProcessCount.Font = New System.Drawing.Font("Segoe UI Symbol", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblOnProcessCount.ForeColor = System.Drawing.Color.White
         Me.lblOnProcessCount.Location = New System.Drawing.Point(6, 31)
         Me.lblOnProcessCount.Name = "lblOnProcessCount"
         Me.lblOnProcessCount.Size = New System.Drawing.Size(172, 47)
         Me.lblOnProcessCount.TabIndex = 5
-        Me.lblOnProcessCount.Text = "1,500,000"
+        Me.lblOnProcessCount.Text = "0"
         Me.lblOnProcessCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Panel3
@@ -436,13 +437,14 @@ Partial Class frmMain
         '
         'lblTotalApproveCount
         '
+        Me.lblTotalApproveCount.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblTotalApproveCount.Font = New System.Drawing.Font("Segoe UI Symbol", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotalApproveCount.ForeColor = System.Drawing.SystemColors.Window
         Me.lblTotalApproveCount.Location = New System.Drawing.Point(8, 34)
         Me.lblTotalApproveCount.Name = "lblTotalApproveCount"
         Me.lblTotalApproveCount.Size = New System.Drawing.Size(167, 37)
         Me.lblTotalApproveCount.TabIndex = 5
-        Me.lblTotalApproveCount.Text = "1,500,000"
+        Me.lblTotalApproveCount.Text = "0"
         Me.lblTotalApproveCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Panel6
@@ -478,13 +480,14 @@ Partial Class frmMain
         '
         'lblTotalPendingCount
         '
+        Me.lblTotalPendingCount.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblTotalPendingCount.Font = New System.Drawing.Font("Segoe UI Symbol", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotalPendingCount.ForeColor = System.Drawing.SystemColors.Window
         Me.lblTotalPendingCount.Location = New System.Drawing.Point(8, 34)
         Me.lblTotalPendingCount.Name = "lblTotalPendingCount"
         Me.lblTotalPendingCount.Size = New System.Drawing.Size(167, 37)
         Me.lblTotalPendingCount.TabIndex = 5
-        Me.lblTotalPendingCount.Text = "1,500,000"
+        Me.lblTotalPendingCount.Text = "0"
         Me.lblTotalPendingCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Panel4
@@ -520,13 +523,14 @@ Partial Class frmMain
         '
         'lblTotalRejectCount
         '
+        Me.lblTotalRejectCount.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblTotalRejectCount.Font = New System.Drawing.Font("Segoe UI Symbol", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotalRejectCount.ForeColor = System.Drawing.SystemColors.Window
         Me.lblTotalRejectCount.Location = New System.Drawing.Point(8, 34)
         Me.lblTotalRejectCount.Name = "lblTotalRejectCount"
         Me.lblTotalRejectCount.Size = New System.Drawing.Size(167, 37)
         Me.lblTotalRejectCount.TabIndex = 5
-        Me.lblTotalRejectCount.Text = "1,500,000"
+        Me.lblTotalRejectCount.Text = "0"
         Me.lblTotalRejectCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Panel1

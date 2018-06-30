@@ -230,6 +230,12 @@
     <Compile Include="repDebitMemoApproved.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="repDMItemRequestMonitoring.Designer.vb">
+      <DependentUpon>repDMItemRequestMonitoring.vb</DependentUpon>
+    </Compile>
+    <Compile Include="repDMItemRequestMonitoring.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="repDMTotalSummary.Designer.vb">
       <DependentUpon>repDMTotalSummary.vb</DependentUpon>
     </Compile>
@@ -278,6 +284,42 @@
       <DependentUpon>repDebitMemoTotalSummary_List_Supervisor.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reports\repDispatchDM.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>repDispatchDM.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\repDMRequestMonitoring_Approved.vb">
+      <DependentUpon>repDMRequestMonitoring_Approved.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\repDMRequestMonitoring_ForApproval.vb">
+      <DependentUpon>repDMRequestMonitoring_ForApproval.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\repDMRequestMonitoring_Reject.vb">
+      <DependentUpon>repDMRequestMonitoring_Reject.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\repDMRequestMonitoring_Pending.vb">
+      <DependentUpon>repDMRequestMonitoring_Pending.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\repDMRequestMonitoring.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>repDMRequestMonitoring.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmDMDispatch.resx">
@@ -319,6 +361,9 @@
     <EmbeddedResource Include="repDebitMemoApproved.resx">
       <DependentUpon>repDebitMemoApproved.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="repDMItemRequestMonitoring.resx">
+      <DependentUpon>repDMItemRequestMonitoring.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="repDMTotalSummary.resx">
       <DependentUpon>repDMTotalSummary.vb</DependentUpon>
     </EmbeddedResource>
@@ -349,6 +394,30 @@
     <EmbeddedResource Include="Reports\repDebitMemoTotalSummary_List_Supervisor.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>repDebitMemoTotalSummary_List_Supervisor.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\repDispatchDM.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>repDispatchDM.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\repDMRequestMonitoring_Approved.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>repDMRequestMonitoring_Approved.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\repDMRequestMonitoring_ForApproval.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>repDMRequestMonitoring_ForApproval.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\repDMRequestMonitoring_Reject.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>repDMRequestMonitoring_Reject.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\repDMRequestMonitoring_Pending.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>repDMRequestMonitoring_Pending.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\repDMRequestMonitoring.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>repDMRequestMonitoring.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -401,6 +470,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\malou_sign06282018_ps.png" />
     <Content Include="Images\x1.png" />
     <Content Include="process-24.ico" />
     <None Include="packages.config" />

@@ -167,6 +167,7 @@ Partial Class frmDebitMemoRequest
         '
         'cmbBranch
         '
+        Me.cmbBranch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbBranch.FormattingEnabled = True
         Me.cmbBranch.Location = New System.Drawing.Point(305, 48)
         Me.cmbBranch.Name = "cmbBranch"
@@ -286,6 +287,8 @@ Partial Class frmDebitMemoRequest
         '
         'cmbSupervisor
         '
+        Me.cmbSupervisor.BackColor = System.Drawing.Color.White
+        Me.cmbSupervisor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbSupervisor.FormattingEnabled = True
         Me.cmbSupervisor.Location = New System.Drawing.Point(305, 76)
         Me.cmbSupervisor.Name = "cmbSupervisor"
@@ -294,6 +297,7 @@ Partial Class frmDebitMemoRequest
         '
         'cmbItem
         '
+        Me.cmbItem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbItem.FormattingEnabled = True
         Me.cmbItem.Location = New System.Drawing.Point(106, 120)
         Me.cmbItem.Name = "cmbItem"

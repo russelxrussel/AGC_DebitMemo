@@ -32,9 +32,10 @@ Partial Class frmViewAttachment
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.dgAttachment)
-        Me.Panel1.Location = New System.Drawing.Point(12, 43)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(694, 423)
+        Me.Panel1.Size = New System.Drawing.Size(706, 498)
         Me.Panel1.TabIndex = 0
         '
         'dgAttachment
@@ -50,7 +51,7 @@ Partial Class frmViewAttachment
         Me.dgAttachment.Location = New System.Drawing.Point(0, 0)
         Me.dgAttachment.Name = "dgAttachment"
         Me.dgAttachment.ReadOnly = True
-        Me.dgAttachment.Size = New System.Drawing.Size(694, 423)
+        Me.dgAttachment.Size = New System.Drawing.Size(706, 498)
         Me.dgAttachment.TabIndex = 0
         '
         'lblDMRNum
@@ -70,11 +71,10 @@ Partial Class frmViewAttachment
         Me.Controls.Add(Me.lblDMRNum)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MaximizeBox = False
-        Me.MinimizeBox = False
         Me.Name = "frmViewAttachment"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Attachment Viewer"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
         CType(Me.dgAttachment, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
