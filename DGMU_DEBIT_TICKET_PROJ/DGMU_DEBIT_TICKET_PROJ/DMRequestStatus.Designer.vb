@@ -168,6 +168,7 @@ Partial Class frmMyDMRequest
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "frmMyDMRequest"
         Me.Text = "My Debit Memo"
         Me.GroupBox1.ResumeLayout(False)

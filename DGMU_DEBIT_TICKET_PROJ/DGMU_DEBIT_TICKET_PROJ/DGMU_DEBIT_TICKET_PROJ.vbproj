@@ -131,6 +131,12 @@
   <ItemGroup>
     <Compile Include="Class\Base_C.vb" />
     <Compile Include="Class\DMT_C.vb" />
+    <Compile Include="frmVoucherModule.Designer.vb">
+      <DependentUpon>frmVoucherModule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmVoucherModule.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmDMDispatch.Designer.vb">
       <DependentUpon>frmDMDispatch.vb</DependentUpon>
     </Compile>
@@ -322,6 +328,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmVoucherModule.resx">
+      <DependentUpon>frmVoucherModule.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDMDispatch.resx">
       <DependentUpon>frmDMDispatch.vb</DependentUpon>
     </EmbeddedResource>

@@ -84,6 +84,12 @@ Public Class UTILITY
         Return dt
     End Function
 
+    Public Function GET_SUPPLIERS() As DataTable
+        Dim dt As New DataTable
+        dt = queryCommandDT_SP("[Master].[spGET_SUPPLIER_LIST]")
+        Return dt
+    End Function
+
 
     Public Function GET_SUPERVISORS() As DataTable
         Dim dt As New DataTable
@@ -112,6 +118,12 @@ Public Class UTILITY
     Public Function GET_REPORTS() As DataTable
         Dim dt As New DataTable
         dt = queryCommandDT_SP("[UTIL].[spGET_DM_REPORTS_LIST]")
+        Return dt
+        End
+    End Function
+    Public Function GET_VOUCHER_TYPE() As DataTable
+        Dim dt As New DataTable
+        dt = queryCommandDT_SP("[UTIL].[spGET_VOUCHER_TYPE_LIST]")
         Return dt
     End Function
 
@@ -321,8 +333,29 @@ Public Class DMT_DEBITMEMO_C
 #End Region
 
 #Region "TRANSACTION"
+
+    Public Function CHECK_REQUEST_EXIST(ByVal _dateRequest As DateTime, ByVal _supervisorID As Integer, ByVal _branchCode As String, ByVal _totalAmount As Double)
+        Dim x As Boolean = False
+        Using cn As New SqlConnection(_CONSTRING)
+
+            Using cmd As New SqlCommand("[TRANSACTION].[CHECK_EXIST_REQUEST]", cn)
+                With cmd
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.AddWithValue("@DATEREQUEST", _dateRequest)
+                    .Parameters.AddWithValue("@SUPERVISORID", _supervisorID)
+                    .Parameters.AddWithValue("@BRANCHCODE", _branchCode)
+                    .Parameters.AddWithValue("@TOTALAMOUNT", _totalAmount)
+                End With
+                cn.Open()
+                x = cmd.ExecuteScalar()
+
+            End Using
+        End Using
+        Return x
+    End Function
     Public Sub INSERT_DEBIT_MEMO_REQUEST(ByVal _dmrNum As String, ByVal _branchCode As String, ByVal _supervisorID As Integer,
-                                         ByVal _itemID As Integer, ByVal _ItemDescription As String, ByVal _quantity As Double, ByVal _unitPrice As Double, ByVal _amount As Double,
+                                         ByVal _itemID As Integer, ByVal _ItemDescription As String, ByVal _quantity As Double,
+                                         ByVal _unitPrice As Double, ByVal _amount As Double, ByVal _totalAmount As Double,
                                          ByVal _othersDetail As String, ByVal _requesterNotes As String,
                                          ByVal _isAttachment As Boolean, ByVal _attachment As Byte(), ByVal _dateRequest As DateTime,
                                          ByVal _userCode As String)
@@ -340,6 +373,7 @@ Public Class DMT_DEBITMEMO_C
                     .Parameters.AddWithValue("@QUANTITY", _quantity)
                     .Parameters.AddWithValue("@UNITPRICE", _unitPrice)
                     .Parameters.AddWithValue("@AMOUNT", _amount)
+                    .Parameters.AddWithValue("@TOTALAMOUNT", _totalAmount)
                     .Parameters.AddWithValue("@OTHERS_DETAIL", _othersDetail)
                     .Parameters.AddWithValue("@REQUESTER_NOTES", _requesterNotes)
                     .Parameters.AddWithValue("@ATTACHMENT", _attachment)
@@ -371,7 +405,7 @@ Public Class DMT_DEBITMEMO_C
             End Using
         End Using
     End Sub
-    Public Sub UPDATE_APPROVAL_DECISION(ByVal _dmrNum As String, ByVal _requestStatus As String, ByVal _id As Integer, ByVal _approverNotes As String)
+    Public Sub UPDATE_APPROVAL_DECISION(ByVal _dmrNum As String, ByVal _requestStatus As String, ByVal _id As Integer, ByVal _approverNotes As String, ByVal _approveBy As String)
         Using cn As New SqlConnection(_CONSTRING)
 
             Using cmd As New SqlCommand("[TRANSACTION].[spUPDATE_DM_APPROVAL_DEBIT_MEMO]", cn)
@@ -381,6 +415,7 @@ Public Class DMT_DEBITMEMO_C
                     .Parameters.AddWithValue("@REQUESTSTATUS", _requestStatus)
                     .Parameters.AddWithValue("@ID", _id)
                     .Parameters.AddWithValue("@APPROVER_NOTES", _approverNotes)
+                    .Parameters.AddWithValue("@APPROVE_BY", _approveBy)
                 End With
                 cn.Open()
                 cmd.ExecuteNonQuery()
@@ -475,6 +510,13 @@ Public Class DMT_SYSTEM_C
     Public Function GET_USER_DATA() As DataTable
         Dim dt As New DataTable
         dt = queryCommandDT_SP("[xSys].[spGET_USER_LIST]")
+        Return dt
+    End Function
+
+
+    Public Function GET_COMPANY_DATA() As DataTable
+        Dim dt As New DataTable
+        dt = queryCommandDT_SP("[xSys].[spGET_COMPANY_LIST]")
         Return dt
     End Function
 
@@ -730,5 +772,40 @@ Public Class DMT_SYSTEM_C
 
         Return str
     End Function
+End Class
+
+Public Class VOUCHER_C
+    Inherits Base_C
+
+
+    Public Sub INSERT_VOUCHER(ByVal _voucherNumber As String, ByVal _voucherTypeCode As String,
+                             ByVal _companyCode As String, ByVal _voucherDate As DateTime, ByVal _supplierID As Integer,
+                              ByVal _discount1 As Double, ByVal _discount2 As Double,
+                              ByVal _userCode As String)
+
+        Using cn As New SqlConnection(_CONSTRING)
+
+            Using cmd As New SqlCommand("[TRANSACTION].[spINSERT_VOUCHER]", cn)
+                With cmd
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.AddWithValue("@VOUCHERNUMBER", _voucherNumber)
+                    .Parameters.AddWithValue("@VOUCHERTYPECODE", _voucherTypeCode)
+                    .Parameters.AddWithValue("@COMPANYCODE", _companyCode)
+                    .Parameters.AddWithValue("@VOUCHERDATE", _voucherDate)
+                    .Parameters.AddWithValue("@SUPPLIERID", _supplierID)
+                    .Parameters.AddWithValue("@DISCOUNT1", _discount1)
+                    .Parameters.AddWithValue("@DISCOUNT2", _discount2)
+                    .Parameters.AddWithValue("@USERCODE", _userCode)
+                End With
+                cn.Open()
+                cmd.ExecuteNonQuery()
+
+            End Using
+        End Using
+
+
+    End Sub
 
 End Class
+
+

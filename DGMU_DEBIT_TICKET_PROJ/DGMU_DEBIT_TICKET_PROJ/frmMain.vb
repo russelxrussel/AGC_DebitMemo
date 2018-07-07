@@ -59,6 +59,8 @@
 
         countApproveDBR_ForPosting()
 
+        countForDispatchDBR()
+
         tsCalendar.Text = DateTime.Now.ToShortDateString
 
         DISPLAY_STAT_COUNT()
@@ -87,7 +89,6 @@
 
     Public Sub countForApprovalDBR()
 
-
         Dim i As Integer = countDebitMemoStatus("IsCompleted = 0")
 
         If i <> 0 Then
@@ -105,6 +106,16 @@
             lnkMyRequest.Text = "My Request (" + i.ToString + ")"
         Else
             lnkMyRequest.Text = "My Request"
+        End If
+    End Sub
+
+
+    Public Sub countForDispatchDBR()
+        Dim i As Integer = countDebitMemoStatus("Isposted = 1 and IsCompleted = 1 and IsDispatch = 0")
+        If i <> 0 Then
+            lnkDispatching.Text = "For Dispatch (" + i.ToString + ")"
+        Else
+            lnkDispatching.Text = "For Dispatch"
         End If
     End Sub
 

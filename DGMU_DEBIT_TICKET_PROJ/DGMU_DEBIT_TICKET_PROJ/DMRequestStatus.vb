@@ -102,7 +102,7 @@ Public Class frmMyDMRequest
 
             'Refresh Main Counting
             frmMain.countApproveDBR_ForPosting()
-
+            frmMain.countForDispatchDBR()
             'RELOAD FORM
             Controls.Clear()
             InitializeComponent()

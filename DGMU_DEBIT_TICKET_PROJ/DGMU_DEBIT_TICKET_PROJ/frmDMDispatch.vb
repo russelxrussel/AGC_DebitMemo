@@ -61,10 +61,12 @@ Public Class frmDMDispatch
     Private Sub lnkDispatch_Click(sender As Object, e As EventArgs) Handles lnkDispatch.Click
         If txtDispatchPerson.Text IsNot Nothing Then
             oDebitMemo.UPDATE_DISPATCHED(lblTempDMNumber.Text, Convert.ToDateTime(dtpDispatchDate.Value), txtDispatchPerson.Text)
+            frmMain.countForDispatchDBR()
             DisplayUserRequest()
             txtDispatchPerson.Text = ""
             dtpDispatchDate.Value = DateTime.Now
             MetroMessageBox.Show(Me, "Dispatch process success.", "Debit Memo", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
         Else
 
             MetroMessageBox.Show(Me, "Required Input needed.", "Debit Memo", MessageBoxButtons.OK, MessageBoxIcon.Stop)

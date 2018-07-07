@@ -28,7 +28,6 @@ Partial Class frmDebitMemoRequest
         Me.btnAttachImage = New MetroFramework.Controls.MetroButton()
         Me.btnAddRequestItem = New MetroFramework.Controls.MetroButton()
         Me.lblDMRSeries = New MetroFramework.Controls.MetroLabel()
-        Me.lblTotalAmount = New MetroFramework.Controls.MetroLabel()
         Me.btnProcess = New MetroFramework.Controls.MetroButton()
         Me.dgRequestList = New MetroFramework.Controls.MetroGrid()
         Me.dtRequest = New System.Windows.Forms.DateTimePicker()
@@ -52,6 +51,8 @@ Partial Class frmDebitMemoRequest
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtDocumentRemarks = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.lblTotalAmount = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
         CType(Me.dgRequestList, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudQuantity, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbAttachment, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -87,21 +88,10 @@ Partial Class frmDebitMemoRequest
         Me.lblDMRSeries.TabIndex = 10
         Me.lblDMRSeries.Text = "SERIES"
         '
-        'lblTotalAmount
-        '
-        Me.lblTotalAmount.AutoSize = True
-        Me.lblTotalAmount.BackColor = System.Drawing.Color.Transparent
-        Me.lblTotalAmount.FontWeight = MetroFramework.MetroLabelWeight.Bold
-        Me.lblTotalAmount.Location = New System.Drawing.Point(12, 406)
-        Me.lblTotalAmount.Name = "lblTotalAmount"
-        Me.lblTotalAmount.Size = New System.Drawing.Size(17, 19)
-        Me.lblTotalAmount.TabIndex = 10
-        Me.lblTotalAmount.Text = "0"
-        '
         'btnProcess
         '
         Me.btnProcess.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.btnProcess.Location = New System.Drawing.Point(384, 348)
+        Me.btnProcess.Location = New System.Drawing.Point(384, 448)
         Me.btnProcess.Name = "btnProcess"
         Me.btnProcess.Size = New System.Drawing.Size(104, 32)
         Me.btnProcess.TabIndex = 14
@@ -137,7 +127,7 @@ Partial Class frmDebitMemoRequest
         Me.dgRequestList.EnableHeadersVisualStyles = False
         Me.dgRequestList.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.dgRequestList.GridColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgRequestList.Location = New System.Drawing.Point(12, 222)
+        Me.dgRequestList.Location = New System.Drawing.Point(12, 218)
         Me.dgRequestList.Name = "dgRequestList"
         Me.dgRequestList.ReadOnly = True
         Me.dgRequestList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
@@ -151,7 +141,7 @@ Partial Class frmDebitMemoRequest
         Me.dgRequestList.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgRequestList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.dgRequestList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgRequestList.Size = New System.Drawing.Size(476, 108)
+        Me.dgRequestList.Size = New System.Drawing.Size(476, 189)
         Me.dgRequestList.TabIndex = 15
         Me.dgRequestList.UseCustomBackColor = True
         '
@@ -307,7 +297,7 @@ Partial Class frmDebitMemoRequest
         'Label4
         '
         Me.Label4.BackColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(393, 351)
+        Me.Label4.Location = New System.Drawing.Point(393, 451)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(98, 36)
         Me.Label4.TabIndex = 31
@@ -325,7 +315,7 @@ Partial Class frmDebitMemoRequest
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(9, 334)
+        Me.Label6.Location = New System.Drawing.Point(9, 434)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(118, 14)
         Me.Label6.TabIndex = 33
@@ -335,11 +325,11 @@ Partial Class frmDebitMemoRequest
         'txtDocumentRemarks
         '
         Me.txtDocumentRemarks.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDocumentRemarks.Location = New System.Drawing.Point(12, 351)
+        Me.txtDocumentRemarks.Location = New System.Drawing.Point(12, 451)
         Me.txtDocumentRemarks.Multiline = True
         Me.txtDocumentRemarks.Name = "txtDocumentRemarks"
         Me.txtDocumentRemarks.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtDocumentRemarks.Size = New System.Drawing.Size(252, 52)
+        Me.txtDocumentRemarks.Size = New System.Drawing.Size(252, 36)
         Me.txtDocumentRemarks.TabIndex = 34
         '
         'Label11
@@ -351,12 +341,33 @@ Partial Class frmDebitMemoRequest
         Me.Label11.TabIndex = 35
         Me.Label11.Text = "Label11"
         '
+        'lblTotalAmount
+        '
+        Me.lblTotalAmount.AutoSize = True
+        Me.lblTotalAmount.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalAmount.Location = New System.Drawing.Point(9, 410)
+        Me.lblTotalAmount.Name = "lblTotalAmount"
+        Me.lblTotalAmount.Size = New System.Drawing.Size(15, 18)
+        Me.lblTotalAmount.TabIndex = 36
+        Me.lblTotalAmount.Text = "0"
+        '
+        'Label12
+        '
+        Me.Label12.BackColor = System.Drawing.Color.Black
+        Me.Label12.Location = New System.Drawing.Point(-6, 430)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(535, 3)
+        Me.Label12.TabIndex = 37
+        Me.Label12.Text = "Label12"
+        '
         'frmDebitMemoRequest
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.ClientSize = New System.Drawing.Size(505, 433)
+        Me.ClientSize = New System.Drawing.Size(505, 497)
+        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.lblTotalAmount)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.txtDocumentRemarks)
         Me.Controls.Add(Me.Label6)
@@ -380,7 +391,6 @@ Partial Class frmDebitMemoRequest
         Me.Controls.Add(Me.cmbBranch)
         Me.Controls.Add(Me.dtRequest)
         Me.Controls.Add(Me.btnProcess)
-        Me.Controls.Add(Me.lblTotalAmount)
         Me.Controls.Add(Me.lblDMRSeries)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label5)
@@ -402,7 +412,6 @@ Partial Class frmDebitMemoRequest
     Friend WithEvents dgRequestList As MetroFramework.Controls.MetroGrid
     Friend WithEvents lblDMRSeries As MetroFramework.Controls.MetroLabel
     Friend WithEvents btnProcess As MetroFramework.Controls.MetroButton
-    Friend WithEvents lblTotalAmount As MetroFramework.Controls.MetroLabel
     Friend WithEvents btnAttachImage As MetroFramework.Controls.MetroButton
     Friend WithEvents dtRequest As System.Windows.Forms.DateTimePicker
     Friend WithEvents cmbBranch As System.Windows.Forms.ComboBox
@@ -425,4 +434,6 @@ Partial Class frmDebitMemoRequest
     Friend WithEvents Label6 As Label
     Friend WithEvents txtDocumentRemarks As TextBox
     Friend WithEvents Label11 As Label
+    Friend WithEvents lblTotalAmount As Label
+    Friend WithEvents Label12 As Label
 End Class

@@ -164,7 +164,7 @@ Public Class frmApprover
 
 
                     'UPDATE ALL REQUEST ITEM STATUS
-                    oDebitMemo.UPDATE_APPROVAL_DECISION(lblDebitMemoNumber.Text, requeststatus, id, txtApproverNotes.Text)
+                    oDebitMemo.UPDATE_APPROVAL_DECISION(lblDebitMemoNumber.Text, requeststatus, id, txtApproverNotes.Text, frmMain.tsUserCode.Text)
 
 
                 Next

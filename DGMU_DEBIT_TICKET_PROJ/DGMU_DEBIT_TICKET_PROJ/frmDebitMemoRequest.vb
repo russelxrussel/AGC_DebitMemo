@@ -7,8 +7,8 @@ Public Class frmDebitMemoRequest
     Dim oDMR As New DMT_DEBITMEMO_C
 
     Private rowIndex As Integer = 0
+    Private pTotalAmountPrice As Double = 0
 
-  
 
 
 
@@ -45,19 +45,9 @@ Public Class frmDebitMemoRequest
 
 #Region "Local Function"
 
-    'Private Sub InitAutoSearch()
-    '    txtItem.AutoCompleteMode = AutoCompleteMode.Suggest
-    '    txtItem.AutoCompleteSource = AutoCompleteSource.CustomSource
-    '    Dim DataCollection As New AutoCompleteStringCollection()
-    '    AutoSearchItem(DataCollection)
-    '    txtItem.AutoCompleteCustomSource = DataCollection
-    'End Sub
-
     Private Sub AutoSearchItem(ByVal dc As AutoCompleteStringCollection)
         Dim dt As New DataTable
         dt = oItem.GET_ITEM_LIST()
-
-        'Dim autoComp As New AutoCompleteStringCollection()
 
         For Each row As DataRow In dt.Rows
             dc.Add(row(1).ToString())
@@ -147,9 +137,6 @@ Public Class frmDebitMemoRequest
             .DataSource = dt
             .DisplayMember = dt.Columns("BranchName").ToString()
             .ValueMember = dt.Columns("BranchCode").ToString()
-            '.AutoCompleteMode = AutoCompleteMode.SuggestAppend
-            '.AutoCompleteSource = AutoCompleteSource.ListItems
-            '.SelectedIndex = 0
 
         End With
 
@@ -171,9 +158,6 @@ Public Class frmDebitMemoRequest
             .DataSource = dt
             .DisplayMember = dt.Columns("SupervisorName").ToString()
             .ValueMember = dt.Columns("supervisorID").ToString()
-            '.AutoCompleteMode = AutoCompleteMode.SuggestAppend
-            '.AutoCompleteSource = AutoCompleteSource.ListItems
-            '.SelectedIndex = 0
 
         End With
 
@@ -195,9 +179,6 @@ Public Class frmDebitMemoRequest
             .DataSource = dt
             .DisplayMember = dt.Columns("ItemDescription").ToString()
             .ValueMember = dt.Columns("ItemID").ToString()
-            '.AutoCompleteMode = AutoCompleteMode.SuggestAppend
-            '.AutoCompleteSource = AutoCompleteSource.ListItems
-            '.SelectedIndex = 0
 
         End With
 
@@ -225,10 +206,12 @@ Public Class frmDebitMemoRequest
             'totalItems += Integer.Parse(dgRequestList.Rows(i).Cells(2).Value)
             'Change the number 2 to your column index number (The first column has a 0 index column)
             'In this example the column index of Price is 2
-        Next
 
+        Next
+        pTotalAmountPrice = total
         'lblTotalItems.Text = totalItems.ToString()
         lblTotalAmount.Text = "Total Amount : " & String.Format("{0:n}", total)
+
     End Sub
 
 
@@ -243,6 +226,14 @@ Public Class frmDebitMemoRequest
 
 
     End Sub
+
+
+    Private Function checkDuplicate(ByVal _dateRequest As DateTime, ByVal _supervisorID As Integer, ByVal _branchCode As String, ByVal _totalAmount As Double)
+        Dim x As Boolean = False
+
+
+        Return x
+    End Function
 
 #End Region
 
@@ -264,59 +255,71 @@ Public Class frmDebitMemoRequest
         'First Validation
         If Not cmbBranch.SelectedIndex = 0 And Not cmbSupervisor.SelectedIndex = 0 Then
 
-            'PROMPT CONFIRMATION
-            If (MetroMessageBox.Show(Me, "Please Press (YES) to Confirm request?" & vbNewLine _
-                                         & "Warning This request is not reversable after confirmation.", "Debit Memo Request", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = Windows.Forms.DialogResult.Yes) Then
-
-                If dgRequestList.Rows.Count > 0 Then
-                    For i As Integer = 0 To dgRequestList.RowCount - 1
-                        'Dim sDMRNum As String = dgRequestList.Rows(i).Cells(0).Value.ToString()
-                        Dim iItemID As Integer = Int32.Parse(dgRequestList.Rows(i).Cells(7).Value)
-                        Dim sItemDescription As String = dgRequestList.Rows(i).Cells(0).Value.ToString()
-
-                        Dim dQuantity As Double = Double.Parse(dgRequestList.Rows(i).Cells(1).Value)
-                        Dim dUnitPrice As Double = Double.Parse(dgRequestList.Rows(i).Cells(2).Value)
-                        Dim dAmount As Double = Double.Parse(dgRequestList.Rows(i).Cells(3).Value)
-                        Dim sPurposeRemarks As String = dgRequestList.Rows(i).Cells(4).Value.ToString()
-
-                        Dim bAttachment As Byte() = IO.File.ReadAllBytes(dgRequestList.Rows(i).Cells(5).Value.ToString())
-
-                        Dim fIsAttachment As Boolean
-                        If String.IsNullOrEmpty(dgRequestList.Rows(i).Cells(6).Value.ToString()) Then
-                            fIsAttachment = False
-                        Else
-                            fIsAttachment = True
-                        End If
-                        'SAVE TO TABLE
-
-                        oDMR.INSERT_DEBIT_MEMO_REQUEST(lblDMRSeries.Text, cmbBranch.SelectedValue, Convert.ToInt32(cmbSupervisor.SelectedValue), iItemID, sItemDescription, dQuantity, dUnitPrice,
-                                                       dAmount, sPurposeRemarks, txtDocumentRemarks.Text, fIsAttachment, bAttachment, DateTime.Parse(dtRequest.Text), frmMain.tsUserCode.Text)
-                    Next
+            If Not oDMR.CHECK_REQUEST_EXIST(Convert.ToDateTime(dtRequest.Value), Convert.ToInt32(cmbSupervisor.SelectedValue), cmbBranch.SelectedValue, pTotalAmountPrice) Then
 
 
-                    oSystem.UPDATE_SERIES_NUMBER("DM")
+                'PROMPT CONFIRMATION
+                If (MetroMessageBox.Show(Me, "Please Press (YES) to Confirm request?" & vbNewLine _
+                                             & "Warning This request is not reversable after confirmation.", "Debit Memo Request", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = Windows.Forms.DialogResult.Yes) Then
 
-                    MetroMessageBox.Show(Me, "Debit Memo Request successfully sent for approval", "Debit Memo", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    If dgRequestList.Rows.Count > 0 Then
+                        For i As Integer = 0 To dgRequestList.RowCount - 1
+                            'Dim sDMRNum As String = dgRequestList.Rows(i).Cells(0).Value.ToString()
+                            Dim iItemID As Integer = Int32.Parse(dgRequestList.Rows(i).Cells(7).Value)
+                            Dim sItemDescription As String = dgRequestList.Rows(i).Cells(0).Value.ToString()
 
-                    frmMain.countForApprovalDBR()
-                    'RELOAD FORM
-                    Controls.Clear()
-                    InitializeComponent()
-                    Show()
-                    generateSeriesNumber()
-                    LoadBranchList()
+                            Dim dQuantity As Double = Double.Parse(dgRequestList.Rows(i).Cells(1).Value)
+                            Dim dUnitPrice As Double = Double.Parse(dgRequestList.Rows(i).Cells(2).Value)
+                            Dim dAmount As Double = Double.Parse(dgRequestList.Rows(i).Cells(3).Value)
+                            Dim sPurposeRemarks As String = dgRequestList.Rows(i).Cells(4).Value.ToString()
+
+                            Dim bAttachment As Byte() = IO.File.ReadAllBytes(dgRequestList.Rows(i).Cells(5).Value.ToString())
+
+                            Dim fIsAttachment As Boolean
+                            If String.IsNullOrEmpty(dgRequestList.Rows(i).Cells(6).Value.ToString()) Then
+                                fIsAttachment = False
+                            Else
+                                fIsAttachment = True
+                            End If
+                            'SAVE TO TABLE
+
+                            oDMR.INSERT_DEBIT_MEMO_REQUEST(lblDMRSeries.Text, cmbBranch.SelectedValue, Convert.ToInt32(cmbSupervisor.SelectedValue), iItemID, sItemDescription, dQuantity, dUnitPrice,
+                                                       dAmount, pTotalAmountPrice, sPurposeRemarks, txtDocumentRemarks.Text, fIsAttachment, bAttachment, Convert.ToDateTime(dtRequest.Text), frmMain.tsUserCode.Text)
+
+                        Next
+
+
+                        oSystem.UPDATE_SERIES_NUMBER("DM")
+
+                        MetroMessageBox.Show(Me, "Debit Memo Request successfully sent for approval", "Debit Memo", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                        pTotalAmountPrice = 0
+
+                        frmMain.countForApprovalDBR()
+                        'RELOAD FORM
+                        Controls.Clear()
+                        InitializeComponent()
+                        Show()
+                        generateSeriesNumber()
+                        LoadBranchList()
+                        LoadSupervisorList()
+                        LoadItemsList()
+                    End If
+                Else
+                    MetroMessageBox.Show(Me, "No Request to Process", "Debit Memo", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+                    Exit Sub
+
                 End If
+
+
             Else
-                MetroMessageBox.Show(Me, "No Request to Process", "Debit Memo", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+                MetroMessageBox.Show(Me, "Request already exist.", "Debit Memo", MessageBoxButtons.OK, MessageBoxIcon.Stop)
                 Exit Sub
 
             End If
         Else
             MetroMessageBox.Show(Me, "Branch and Supervisor required.", "Debit Memo", MessageBoxButtons.OK, MessageBoxIcon.Stop)
-            Exit Sub
-
         End If
-
     End Sub
 
 

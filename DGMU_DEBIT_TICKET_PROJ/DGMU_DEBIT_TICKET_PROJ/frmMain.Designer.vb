@@ -201,10 +201,10 @@ Partial Class frmMain
         Me.lnkDispatching.ImageSize = 24
         Me.lnkDispatching.Location = New System.Drawing.Point(3, 117)
         Me.lnkDispatching.Name = "lnkDispatching"
-        Me.lnkDispatching.Size = New System.Drawing.Size(133, 23)
+        Me.lnkDispatching.Size = New System.Drawing.Size(159, 23)
         Me.lnkDispatching.Style = MetroFramework.MetroColorStyle.Purple
         Me.lnkDispatching.TabIndex = 109
-        Me.lnkDispatching.Text = "Dispatching"
+        Me.lnkDispatching.Text = "For Dispatch"
         Me.lnkDispatching.UseCustomBackColor = True
         Me.lnkDispatching.UseSelectable = True
         Me.lnkDispatching.UseStyleColors = True
