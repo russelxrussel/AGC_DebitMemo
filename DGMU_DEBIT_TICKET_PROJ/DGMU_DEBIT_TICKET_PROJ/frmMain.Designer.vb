@@ -36,6 +36,7 @@ Partial Class frmMain
         Me.lnkMaintenance = New MetroFramework.Controls.MetroLink()
         Me.lnkPersonnelMaintenance = New MetroFramework.Controls.MetroLink()
         Me.lnkLogOut = New MetroFramework.Controls.MetroLink()
+        Me.lnkCreateVoucher = New MetroFramework.Controls.MetroLink()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.tsUserCode = New System.Windows.Forms.ToolStripStatusLabel()
@@ -118,6 +119,7 @@ Partial Class frmMain
         Me.FlowLayoutPanel1.Controls.Add(Me.Panel5)
         Me.FlowLayoutPanel1.Controls.Add(Me.lnkMyRequest)
         Me.FlowLayoutPanel1.Controls.Add(Me.lnkDBR)
+        Me.FlowLayoutPanel1.Controls.Add(Me.lnkCreateVoucher)
         Me.FlowLayoutPanel1.Controls.Add(Me.lnkDispatching)
         Me.FlowLayoutPanel1.Controls.Add(Me.lnkApproval)
         Me.FlowLayoutPanel1.Controls.Add(Me.lnkReports)
@@ -183,7 +185,7 @@ Partial Class frmMain
         Me.lnkDBR.ImageSize = 24
         Me.lnkDBR.Location = New System.Drawing.Point(3, 88)
         Me.lnkDBR.Name = "lnkDBR"
-        Me.lnkDBR.Size = New System.Drawing.Size(171, 23)
+        Me.lnkDBR.Size = New System.Drawing.Size(171, 32)
         Me.lnkDBR.Style = MetroFramework.MetroColorStyle.Purple
         Me.lnkDBR.TabIndex = 100
         Me.lnkDBR.Text = "Create Debit Memo"
@@ -199,7 +201,7 @@ Partial Class frmMain
         Me.lnkDispatching.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.in_transit_24
         Me.lnkDispatching.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lnkDispatching.ImageSize = 24
-        Me.lnkDispatching.Location = New System.Drawing.Point(3, 117)
+        Me.lnkDispatching.Location = New System.Drawing.Point(3, 160)
         Me.lnkDispatching.Name = "lnkDispatching"
         Me.lnkDispatching.Size = New System.Drawing.Size(159, 23)
         Me.lnkDispatching.Style = MetroFramework.MetroColorStyle.Purple
@@ -217,7 +219,7 @@ Partial Class frmMain
         Me.lnkApproval.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.about_24
         Me.lnkApproval.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lnkApproval.ImageSize = 24
-        Me.lnkApproval.Location = New System.Drawing.Point(3, 146)
+        Me.lnkApproval.Location = New System.Drawing.Point(3, 189)
         Me.lnkApproval.Name = "lnkApproval"
         Me.lnkApproval.Size = New System.Drawing.Size(168, 23)
         Me.lnkApproval.Style = MetroFramework.MetroColorStyle.Purple
@@ -235,7 +237,7 @@ Partial Class frmMain
         Me.lnkReports.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.print_24
         Me.lnkReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lnkReports.ImageSize = 24
-        Me.lnkReports.Location = New System.Drawing.Point(3, 175)
+        Me.lnkReports.Location = New System.Drawing.Point(3, 218)
         Me.lnkReports.Name = "lnkReports"
         Me.lnkReports.Size = New System.Drawing.Size(146, 23)
         Me.lnkReports.Style = MetroFramework.MetroColorStyle.Purple
@@ -253,7 +255,7 @@ Partial Class frmMain
         Me.lnkMaintenance.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.folder_24
         Me.lnkMaintenance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lnkMaintenance.ImageSize = 24
-        Me.lnkMaintenance.Location = New System.Drawing.Point(3, 204)
+        Me.lnkMaintenance.Location = New System.Drawing.Point(3, 247)
         Me.lnkMaintenance.Name = "lnkMaintenance"
         Me.lnkMaintenance.Size = New System.Drawing.Size(159, 23)
         Me.lnkMaintenance.Style = MetroFramework.MetroColorStyle.Purple
@@ -271,7 +273,7 @@ Partial Class frmMain
         Me.lnkPersonnelMaintenance.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.flow_chart_24
         Me.lnkPersonnelMaintenance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lnkPersonnelMaintenance.ImageSize = 24
-        Me.lnkPersonnelMaintenance.Location = New System.Drawing.Point(3, 233)
+        Me.lnkPersonnelMaintenance.Location = New System.Drawing.Point(3, 276)
         Me.lnkPersonnelMaintenance.Name = "lnkPersonnelMaintenance"
         Me.lnkPersonnelMaintenance.Size = New System.Drawing.Size(168, 23)
         Me.lnkPersonnelMaintenance.Style = MetroFramework.MetroColorStyle.Purple
@@ -289,7 +291,7 @@ Partial Class frmMain
         Me.lnkLogOut.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.lock_24
         Me.lnkLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lnkLogOut.ImageSize = 24
-        Me.lnkLogOut.Location = New System.Drawing.Point(3, 262)
+        Me.lnkLogOut.Location = New System.Drawing.Point(3, 305)
         Me.lnkLogOut.Name = "lnkLogOut"
         Me.lnkLogOut.Size = New System.Drawing.Size(119, 23)
         Me.lnkLogOut.Style = MetroFramework.MetroColorStyle.Purple
@@ -298,6 +300,24 @@ Partial Class frmMain
         Me.lnkLogOut.UseCustomBackColor = True
         Me.lnkLogOut.UseSelectable = True
         Me.lnkLogOut.UseStyleColors = True
+        '
+        'lnkCreateVoucher
+        '
+        Me.lnkCreateVoucher.BackColor = System.Drawing.Color.Transparent
+        Me.lnkCreateVoucher.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lnkCreateVoucher.DisplayFocus = True
+        Me.lnkCreateVoucher.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.add_column_24
+        Me.lnkCreateVoucher.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lnkCreateVoucher.ImageSize = 24
+        Me.lnkCreateVoucher.Location = New System.Drawing.Point(3, 126)
+        Me.lnkCreateVoucher.Name = "lnkCreateVoucher"
+        Me.lnkCreateVoucher.Size = New System.Drawing.Size(168, 28)
+        Me.lnkCreateVoucher.Style = MetroFramework.MetroColorStyle.Purple
+        Me.lnkCreateVoucher.TabIndex = 110
+        Me.lnkCreateVoucher.Text = "Create Voucher"
+        Me.lnkCreateVoucher.UseCustomBackColor = True
+        Me.lnkCreateVoucher.UseSelectable = True
+        Me.lnkCreateVoucher.UseStyleColors = True
         '
         'Label1
         '
@@ -703,4 +723,5 @@ Partial Class frmMain
     Friend WithEvents lnkMaintenance As MetroFramework.Controls.MetroLink
     Friend WithEvents lnkPersonnelMaintenance As MetroFramework.Controls.MetroLink
     Friend WithEvents lnkDispatching As MetroFramework.Controls.MetroLink
+    Friend WithEvents lnkCreateVoucher As MetroFramework.Controls.MetroLink
 End Class

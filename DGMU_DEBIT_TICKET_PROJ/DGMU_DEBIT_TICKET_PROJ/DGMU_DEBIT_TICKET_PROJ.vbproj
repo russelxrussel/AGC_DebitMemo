@@ -131,6 +131,12 @@
   <ItemGroup>
     <Compile Include="Class\Base_C.vb" />
     <Compile Include="Class\DMT_C.vb" />
+    <Compile Include="frmVoucherList.Designer.vb">
+      <DependentUpon>frmVoucherList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmVoucherList.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmVoucherModule.Designer.vb">
       <DependentUpon>frmVoucherModule.vb</DependentUpon>
     </Compile>
@@ -326,8 +332,17 @@
       <DependentUpon>repDMRequestMonitoring.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reports\repVoucher.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>repVoucher.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmVoucherList.resx">
+      <DependentUpon>frmVoucherList.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmVoucherModule.resx">
       <DependentUpon>frmVoucherModule.vb</DependentUpon>
     </EmbeddedResource>
@@ -428,6 +443,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>repDMRequestMonitoring.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\repVoucher.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>repVoucher.vb</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="dsItemList.xsc">
@@ -467,6 +486,7 @@
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
+    <None Include="My Project\DataSources\DMT_DEBITMEMO_C.datasource" />
     <None Include="My Project\DataSources\DMT_ITEM_C.datasource" />
     <None Include="My Project\DataSources\frmMain.datasource" />
     <None Include="My Project\Settings.settings">

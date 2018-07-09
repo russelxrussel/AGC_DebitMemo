@@ -291,4 +291,16 @@
         Me.scPage.Panel2.Controls.Add(repDMItemRequestMonitoring)
         repDMItemRequestMonitoring.BringToFront()
     End Sub
+
+    Private Sub lnkCreateVoucher_Click(sender As Object, e As EventArgs) Handles lnkCreateVoucher.Click
+        With frmVoucherModule
+            .TopLevel = False
+            .Left = 0
+            .Top = 0
+        End With
+
+        frmVoucherModule.Show()
+        Me.scPage.Panel2.Controls.Add(frmVoucherModule)
+        frmVoucherModule.BringToFront()
+    End Sub
 End Class

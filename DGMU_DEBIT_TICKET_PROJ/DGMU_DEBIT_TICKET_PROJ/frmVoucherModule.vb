@@ -32,6 +32,16 @@ Public Class frmVoucherModule
     Private Sub frmDebitMemoRequest_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         ' AutoSearchItem()
+        defaultInit()
+
+
+
+    End Sub
+
+
+#Region "Local Function"
+
+    Private Sub defaultInit()
         LoadVoucherType()
         LoadSupplierList()
         LoadCompanyList()
@@ -40,17 +50,12 @@ Public Class frmVoucherModule
 
         dtRequest.Text = oSystem.GET_SERVER_DATE_TIME
 
-
+        txtItemAmount.Text = "0"
+        txtItemDiscount.Text = "0"
         txtTotalDiscount1.Text = "0"
         txtTotalDiscount2.Text = "0"
-        ' InitAutoSearch()
-
 
     End Sub
-
-
-#Region "Local Function"
-
     Private Sub AutoSearchItem(ByVal dc As AutoCompleteStringCollection)
         Dim dt As New DataTable
         dt = oItem.GET_ITEM_LIST()
@@ -64,7 +69,6 @@ Public Class frmVoucherModule
     Private Sub SearchData(ByVal inputSearch As String)
         Dim dt As New DataTable
 
-        'dt = oInventory.GET_PRODUCT_LIST
         dt = oItem.GET_ITEM_LIST()
         Dim dv As DataView = dt.DefaultView
 
@@ -80,12 +84,10 @@ Public Class frmVoucherModule
 
 
         With dgVoucherItemList
-            .ColumnCount = 5
+            .ColumnCount = 3
             .Columns(0).Name = "Item Description"
             .Columns(1).Name = "Amount"
             .Columns(2).Name = "Discount"
-            .Columns(3).Name = "Image Location"
-            .Columns(4).Name = "Attach"
         End With
 
         Dim btn As New DataGridViewButtonColumn()
@@ -95,17 +97,11 @@ Public Class frmVoucherModule
         btn.Name = "btn"
         btn.UseColumnTextForButtonValue = True
 
-        Dim fName As String
 
-        If (pbAttachment.ImageLocation Is Nothing) Then
-            fName = "images/x1.png"
-        Else
-            fName = pbAttachment.ImageLocation
-        End If
 
         'Dim itemAmount As Double = Double.Parse(nudQuantity.Value * txtItemAmount.Text)
 
-        Dim row As String() = New String() {txtDescription.Text, txtItemAmount.Text, txtItemDiscount.Text, fName, lblFileName.Text}
+        Dim row As String() = New String() {txtDescription.Text, txtItemAmount.Text, txtItemDiscount.Text}
         dgVoucherItemList.Rows.Add(row)
 
         computeTotalPrice()
@@ -113,19 +109,6 @@ Public Class frmVoucherModule
 
     End Sub
 
-
-    Private Sub dgRequestList_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs)
-        If e.ColumnIndex = 8 Then
-            'Confirmation
-            If (MetroMessageBox.Show(Me, "Are you sure you want to remove selected item?", "Debit Memo Request", MessageBoxButtons.YesNo, MessageBoxIcon.Stop) = Windows.Forms.DialogResult.Yes) Then
-                'REMOVE Selected Item
-                removeSelectedItem()
-                computeTotalPrice()
-            Else
-                Exit Sub
-            End If
-        End If
-    End Sub
 
     Private Sub LoadVoucherType()
         Dim dt As DataTable = oUtility.GET_VOUCHER_TYPE
@@ -195,8 +178,8 @@ Public Class frmVoucherModule
         txtItemDiscount.Text = "0"
         txtDescription.Text = ""
 
-        pbAttachment.ImageLocation = Nothing
-        lblFileName.Text = ""
+        'pbAttachment.ImageLocation = Nothing
+        'lblFileName.Text = ""
     End Sub
 
 
@@ -212,13 +195,15 @@ Public Class frmVoucherModule
             itemDiscountTotal += Double.Parse(dgVoucherItemList.Rows(i).Cells(2).Value)
         Next
 
+        lblTotalBeforeDiscount.Text = "Total Before Discount : " & String.Format("{0:n}", total)
+
         lblTotalItemDiscount.Text = itemDiscountTotal.ToString()
 
-        pTotalTransDiscount = Convert.ToDouble(txtTotalDiscount1.Text) + Convert.ToDouble(txtTotalDiscount2.Text)
+        lblTotalAllDiscount.Text = itemDiscountTotal + Convert.ToDouble(txtTotalDiscount1.Text) + Convert.ToDouble(txtTotalDiscount2.Text)
         total = (total - itemDiscountTotal) - Convert.ToDouble(txtTotalDiscount1.Text) - Convert.ToDouble(txtTotalDiscount2.Text)
 
 
-        'lblTotalItems.Text = totalItems.ToString()
+
         lblTotalAmount.Text = "Total Amount : " & String.Format("{0:n}", total)
 
     End Sub
@@ -262,72 +247,74 @@ Public Class frmVoucherModule
     Private Sub btnProcess_Click(sender As Object, e As EventArgs) Handles btnProcess.Click
 
         'First Validation
-        If Not ddCompany.SelectedIndex = 0 And Not ddSupplier_Payee.SelectedIndex = 0 Then
+        If Not ddVoucherType.SelectedIndex = 0 And Not ddCompany.SelectedIndex = 0 And Not ddSupplier_Payee.SelectedIndex = 0 And Not String.IsNullOrEmpty(dtRequest.Text) Then
 
             If Not oDMR.CHECK_REQUEST_EXIST(Convert.ToDateTime(dtRequest.Value), Convert.ToInt32(ddSupplier_Payee.SelectedValue), ddCompany.SelectedValue, pTotalAmountPrice) Then
 
 
                 'PROMPT CONFIRMATION
-                If (MetroMessageBox.Show(Me, "Please Press (YES) to Confirm request?" & vbNewLine _
-                                             & "Warning This request is not reversable after confirmation.", "Debit Memo Request", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = Windows.Forms.DialogResult.Yes) Then
+                If (MetroMessageBox.Show(Me, "Please Press (YES) to Confirm voucher?" & vbNewLine _
+                                             & "Warning This request is not reversable after confirmation.", "Voucher", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = Windows.Forms.DialogResult.Yes) Then
 
                     If dgVoucherItemList.Rows.Count > 0 Then
-                        'For i As Integer = 0 To dgVoucherItemList.RowCount - 1
-                        '    'Dim sDMRNum As String = dgRequestList.Rows(i).Cells(0).Value.ToString()
-                        '    Dim iItemID As Integer = Int32.Parse(dgVoucherItemList.Rows(i).Cells(7).Value)
-                        '    Dim sItemDescription As String = dgVoucherItemList.Rows(i).Cells(0).Value.ToString()
 
-                        '    Dim dQuantity As Double = Double.Parse(dgVoucherItemList.Rows(i).Cells(1).Value)
-                        '    Dim dUnitPrice As Double = Double.Parse(dgVoucherItemList.Rows(i).Cells(2).Value)
-                        '    Dim dAmount As Double = Double.Parse(dgVoucherItemList.Rows(i).Cells(3).Value)
-                        '    Dim sPurposeRemarks As String = dgVoucherItemList.Rows(i).Cells(4).Value.ToString()
+                        Dim fName As String
 
-                        '    Dim bAttachment As Byte() = IO.File.ReadAllBytes(dgVoucherItemList.Rows(i).Cells(5).Value.ToString())
+                        If (pbAttachment.ImageLocation Is Nothing) Then
+                            fName = "images/x1.png"
+                        Else
+                            fName = pbAttachment.ImageLocation
+                        End If
 
-                        '    Dim fIsAttachment As Boolean
-                        '    If String.IsNullOrEmpty(dgVoucherItemList.Rows(i).Cells(6).Value.ToString()) Then
-                        '        fIsAttachment = False
-                        '    Else
-                        '        fIsAttachment = True
-                        '    End If
-                        '    'SAVE TO TABLE
+                        Dim bAttachment As Byte() = IO.File.ReadAllBytes(fName)
 
-                        '    oDMR.INSERT_DEBIT_MEMO_REQUEST(lblVoucherSeries.Text, ddCompany.SelectedValue, Convert.ToInt32(ddSupplier_Payee.SelectedValue), iItemID, sItemDescription, dQuantity, dUnitPrice,
-                        '                               dAmount, pTotalAmountPrice, sPurposeRemarks, txtDocumentRemarks.Text, fIsAttachment, bAttachment, Convert.ToDateTime(dtRequest.Text), frmMain.tsUserCode.Text)
+                        Dim fIsAttachment As Boolean
+                        If String.IsNullOrEmpty(fName) Then
+                            fIsAttachment = False
+                        Else
+                            fIsAttachment = True
+                        End If
 
-                        'Next
 
-                        oVoucher.INSERT_VOUCHER(lblVoucherSeries.Text, ddVoucherType.SelectedValue, ddCompany.SelectedValue, Convert.ToDateTime(dtRequest.Text), Convert.ToInt32(ddSupplier_Payee.SelectedValue), Convert.ToDouble(txtTotalDiscount1.Text), Convert.ToDouble(txtTotalDiscount2.Text), "testUser")
+                        For i As Integer = 0 To dgVoucherItemList.RowCount - 1
+                            Dim sItemDescription As String = dgVoucherItemList.Rows(i).Cells(0).Value.ToString()
+
+                            Dim dAmount As Double = Double.Parse(dgVoucherItemList.Rows(i).Cells(1).Value)
+                            Dim dItemDiscount As Double = Double.Parse(dgVoucherItemList.Rows(i).Cells(2).Value)
+
+                            oVoucher.INSERT_VOUCHER(lblVoucherSeries.Text, ddVoucherType.SelectedValue, ddCompany.SelectedValue, Convert.ToDateTime(dtRequest.Text), Convert.ToInt32(ddSupplier_Payee.SelectedValue), txtDocumentRemarks.Text, Convert.ToDouble(txtTotalDiscount1.Text), Convert.ToDouble(txtTotalDiscount2.Text), bAttachment, fIsAttachment, sItemDescription, dAmount, dItemDiscount, frmMain.tsUserCode.Text)
+                        Next
+
+
                         oSystem.UPDATE_SERIES_NUMBER("CV")
 
-                        MetroMessageBox.Show(Me, "Voucher successfully saved", "AGC Voucher", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        MetroMessageBox.Show(Me, "Voucher successfully saved", "Voucher", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
                         'pTotalAmountPrice = 0
 
                         'frmMain.countForApprovalDBR()
                         ''RELOAD FORM
-                        'Controls.Clear()
-                        'InitializeComponent()
-                        'Show()
-                        'generateSeriesNumber()
-                        'LoadVoucherType()
-                        'LoadSupplierList()
+                        Controls.Clear()
+                        InitializeComponent()
+                        Show()
+                        defaultInit()
+
 
                     End If
                 Else
-                    MetroMessageBox.Show(Me, "No Request to Process", "Debit Memo", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+                    MetroMessageBox.Show(Me, "No Request to Process", "Voucher", MessageBoxButtons.OK, MessageBoxIcon.Stop)
                     Exit Sub
 
                 End If
 
 
             Else
-                MetroMessageBox.Show(Me, "Request already exist.", "Debit Memo", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+                MetroMessageBox.Show(Me, "Request already exist.", "Voucher", MessageBoxButtons.OK, MessageBoxIcon.Stop)
                 Exit Sub
 
             End If
         Else
-            MetroMessageBox.Show(Me, "Branch and Supervisor required.", "Debit Memo", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+            MetroMessageBox.Show(Me, "Voucher Type, Company and supplier are required, please verify.", "Voucher", MessageBoxButtons.OK, MessageBoxIcon.Stop)
         End If
     End Sub
 
@@ -382,5 +369,18 @@ Public Class frmVoucherModule
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub dgVoucherItemList_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgVoucherItemList.CellClick
+        If e.ColumnIndex = 3 Then
+            'Confirmation
+            If (MetroMessageBox.Show(Me, "Are you sure you want to remove selected item?", "Voucher", MessageBoxButtons.YesNo, MessageBoxIcon.Stop) = Windows.Forms.DialogResult.Yes) Then
+                'REMOVE Selected Item
+                removeSelectedItem()
+                computeTotalPrice()
+            Else
+                Exit Sub
+            End If
+        End If
     End Sub
 End Class

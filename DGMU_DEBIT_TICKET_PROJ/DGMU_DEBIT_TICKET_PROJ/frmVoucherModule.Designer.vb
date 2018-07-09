@@ -22,9 +22,9 @@ Partial Class frmVoucherModule
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.btnAttachImage = New MetroFramework.Controls.MetroButton()
         Me.btnAddRequestItem = New MetroFramework.Controls.MetroButton()
         Me.lblVoucherSeries = New MetroFramework.Controls.MetroLabel()
@@ -55,12 +55,15 @@ Partial Class frmVoucherModule
         Me.txtItemDiscount = New System.Windows.Forms.TextBox()
         Me.txtItemAmount = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.lblTotalItemDiscount = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
         Me.txtTotalDiscount2 = New System.Windows.Forms.TextBox()
         Me.txtTotalDiscount1 = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.lblTotalItemDiscount = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.lblTotalAllDiscount = New System.Windows.Forms.Label()
+        Me.lblTotalBeforeDiscount = New System.Windows.Forms.Label()
         CType(Me.nudQuantity, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbAttachment, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -70,7 +73,7 @@ Partial Class frmVoucherModule
         '
         'btnAttachImage
         '
-        Me.btnAttachImage.Location = New System.Drawing.Point(17, 168)
+        Me.btnAttachImage.Location = New System.Drawing.Point(584, 154)
         Me.btnAttachImage.Name = "btnAttachImage"
         Me.btnAttachImage.Size = New System.Drawing.Size(94, 27)
         Me.btnAttachImage.TabIndex = 10
@@ -79,7 +82,7 @@ Partial Class frmVoucherModule
         '
         'btnAddRequestItem
         '
-        Me.btnAddRequestItem.Location = New System.Drawing.Point(251, 168)
+        Me.btnAddRequestItem.Location = New System.Drawing.Point(493, 92)
         Me.btnAddRequestItem.Name = "btnAddRequestItem"
         Me.btnAddRequestItem.Size = New System.Drawing.Size(94, 27)
         Me.btnAddRequestItem.TabIndex = 11
@@ -101,9 +104,9 @@ Partial Class frmVoucherModule
         'btnProcess
         '
         Me.btnProcess.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.btnProcess.Location = New System.Drawing.Point(14, 162)
+        Me.btnProcess.Location = New System.Drawing.Point(6, 146)
         Me.btnProcess.Name = "btnProcess"
-        Me.btnProcess.Size = New System.Drawing.Size(355, 34)
+        Me.btnProcess.Size = New System.Drawing.Size(635, 44)
         Me.btnProcess.TabIndex = 14
         Me.btnProcess.Text = "&Process"
         Me.btnProcess.UseSelectable = True
@@ -112,7 +115,7 @@ Partial Class frmVoucherModule
         '
         Me.dtRequest.CalendarFont = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtRequest.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtRequest.Location = New System.Drawing.Point(132, 81)
+        Me.dtRequest.Location = New System.Drawing.Point(102, 63)
         Me.dtRequest.Name = "dtRequest"
         Me.dtRequest.Size = New System.Drawing.Size(110, 23)
         Me.dtRequest.TabIndex = 0
@@ -122,7 +125,7 @@ Partial Class frmVoucherModule
         '
         Me.ddCompany.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ddCompany.FormattingEnabled = True
-        Me.ddCompany.Location = New System.Drawing.Point(132, 110)
+        Me.ddCompany.Location = New System.Drawing.Point(465, 63)
         Me.ddCompany.Name = "ddCompany"
         Me.ddCompany.Size = New System.Drawing.Size(213, 23)
         Me.ddCompany.TabIndex = 1
@@ -130,7 +133,7 @@ Partial Class frmVoucherModule
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(23, 87)
+        Me.Label1.Location = New System.Drawing.Point(11, 68)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(85, 15)
         Me.Label1.TabIndex = 13
@@ -139,7 +142,7 @@ Partial Class frmVoucherModule
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(44, 114)
+        Me.Label2.Location = New System.Drawing.Point(395, 66)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(64, 15)
         Me.Label2.TabIndex = 14
@@ -148,7 +151,7 @@ Partial Class frmVoucherModule
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(5, 142)
+        Me.Label3.Location = New System.Drawing.Point(357, 97)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(102, 15)
         Me.Label3.TabIndex = 15
@@ -166,7 +169,7 @@ Partial Class frmVoucherModule
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(28, 138)
+        Me.Label8.Location = New System.Drawing.Point(385, 71)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(62, 15)
         Me.Label8.TabIndex = 21
@@ -175,18 +178,19 @@ Partial Class frmVoucherModule
         'nudQuantity
         '
         Me.nudQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.nudQuantity.Location = New System.Drawing.Point(184, 565)
+        Me.nudQuantity.Location = New System.Drawing.Point(501, 673)
         Me.nudQuantity.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
         Me.nudQuantity.Name = "nudQuantity"
         Me.nudQuantity.Size = New System.Drawing.Size(98, 23)
         Me.nudQuantity.TabIndex = 7
         Me.nudQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.nudQuantity.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.nudQuantity.Visible = False
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(35, 106)
+        Me.Label9.Location = New System.Drawing.Point(392, 39)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(55, 15)
         Me.Label9.TabIndex = 24
@@ -215,7 +219,7 @@ Partial Class frmVoucherModule
         '
         Me.lblFileName.AutoSize = True
         Me.lblFileName.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFileName.Location = New System.Drawing.Point(14, 197)
+        Me.lblFileName.Location = New System.Drawing.Point(462, 137)
         Me.lblFileName.Name = "lblFileName"
         Me.lblFileName.Size = New System.Drawing.Size(13, 14)
         Me.lblFileName.TabIndex = 28
@@ -226,7 +230,7 @@ Partial Class frmVoucherModule
         Me.ddSupplier_Payee.BackColor = System.Drawing.Color.White
         Me.ddSupplier_Payee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ddSupplier_Payee.FormattingEnabled = True
-        Me.ddSupplier_Payee.Location = New System.Drawing.Point(132, 139)
+        Me.ddSupplier_Payee.Location = New System.Drawing.Point(465, 94)
         Me.ddSupplier_Payee.Name = "ddSupplier_Payee"
         Me.ddSupplier_Payee.Size = New System.Drawing.Size(213, 23)
         Me.ddSupplier_Payee.TabIndex = 29
@@ -235,7 +239,7 @@ Partial Class frmVoucherModule
         '
         Me.ddVoucherType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ddVoucherType.FormattingEnabled = True
-        Me.ddVoucherType.Location = New System.Drawing.Point(132, 52)
+        Me.ddVoucherType.Location = New System.Drawing.Point(102, 94)
         Me.ddVoucherType.Name = "ddVoucherType"
         Me.ddVoucherType.Size = New System.Drawing.Size(213, 23)
         Me.ddVoucherType.TabIndex = 30
@@ -243,16 +247,16 @@ Partial Class frmVoucherModule
         'Label4
         '
         Me.Label4.BackColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(25, 173)
+        Me.Label4.Location = New System.Drawing.Point(25, 159)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(350, 31)
+        Me.Label4.Size = New System.Drawing.Size(620, 38)
         Me.Label4.TabIndex = 31
         Me.Label4.Text = "Label4"
         '
         'Label5
         '
         Me.Label5.BackColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(262, 175)
+        Me.Label5.Location = New System.Drawing.Point(504, 99)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(86, 27)
         Me.Label5.TabIndex = 32
@@ -261,7 +265,7 @@ Partial Class frmVoucherModule
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(4, 181)
+        Me.Label6.Location = New System.Drawing.Point(10, 132)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(118, 15)
         Me.Label6.TabIndex = 33
@@ -271,19 +275,19 @@ Partial Class frmVoucherModule
         'txtDocumentRemarks
         '
         Me.txtDocumentRemarks.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDocumentRemarks.Location = New System.Drawing.Point(8, 200)
+        Me.txtDocumentRemarks.Location = New System.Drawing.Point(134, 132)
         Me.txtDocumentRemarks.Multiline = True
         Me.txtDocumentRemarks.Name = "txtDocumentRemarks"
         Me.txtDocumentRemarks.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtDocumentRemarks.Size = New System.Drawing.Size(337, 64)
+        Me.txtDocumentRemarks.Size = New System.Drawing.Size(319, 49)
         Me.txtDocumentRemarks.TabIndex = 34
         '
         'Label11
         '
         Me.Label11.BackColor = System.Drawing.Color.Black
-        Me.Label11.Location = New System.Drawing.Point(-61, 271)
+        Me.Label11.Location = New System.Drawing.Point(-1, 188)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(406, 5)
+        Me.Label11.Size = New System.Drawing.Size(691, 2)
         Me.Label11.TabIndex = 35
         Me.Label11.Text = "Label11"
         '
@@ -291,7 +295,7 @@ Partial Class frmVoucherModule
         '
         Me.lblTotalAmount.AutoSize = True
         Me.lblTotalAmount.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalAmount.Location = New System.Drawing.Point(28, 127)
+        Me.lblTotalAmount.Location = New System.Drawing.Point(368, 84)
         Me.lblTotalAmount.Name = "lblTotalAmount"
         Me.lblTotalAmount.Size = New System.Drawing.Size(15, 18)
         Me.lblTotalAmount.TabIndex = 36
@@ -300,7 +304,7 @@ Partial Class frmVoucherModule
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(23, 56)
+        Me.Label12.Location = New System.Drawing.Point(12, 97)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(84, 15)
         Me.Label12.TabIndex = 37
@@ -308,6 +312,7 @@ Partial Class frmVoucherModule
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.GroupBox2)
         Me.GroupBox1.Controls.Add(Me.dgVoucherItemList)
         Me.GroupBox1.Controls.Add(Me.txtItemDiscount)
         Me.GroupBox1.Controls.Add(Me.txtItemAmount)
@@ -315,13 +320,11 @@ Partial Class frmVoucherModule
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.txtDescription)
-        Me.GroupBox1.Controls.Add(Me.btnAttachImage)
-        Me.GroupBox1.Controls.Add(Me.lblFileName)
         Me.GroupBox1.Controls.Add(Me.btnAddRequestItem)
         Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Location = New System.Drawing.Point(362, 10)
+        Me.GroupBox1.Location = New System.Drawing.Point(8, 202)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(376, 330)
+        Me.GroupBox1.Size = New System.Drawing.Size(670, 473)
         Me.GroupBox1.TabIndex = 38
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Particular"
@@ -335,48 +338,48 @@ Partial Class frmVoucherModule
         Me.dgVoucherItemList.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgVoucherItemList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.dgVoucherItemList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgVoucherItemList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
+        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgVoucherItemList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
         Me.dgVoucherItemList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer))
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgVoucherItemList.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer))
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgVoucherItemList.DefaultCellStyle = DataGridViewCellStyle14
         Me.dgVoucherItemList.EnableHeadersVisualStyles = False
         Me.dgVoucherItemList.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.dgVoucherItemList.GridColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgVoucherItemList.Location = New System.Drawing.Point(12, 223)
+        Me.dgVoucherItemList.Location = New System.Drawing.Point(17, 144)
         Me.dgVoucherItemList.Name = "dgVoucherItemList"
         Me.dgVoucherItemList.ReadOnly = True
         Me.dgVoucherItemList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgVoucherItemList.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        DataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
+        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
+        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgVoucherItemList.RowHeadersDefaultCellStyle = DataGridViewCellStyle15
         Me.dgVoucherItemList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.dgVoucherItemList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgVoucherItemList.Size = New System.Drawing.Size(358, 98)
+        Me.dgVoucherItemList.Size = New System.Drawing.Size(647, 98)
         Me.dgVoucherItemList.TabIndex = 33
         Me.dgVoucherItemList.UseCustomBackColor = True
         '
         'txtItemDiscount
         '
         Me.txtItemDiscount.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtItemDiscount.Location = New System.Drawing.Point(100, 130)
+        Me.txtItemDiscount.Location = New System.Drawing.Point(457, 63)
         Me.txtItemDiscount.Name = "txtItemDiscount"
         Me.txtItemDiscount.Size = New System.Drawing.Size(130, 23)
         Me.txtItemDiscount.TabIndex = 26
@@ -384,13 +387,16 @@ Partial Class frmVoucherModule
         'txtItemAmount
         '
         Me.txtItemAmount.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtItemAmount.Location = New System.Drawing.Point(100, 98)
+        Me.txtItemAmount.Location = New System.Drawing.Point(457, 31)
         Me.txtItemAmount.Name = "txtItemAmount"
         Me.txtItemAmount.Size = New System.Drawing.Size(130, 23)
         Me.txtItemAmount.TabIndex = 25
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.lblTotalBeforeDiscount)
+        Me.GroupBox2.Controls.Add(Me.lblTotalAllDiscount)
+        Me.GroupBox2.Controls.Add(Me.Label15)
         Me.GroupBox2.Controls.Add(Me.lblTotalItemDiscount)
         Me.GroupBox2.Controls.Add(Me.Label14)
         Me.GroupBox2.Controls.Add(Me.txtTotalDiscount2)
@@ -400,12 +406,31 @@ Partial Class frmVoucherModule
         Me.GroupBox2.Controls.Add(Me.lblTotalAmount)
         Me.GroupBox2.Controls.Add(Me.btnProcess)
         Me.GroupBox2.Controls.Add(Me.Label4)
-        Me.GroupBox2.Location = New System.Drawing.Point(362, 346)
+        Me.GroupBox2.Location = New System.Drawing.Point(17, 248)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(378, 217)
+        Me.GroupBox2.Size = New System.Drawing.Size(647, 217)
         Me.GroupBox2.TabIndex = 39
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Total Breakdown "
+        '
+        'lblTotalItemDiscount
+        '
+        Me.lblTotalItemDiscount.AutoSize = True
+        Me.lblTotalItemDiscount.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalItemDiscount.Location = New System.Drawing.Point(141, 25)
+        Me.lblTotalItemDiscount.Name = "lblTotalItemDiscount"
+        Me.lblTotalItemDiscount.Size = New System.Drawing.Size(15, 18)
+        Me.lblTotalItemDiscount.TabIndex = 40
+        Me.lblTotalItemDiscount.Text = "0"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(13, 28)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(122, 15)
+        Me.Label14.TabIndex = 39
+        Me.Label14.Text = "Total Item Discount  :"
         '
         'txtTotalDiscount2
         '
@@ -441,32 +466,41 @@ Partial Class frmVoucherModule
         Me.Label10.TabIndex = 22
         Me.Label10.Text = "Discount 1 :"
         '
-        'Label14
+        'Label15
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(13, 28)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(122, 15)
-        Me.Label14.TabIndex = 39
-        Me.Label14.Text = "Total Item Discount  :"
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(22, 113)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(113, 15)
+        Me.Label15.TabIndex = 41
+        Me.Label15.Text = "Total All Discount  :"
         '
-        'lblTotalItemDiscount
+        'lblTotalAllDiscount
         '
-        Me.lblTotalItemDiscount.AutoSize = True
-        Me.lblTotalItemDiscount.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalItemDiscount.Location = New System.Drawing.Point(141, 25)
-        Me.lblTotalItemDiscount.Name = "lblTotalItemDiscount"
-        Me.lblTotalItemDiscount.Size = New System.Drawing.Size(15, 18)
-        Me.lblTotalItemDiscount.TabIndex = 40
-        Me.lblTotalItemDiscount.Text = "0"
+        Me.lblTotalAllDiscount.AutoSize = True
+        Me.lblTotalAllDiscount.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalAllDiscount.Location = New System.Drawing.Point(141, 110)
+        Me.lblTotalAllDiscount.Name = "lblTotalAllDiscount"
+        Me.lblTotalAllDiscount.Size = New System.Drawing.Size(15, 18)
+        Me.lblTotalAllDiscount.TabIndex = 42
+        Me.lblTotalAllDiscount.Text = "0"
+        '
+        'lblTotalBeforeDiscount
+        '
+        Me.lblTotalBeforeDiscount.AutoSize = True
+        Me.lblTotalBeforeDiscount.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalBeforeDiscount.Location = New System.Drawing.Point(368, 28)
+        Me.lblTotalBeforeDiscount.Name = "lblTotalBeforeDiscount"
+        Me.lblTotalBeforeDiscount.Size = New System.Drawing.Size(15, 18)
+        Me.lblTotalBeforeDiscount.TabIndex = 43
+        Me.lblTotalBeforeDiscount.Text = "0"
         '
         'frmVoucherModule
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.ClientSize = New System.Drawing.Size(752, 564)
-        Me.Controls.Add(Me.GroupBox2)
+        Me.ClientSize = New System.Drawing.Size(685, 684)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
@@ -475,6 +509,8 @@ Partial Class frmVoucherModule
         Me.Controls.Add(Me.ddVoucherType)
         Me.Controls.Add(Me.ddSupplier_Payee)
         Me.Controls.Add(Me.pbAttachment)
+        Me.Controls.Add(Me.lblFileName)
+        Me.Controls.Add(Me.btnAttachImage)
         Me.Controls.Add(Me.nudQuantity)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -488,7 +524,6 @@ Partial Class frmVoucherModule
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Create Voucher"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.nudQuantity, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbAttachment, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
@@ -536,4 +571,7 @@ Partial Class frmVoucherModule
     Friend WithEvents txtTotalDiscount1 As TextBox
     Friend WithEvents lblTotalItemDiscount As Label
     Friend WithEvents Label14 As Label
+    Friend WithEvents lblTotalAllDiscount As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents lblTotalBeforeDiscount As Label
 End Class

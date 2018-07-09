@@ -776,11 +776,32 @@ End Class
 
 Public Class VOUCHER_C
     Inherits Base_C
+    Public Function GET_USER_VOUCHER_LIST(ByVal _usercode As String) As DataTable
+        Dim dt As New DataTable
+        Using cn As New SqlConnection(_CONSTRING)
+            Dim cmd As New SqlCommand("[TRANSACTION].[spGET_USER_VOUCHER_LIST]", cn)
+            Dim sqlDA As New SqlDataAdapter(cmd)
+            With cmd
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@USERCODE", _usercode)
+            End With
+
+            sqlDA.Fill(dt)
+
+            cn.Open()
+
+        End Using
+
+        Return dt
+    End Function
+
 
 
     Public Sub INSERT_VOUCHER(ByVal _voucherNumber As String, ByVal _voucherTypeCode As String,
                              ByVal _companyCode As String, ByVal _voucherDate As DateTime, ByVal _supplierID As Integer,
-                              ByVal _discount1 As Double, ByVal _discount2 As Double,
+                             ByVal _docRemarks As String, ByVal _discount1 As Double, ByVal _discount2 As Double,
+                              ByVal _attachment As Byte(), ByVal _isAttachment As Boolean,
+                              ByVal _particular As String, ByVal _itemAmount As Double, ByVal _itemDiscount As Double,
                               ByVal _userCode As String)
 
         Using cn As New SqlConnection(_CONSTRING)
@@ -793,8 +814,14 @@ Public Class VOUCHER_C
                     .Parameters.AddWithValue("@COMPANYCODE", _companyCode)
                     .Parameters.AddWithValue("@VOUCHERDATE", _voucherDate)
                     .Parameters.AddWithValue("@SUPPLIERID", _supplierID)
+                    .Parameters.AddWithValue("@DOCREMARKS", _docRemarks)
                     .Parameters.AddWithValue("@DISCOUNT1", _discount1)
                     .Parameters.AddWithValue("@DISCOUNT2", _discount2)
+                    .Parameters.AddWithValue("@ATTACHMENT", _attachment)
+                    .Parameters.AddWithValue("@ISATTACHMENT", _isAttachment)
+                    .Parameters.AddWithValue("@PARTICULAR", _particular)
+                    .Parameters.AddWithValue("@ITEM_AMOUNT", _itemAmount)
+                    .Parameters.AddWithValue("@ITEM_DISCOUNT", _itemDiscount)
                     .Parameters.AddWithValue("@USERCODE", _userCode)
                 End With
                 cn.Open()

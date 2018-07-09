@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmViewAttachment
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,22 +20,24 @@ Partial Class frmViewAttachment
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.dgAttachment = New System.Windows.Forms.DataGridView()
         Me.lblDMRNum = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         CType(Me.dgAttachment, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.dgAttachment)
+        Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(706, 498)
+        Me.Panel1.Size = New System.Drawing.Size(997, 498)
         Me.Panel1.TabIndex = 0
         '
         'dgAttachment
@@ -44,14 +46,13 @@ Partial Class frmViewAttachment
         Me.dgAttachment.AllowUserToDeleteRows = False
         Me.dgAttachment.AllowUserToResizeColumns = False
         Me.dgAttachment.AllowUserToResizeRows = False
-        Me.dgAttachment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.dgAttachment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgAttachment.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgAttachment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgAttachment.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgAttachment.Location = New System.Drawing.Point(0, 0)
+        Me.dgAttachment.Location = New System.Drawing.Point(18, 43)
         Me.dgAttachment.Name = "dgAttachment"
         Me.dgAttachment.ReadOnly = True
-        Me.dgAttachment.Size = New System.Drawing.Size(706, 498)
+        Me.dgAttachment.Size = New System.Drawing.Size(706, 499)
         Me.dgAttachment.TabIndex = 0
         '
         'lblDMRNum
@@ -63,11 +64,22 @@ Partial Class frmViewAttachment
         Me.lblDMRNum.TabIndex = 1
         Me.lblDMRNum.Text = "."
         '
+        'Panel2
+        '
+        Me.Panel2.AutoScroll = True
+        Me.Panel2.Controls.Add(Me.dgAttachment)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(997, 498)
+        Me.Panel2.TabIndex = 1
+        '
         'frmViewAttachment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(706, 498)
+        Me.AutoScroll = True
+        Me.ClientSize = New System.Drawing.Size(997, 498)
         Me.Controls.Add(Me.lblDMRNum)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -77,6 +89,7 @@ Partial Class frmViewAttachment
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
         CType(Me.dgAttachment, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -84,4 +97,5 @@ Partial Class frmViewAttachment
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents dgAttachment As System.Windows.Forms.DataGridView
     Friend WithEvents lblDMRNum As System.Windows.Forms.Label
+    Friend WithEvents Panel2 As Panel
 End Class
