@@ -83,6 +83,13 @@ Partial Class frmEmployeeForm
         Me.Edit = New System.Windows.Forms.DataGridViewLinkColumn()
         Me.gbInput = New System.Windows.Forms.GroupBox()
         Me.lblImageSize = New System.Windows.Forms.Label()
+        Me.txtContactNumber = New System.Windows.Forms.TextBox()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.txtContactPerson = New System.Windows.Forms.TextBox()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.txtAddress = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.imgEmpPhoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
@@ -93,10 +100,12 @@ Partial Class frmEmployeeForm
         Me.GroupBox4.SuspendLayout()
         CType(Me.dgListOfEmployee, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbInput.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.GroupBox5)
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.lblPhotoPath)
         Me.GroupBox1.Controls.Add(Me.Label7)
@@ -567,7 +576,7 @@ Partial Class frmEmployeeForm
         'gbListOfEmployee
         '
         Me.gbListOfEmployee.Controls.Add(Me.FlowLayoutPanel1)
-        Me.gbListOfEmployee.Location = New System.Drawing.Point(12, 40)
+        Me.gbListOfEmployee.Location = New System.Drawing.Point(6, 45)
         Me.gbListOfEmployee.Name = "gbListOfEmployee"
         Me.gbListOfEmployee.Size = New System.Drawing.Size(849, 488)
         Me.gbListOfEmployee.TabIndex = 37
@@ -676,6 +685,72 @@ Partial Class frmEmployeeForm
         Me.lblImageSize.TabIndex = 39
         Me.lblImageSize.Text = "0"
         '
+        'txtContactNumber
+        '
+        Me.txtContactNumber.Location = New System.Drawing.Point(125, 57)
+        Me.txtContactNumber.Name = "txtContactNumber"
+        Me.txtContactNumber.Size = New System.Drawing.Size(196, 26)
+        Me.txtContactNumber.TabIndex = 35
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.ForeColor = System.Drawing.Color.Black
+        Me.Label21.Location = New System.Drawing.Point(3, 65)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(116, 18)
+        Me.Label21.TabIndex = 34
+        Me.Label21.Text = "Contact Number :"
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.Controls.Add(Me.txtAddress)
+        Me.GroupBox5.Controls.Add(Me.Label23)
+        Me.GroupBox5.Controls.Add(Me.txtContactPerson)
+        Me.GroupBox5.Controls.Add(Me.Label22)
+        Me.GroupBox5.Controls.Add(Me.txtContactNumber)
+        Me.GroupBox5.Controls.Add(Me.Label21)
+        Me.GroupBox5.Location = New System.Drawing.Point(6, 296)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(458, 125)
+        Me.GroupBox5.TabIndex = 36
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "Contact Details"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.ForeColor = System.Drawing.Color.Black
+        Me.Label22.Location = New System.Drawing.Point(14, 96)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(105, 18)
+        Me.Label22.TabIndex = 36
+        Me.Label22.Text = "Contact Person:"
+        '
+        'txtContactPerson
+        '
+        Me.txtContactPerson.Location = New System.Drawing.Point(125, 89)
+        Me.txtContactPerson.Name = "txtContactPerson"
+        Me.txtContactPerson.Size = New System.Drawing.Size(196, 26)
+        Me.txtContactPerson.TabIndex = 37
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.ForeColor = System.Drawing.Color.Black
+        Me.Label23.Location = New System.Drawing.Point(54, 32)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(65, 18)
+        Me.Label23.TabIndex = 38
+        Me.Label23.Text = "Address :"
+        '
+        'txtAddress
+        '
+        Me.txtAddress.Location = New System.Drawing.Point(125, 24)
+        Me.txtAddress.Name = "txtAddress"
+        Me.txtAddress.Size = New System.Drawing.Size(327, 26)
+        Me.txtAddress.TabIndex = 39
+        '
         'frmEmployeeForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 18.0!)
@@ -704,6 +779,8 @@ Partial Class frmEmployeeForm
         Me.GroupBox4.PerformLayout()
         CType(Me.dgListOfEmployee, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbInput.ResumeLayout(False)
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox5.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -771,4 +848,11 @@ Partial Class frmEmployeeForm
     Friend WithEvents lblEmployeeCode As Label
     Friend WithEvents gbInput As GroupBox
     Friend WithEvents lblImageSize As Label
+    Friend WithEvents GroupBox5 As GroupBox
+    Friend WithEvents txtAddress As TextBox
+    Friend WithEvents Label23 As Label
+    Friend WithEvents txtContactPerson As TextBox
+    Friend WithEvents Label22 As Label
+    Friend WithEvents txtContactNumber As TextBox
+    Friend WithEvents Label21 As Label
 End Class

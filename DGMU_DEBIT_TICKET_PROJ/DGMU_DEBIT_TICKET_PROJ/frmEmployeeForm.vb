@@ -155,7 +155,7 @@ Public Class frmEmployeeForm
                 'oEmployee.INSERT_EMPLOYEE_PHOTO(cmbRequestee.SelectedValue.ToString(), bAttachment)
 
                 oEmployee.INSERT_EMPLOYEE_INFORMATION(oSystem.GENERATE_SERIES_NUMBER_5DIGITS(cmbCompanyList.SelectedValue), txtLastName.Text, txtFirstName.Text, txtMiddleName.Text, "", Convert.ToDateTime(dtBirthDate.Value), cmbGender.SelectedValue,
-                                              cmbMaritalStatus.SelectedValue,
+                                              cmbMaritalStatus.SelectedValue, txtAddress.Text, txtContactNumber.Text, txtContactPerson.Text,
                                               txtTIN.Text, txtSSS.Text, txtPagibig.Text, txtPhilHealth.Text, Convert.ToDateTime(dtDateHired.Value), cmbCompanyList.SelectedValue, cmbJobPosition.SelectedValue, cmbDepartmentList.SelectedValue, cmbEmploymentStatus.SelectedValue, iFileSize, bEmpPhoto)
 
 
@@ -181,7 +181,7 @@ Public Class frmEmployeeForm
 
 
                 oEmployee.UPDATE_EMPLOYEE_INFORMATION(lblEmployeeCode.Text, txtLastName.Text, txtFirstName.Text, txtMiddleName.Text, "", Convert.ToDateTime(dtBirthDate.Value), cmbGender.SelectedValue,
-                                              cmbMaritalStatus.SelectedValue,
+                                              cmbMaritalStatus.SelectedValue, txtAddress.Text, txtContactNumber.Text, txtContactPerson.Text,
                                               txtTIN.Text, txtSSS.Text, txtPagibig.Text, txtPhilHealth.Text, Convert.ToDateTime(dtDateHired.Value), cmbCompanyList.SelectedValue, cmbJobPosition.SelectedValue, cmbDepartmentList.SelectedValue, cmbEmploymentStatus.SelectedValue, bIsPhotoChange, bEmpPhoto)
 
                 MetroMessageBox.Show(Me, "Employee Data successfully updated.", "HRIS", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -260,6 +260,9 @@ Public Class frmEmployeeForm
                 cmbGender.SelectedValue = drv("GenderCode").ToString()
                 cmbMaritalStatus.SelectedValue = drv("MaritalCode").ToString()
 
+                txtAddress.Text = drv("Address").ToString()
+                txtContactNumber.Text = drv("Contact_Number").ToString()
+                txtContactPerson.Text = drv("Contact_Person").ToString()
 
                 cmbEmploymentStatus.SelectedValue = drv("EmpStatusCode").ToString()
                 dtDateHired.Value = Convert.ToDateTime(drv("date_Hired"))
