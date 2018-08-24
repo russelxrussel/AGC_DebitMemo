@@ -1,6 +1,8 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class Login
+
     Inherits MetroFramework.Forms.MetroForm
+    'Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -91,27 +93,27 @@ Partial Class Login
         '
         'MetroLabel2
         '
-        Me.MetroLabel2.AutoSize = True
-        Me.MetroLabel2.Location = New System.Drawing.Point(16, 99)
-        Me.MetroLabel2.Name = "MetroLabel2"
-        Me.MetroLabel2.Size = New System.Drawing.Size(70, 19)
-        Me.MetroLabel2.TabIndex = 5
-        Me.MetroLabel2.Text = "Password :"
-        '
+        'Me.MetroLabel2.AutoSize = True
+        'Me.MetroLabel2.Location = New System.Drawing.Point(16, 99)
+        'Me.MetroLabel2.Name = "MetroLabel2"
+        'Me.MetroLabel2.Size = New System.Drawing.Size(70, 19)
+        'Me.MetroLabel2.TabIndex = 5
+        '        Me.MetroLabel2.Text = "Password :"
+        ''
         'txtPassword
         '
         '
         '
         '
-        Me.txtPassword.CustomButton.Image = Nothing
-        Me.txtPassword.CustomButton.Location = New System.Drawing.Point(131, 1)
-        Me.txtPassword.CustomButton.Name = ""
-        Me.txtPassword.CustomButton.Size = New System.Drawing.Size(21, 21)
-        Me.txtPassword.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.txtPassword.CustomButton.TabIndex = 1
-        Me.txtPassword.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.txtPassword.CustomButton.UseSelectable = True
-        Me.txtPassword.CustomButton.Visible = False
+        'Me.txtPassword.CustomButton.Image = Nothing
+        'Me.txtPassword.CustomButton.Location = New System.Drawing.Point(131, 1)
+        'Me.txtPassword.CustomButton.Name = ""
+        'Me.txtPassword.CustomButton.Size = New System.Drawing.Size(21, 21)
+        'Me.txtPassword.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        'Me.txtPassword.CustomButton.TabIndex = 1
+        'Me.txtPassword.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        '        Me.txtPassword.CustomButton.UseSelectable = True
+        '        Me.txtPassword.CustomButton.Visible = False
         Me.txtPassword.Lines = New String(-1) {}
         Me.txtPassword.Location = New System.Drawing.Point(106, 95)
         Me.txtPassword.MaxLength = 32767

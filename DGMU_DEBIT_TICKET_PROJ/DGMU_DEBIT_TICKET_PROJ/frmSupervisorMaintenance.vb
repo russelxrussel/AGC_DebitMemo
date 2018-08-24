@@ -52,7 +52,7 @@
         dr("SupervisorID") = 0
         dt.Rows.InsertAt(dr, 0)
 
-        With cmbSupervisor
+        With cmbBranch
             .DataSource = dt
             .DisplayMember = dt.Columns("SupervisorName").ToString()
             .ValueMember = dt.Columns("SupervisorID").ToString()
@@ -117,7 +117,7 @@
                 txtBranchName.Text = drv("BranchName").ToString()
                 If String.IsNullOrEmpty(drv("SupervisorID").ToString()) Then
                 Else
-                    cmbSupervisor.SelectedValue = drv("SupervisorID").ToString()
+                    cmbBranch.SelectedValue = drv("SupervisorID").ToString()
                 End If
 
                 cmbBusinessPartner.SelectedValue = drv("partnerCode").ToString()
@@ -140,7 +140,7 @@
     Private Sub clearInputs_Branch()
         txtBranchCode.Text = ""
         txtBranchName.Text = ""
-        cmbSupervisor.SelectedIndex = 0
+        cmbBranch.SelectedIndex = 0
         cmbBusinessPartner.SelectedIndex = 0
     End Sub
 

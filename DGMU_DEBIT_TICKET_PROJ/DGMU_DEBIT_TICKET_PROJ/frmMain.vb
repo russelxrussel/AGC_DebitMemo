@@ -1,6 +1,7 @@
 ﻿Public Class frmMain
 
     Dim oDBR As New DMT_DEBITMEMO_C()
+    Dim oVoucher As New VOUCHER_C
     Private _accessType As String
 
     Public Property ACCESSTYPE() As String
@@ -13,17 +14,7 @@
     End Property
 
     Private Sub lnkDBR_Click(sender As Object, e As EventArgs) Handles lnkDBR.Click
-        'Try
 
-        'Dim frm As New frmDebitMemoRequest
-        'frm.TopLevel = False
-        '' frm.ShadowType = MetroFramework.Forms.MetroFormShadowType.None
-        'frm.Show()
-        'scPage.Panel2.Controls.Add(frm)
-
-
-
-        'MsgBox(admissionModule.TopLevel.ToString)
         With frmDebitMemoRequest
             .TopLevel = False
             .Left = 0
@@ -35,13 +26,6 @@
         frmDebitMemoRequest.BringToFront()
 
 
-        'Catch ex As Exception
-
-        'End Try
-        '        Form1 frm =new Form1();
-        'frm.MdiParent=this;
-        'frm.Show();
-        'splitContainer1.Panel1.Controls.Add(frm);
     End Sub
 
 
@@ -60,6 +44,8 @@
         countApproveDBR_ForPosting()
 
         countForDispatchDBR()
+
+        countForVoucherPayment()
 
         tsCalendar.Text = DateTime.Now.ToShortDateString
 
@@ -84,7 +70,7 @@
     Private Sub lnkLogOut_Click(sender As Object, e As EventArgs) Handles lnkLogOut.Click
         'Me.Close()
         'Login.ShowDialog()
-        End
+        Application.Exit()
     End Sub
 
     Public Sub countForApprovalDBR()
@@ -134,6 +120,21 @@
         Return i
     End Function
 
+    Public Function countVoucherPaymentRequest(ByVal strQuery As String) As Integer
+        Dim i As Integer
+
+        Dim dt As New DataTable
+
+        dt = oVoucher.GET_VOUCHER_LIST()
+
+        Dim dv As DataView = dt.DefaultView
+
+        dv.RowFilter = strQuery
+        i = dv.Count
+
+        Return i
+    End Function
+
     Public Sub DISPLAY_STAT_COUNT()
         Dim dt As New DataTable
         dt = oDBR.GET_ALL_REQUEST_ITEM
@@ -163,8 +164,15 @@
 
     End Sub
 
-    Public Sub countApproveForPosted()
+    Public Sub countForVoucherPayment()
+        'Dim i As Integer = countDebitMemoStatus("IsPosted = 0 and IsCompleted = 1 and usercode = '" + tsUserCode.Text + "'")
+        Dim i As Integer = countVoucherPaymentRequest("IsOpen = 1 and IsClose = 0")
+        If i <> 0 Then
 
+            lnkVoucherPaymentRequest.Text = " Voucher Payment (" + i.ToString + ")"
+        Else
+            lnkVoucherPaymentRequest.Text = " Voucher Payment"
+        End If
     End Sub
 
     Private Sub lnkMyRequest_Click(sender As Object, e As EventArgs) Handles lnkMyRequest.Click
@@ -302,5 +310,41 @@
         frmVoucherModule.Show()
         Me.scPage.Panel2.Controls.Add(frmVoucherModule)
         frmVoucherModule.BringToFront()
+    End Sub
+
+    Private Sub lnkVoucherList_Click(sender As Object, e As EventArgs) Handles lnkVoucherList.Click
+        With frmVoucherList
+            .TopLevel = False
+            .Left = 0
+            .Top = 0
+        End With
+
+        frmVoucherList.Show()
+        Me.scPage.Panel2.Controls.Add(frmVoucherList)
+        frmVoucherList.BringToFront()
+    End Sub
+
+    Private Sub lnkVoucherPaymentRequest_Click(sender As Object, e As EventArgs) Handles lnkVoucherPaymentRequest.Click
+        With frmVoucherPaymentRequest
+            .TopLevel = False
+            .Left = 0
+            .Top = 0
+        End With
+
+        frmVoucherPaymentRequest.Show()
+        Me.scPage.Panel2.Controls.Add(frmVoucherPaymentRequest)
+        frmVoucherPaymentRequest.BringToFront()
+    End Sub
+
+    Private Sub lnkChangePassword_Click(sender As Object, e As EventArgs) Handles lnkChangePassword.Click
+        With frmUserModification
+            .TopLevel = False
+            .Left = 0
+            .Top = 0
+        End With
+
+        frmUserModification.Show()
+        Me.scPage.Panel2.Controls.Add(frmUserModification)
+        frmUserModification.BringToFront()
     End Sub
 End Class

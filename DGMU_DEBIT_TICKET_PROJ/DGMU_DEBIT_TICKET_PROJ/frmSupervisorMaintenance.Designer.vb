@@ -24,27 +24,12 @@ Partial Class frmSupervisorMaintenance
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.tpItem = New System.Windows.Forms.TabPage()
-        Me.gbSupervisorEntry = New System.Windows.Forms.GroupBox()
-        Me.chkIsActiveSupervisor = New System.Windows.Forms.CheckBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtSupervisorName = New System.Windows.Forms.TextBox()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.tsCreateSupervisor = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
-        Me.tsSaveSupervisor = New System.Windows.Forms.ToolStripButton()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.dgSupervisorList = New System.Windows.Forms.DataGridView()
-        Me.dgEdit = New System.Windows.Forms.DataGridViewLinkColumn()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtSearchSupervisor = New System.Windows.Forms.TextBox()
-        Me.tpBranch = New System.Windows.Forms.TabPage()
+        Me.tpCompany = New System.Windows.Forms.TabPage()
         Me.gbBranchEntry = New System.Windows.Forms.GroupBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.cmbBusinessPartner = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.cmbSupervisor = New System.Windows.Forms.ComboBox()
+        Me.cmbBranch = New System.Windows.Forms.ComboBox()
         Me.txtBranchName = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.chkIsActiveBranch = New System.Windows.Forms.CheckBox()
@@ -56,32 +41,47 @@ Partial Class frmSupervisorMaintenance
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtSearchBranch = New System.Windows.Forms.TextBox()
         Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
-        Me.tsNewBranch = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
-        Me.tsSaveBranch = New System.Windows.Forms.ToolStripButton()
+        Me.tpItem = New System.Windows.Forms.TabPage()
+        Me.gbSupervisorEntry = New System.Windows.Forms.GroupBox()
+        Me.chkIsActiveSupervisor = New System.Windows.Forms.CheckBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtSupervisorName = New System.Windows.Forms.TextBox()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.dgSupervisorList = New System.Windows.Forms.DataGridView()
+        Me.dgEdit = New System.Windows.Forms.DataGridViewLinkColumn()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtSearchSupervisor = New System.Windows.Forms.TextBox()
         Me.tpPartners = New System.Windows.Forms.TabPage()
         Me.SpGETDMITEMLISTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DsItemList = New DGMU_DEBIT_TICKET_PROJ.dsItemList()
         Me.SpGET_DM_ITEM_LISTTableAdapter2 = New DGMU_DEBIT_TICKET_PROJ.dsItemListTableAdapters.spGET_DM_ITEM_LISTTableAdapter()
+        Me.tsNewBranch = New System.Windows.Forms.ToolStripButton()
+        Me.tsSaveBranch = New System.Windows.Forms.ToolStripButton()
+        Me.tsCreateSupervisor = New System.Windows.Forms.ToolStripButton()
+        Me.tsSaveSupervisor = New System.Windows.Forms.ToolStripButton()
         Me.TabControl1.SuspendLayout()
+        Me.tpCompany.SuspendLayout()
+        Me.gbBranchEntry.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
+        CType(Me.dgBranchList, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ToolStrip2.SuspendLayout()
         Me.tpItem.SuspendLayout()
         Me.gbSupervisorEntry.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgSupervisorList, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.tpBranch.SuspendLayout()
-        Me.gbBranchEntry.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
-        CType(Me.dgBranchList, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ToolStrip2.SuspendLayout()
         CType(Me.SpGETDMITEMLISTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DsItemList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
         '
-        Me.TabControl1.Controls.Add(Me.tpBranch)
+        Me.TabControl1.Controls.Add(Me.tpCompany)
         Me.TabControl1.Controls.Add(Me.tpItem)
         Me.TabControl1.Controls.Add(Me.tpPartners)
         Me.TabControl1.Location = New System.Drawing.Point(2, 13)
@@ -91,169 +91,25 @@ Partial Class frmSupervisorMaintenance
         Me.TabControl1.Size = New System.Drawing.Size(840, 408)
         Me.TabControl1.TabIndex = 0
         '
-        'tpItem
+        'tpCompany
         '
-        Me.tpItem.Controls.Add(Me.gbSupervisorEntry)
-        Me.tpItem.Controls.Add(Me.ToolStrip1)
-        Me.tpItem.Controls.Add(Me.GroupBox1)
-        Me.tpItem.Location = New System.Drawing.Point(4, 27)
-        Me.tpItem.Margin = New System.Windows.Forms.Padding(4)
-        Me.tpItem.Name = "tpItem"
-        Me.tpItem.Padding = New System.Windows.Forms.Padding(4)
-        Me.tpItem.Size = New System.Drawing.Size(832, 377)
-        Me.tpItem.TabIndex = 0
-        Me.tpItem.Text = "Supervisor"
-        '
-        'gbSupervisorEntry
-        '
-        Me.gbSupervisorEntry.Controls.Add(Me.chkIsActiveSupervisor)
-        Me.gbSupervisorEntry.Controls.Add(Me.Label1)
-        Me.gbSupervisorEntry.Controls.Add(Me.txtSupervisorName)
-        Me.gbSupervisorEntry.Enabled = False
-        Me.gbSupervisorEntry.Location = New System.Drawing.Point(472, 38)
-        Me.gbSupervisorEntry.Name = "gbSupervisorEntry"
-        Me.gbSupervisorEntry.Size = New System.Drawing.Size(355, 104)
-        Me.gbSupervisorEntry.TabIndex = 2
-        Me.gbSupervisorEntry.TabStop = False
-        Me.gbSupervisorEntry.Text = "Supervisor Data Entry"
-        '
-        'chkIsActiveSupervisor
-        '
-        Me.chkIsActiveSupervisor.AutoSize = True
-        Me.chkIsActiveSupervisor.Location = New System.Drawing.Point(133, 63)
-        Me.chkIsActiveSupervisor.Name = "chkIsActiveSupervisor"
-        Me.chkIsActiveSupervisor.Size = New System.Drawing.Size(65, 22)
-        Me.chkIsActiveSupervisor.TabIndex = 4
-        Me.chkIsActiveSupervisor.Text = "Active"
-        Me.chkIsActiveSupervisor.UseVisualStyleBackColor = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(16, 31)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(114, 18)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Supervisor Name"
-        '
-        'txtSupervisorName
-        '
-        Me.txtSupervisorName.Location = New System.Drawing.Point(133, 28)
-        Me.txtSupervisorName.Name = "txtSupervisorName"
-        Me.txtSupervisorName.Size = New System.Drawing.Size(216, 26)
-        Me.txtSupervisorName.TabIndex = 0
-        '
-        'ToolStrip1
-        '
-        Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsCreateSupervisor, Me.ToolStripSeparator1, Me.ToolStripLabel1, Me.tsSaveSupervisor})
-        Me.ToolStrip1.Location = New System.Drawing.Point(4, 4)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(824, 31)
-        Me.ToolStrip1.TabIndex = 1
-        Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'tsCreateSupervisor
-        '
-        Me.tsCreateSupervisor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.tsCreateSupervisor.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.add_image_24
-        Me.tsCreateSupervisor.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.tsCreateSupervisor.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsCreateSupervisor.Name = "tsCreateSupervisor"
-        Me.tsCreateSupervisor.Size = New System.Drawing.Size(28, 28)
-        Me.tsCreateSupervisor.Text = "Create"
-        '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 31)
-        '
-        'ToolStripLabel1
-        '
-        Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(73, 28)
-        Me.ToolStripLabel1.Text = "                      "
-        '
-        'tsSaveSupervisor
-        '
-        Me.tsSaveSupervisor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.tsSaveSupervisor.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.approval_24
-        Me.tsSaveSupervisor.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.tsSaveSupervisor.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsSaveSupervisor.Name = "tsSaveSupervisor"
-        Me.tsSaveSupervisor.Size = New System.Drawing.Size(28, 28)
-        Me.tsSaveSupervisor.Text = "Update"
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.dgSupervisorList)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.txtSearchSupervisor)
-        Me.GroupBox1.Location = New System.Drawing.Point(6, 38)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(460, 331)
-        Me.GroupBox1.TabIndex = 0
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Supervisor Details"
-        '
-        'dgSupervisorList
-        '
-        Me.dgSupervisorList.AllowUserToAddRows = False
-        Me.dgSupervisorList.AllowUserToDeleteRows = False
-        Me.dgSupervisorList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgSupervisorList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dgEdit})
-        Me.dgSupervisorList.Location = New System.Drawing.Point(9, 63)
-        Me.dgSupervisorList.Name = "dgSupervisorList"
-        Me.dgSupervisorList.ReadOnly = True
-        Me.dgSupervisorList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.dgSupervisorList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgSupervisorList.Size = New System.Drawing.Size(429, 262)
-        Me.dgSupervisorList.TabIndex = 5
-        '
-        'dgEdit
-        '
-        Me.dgEdit.HeaderText = "Edit"
-        Me.dgEdit.Name = "dgEdit"
-        Me.dgEdit.ReadOnly = True
-        Me.dgEdit.Text = "Edit"
-        Me.dgEdit.UseColumnTextForLinkValue = True
-        Me.dgEdit.Width = 60
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(12, 28)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(49, 18)
-        Me.Label4.TabIndex = 4
-        Me.Label4.Text = "Search"
-        '
-        'txtSearchSupervisor
-        '
-        Me.txtSearchSupervisor.Location = New System.Drawing.Point(67, 25)
-        Me.txtSearchSupervisor.Name = "txtSearchSupervisor"
-        Me.txtSearchSupervisor.Size = New System.Drawing.Size(371, 26)
-        Me.txtSearchSupervisor.TabIndex = 1
-        '
-        'tpBranch
-        '
-        Me.tpBranch.BackColor = System.Drawing.SystemColors.Control
-        Me.tpBranch.Controls.Add(Me.gbBranchEntry)
-        Me.tpBranch.Controls.Add(Me.GroupBox2)
-        Me.tpBranch.Controls.Add(Me.ToolStrip2)
-        Me.tpBranch.Location = New System.Drawing.Point(4, 27)
-        Me.tpBranch.Name = "tpBranch"
-        Me.tpBranch.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpBranch.Size = New System.Drawing.Size(832, 377)
-        Me.tpBranch.TabIndex = 2
-        Me.tpBranch.Text = "Branch"
+        Me.tpCompany.BackColor = System.Drawing.SystemColors.Control
+        Me.tpCompany.Controls.Add(Me.gbBranchEntry)
+        Me.tpCompany.Controls.Add(Me.GroupBox2)
+        Me.tpCompany.Controls.Add(Me.ToolStrip2)
+        Me.tpCompany.Location = New System.Drawing.Point(4, 27)
+        Me.tpCompany.Name = "tpCompany"
+        Me.tpCompany.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpCompany.Size = New System.Drawing.Size(832, 377)
+        Me.tpCompany.TabIndex = 2
+        Me.tpCompany.Text = "Company"
         '
         'gbBranchEntry
         '
         Me.gbBranchEntry.Controls.Add(Me.Label7)
         Me.gbBranchEntry.Controls.Add(Me.cmbBusinessPartner)
         Me.gbBranchEntry.Controls.Add(Me.Label6)
-        Me.gbBranchEntry.Controls.Add(Me.cmbSupervisor)
+        Me.gbBranchEntry.Controls.Add(Me.cmbBranch)
         Me.gbBranchEntry.Controls.Add(Me.txtBranchName)
         Me.gbBranchEntry.Controls.Add(Me.Label5)
         Me.gbBranchEntry.Controls.Add(Me.chkIsActiveBranch)
@@ -293,13 +149,13 @@ Partial Class frmSupervisorMaintenance
         Me.Label6.TabIndex = 8
         Me.Label6.Text = "Supervisor"
         '
-        'cmbSupervisor
+        'cmbBranch
         '
-        Me.cmbSupervisor.FormattingEnabled = True
-        Me.cmbSupervisor.Location = New System.Drawing.Point(107, 92)
-        Me.cmbSupervisor.Name = "cmbSupervisor"
-        Me.cmbSupervisor.Size = New System.Drawing.Size(216, 26)
-        Me.cmbSupervisor.TabIndex = 7
+        Me.cmbBranch.FormattingEnabled = True
+        Me.cmbBranch.Location = New System.Drawing.Point(107, 92)
+        Me.cmbBranch.Name = "cmbBranch"
+        Me.cmbBranch.Size = New System.Drawing.Size(216, 26)
+        Me.cmbBranch.TabIndex = 7
         '
         'txtBranchName
         '
@@ -313,9 +169,9 @@ Partial Class frmSupervisorMaintenance
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(11, 63)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(90, 18)
+        Me.Label5.Size = New System.Drawing.Size(45, 18)
         Me.Label5.TabIndex = 5
-        Me.Label5.Text = "Branch Name"
+        Me.Label5.Text = "Name"
         '
         'chkIsActiveBranch
         '
@@ -332,9 +188,9 @@ Partial Class frmSupervisorMaintenance
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(16, 31)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(85, 18)
+        Me.Label3.Size = New System.Drawing.Size(40, 18)
         Me.Label3.TabIndex = 3
-        Me.Label3.Text = "Branch Code"
+        Me.Label3.Text = "Code"
         '
         'txtBranchCode
         '
@@ -404,16 +260,6 @@ Partial Class frmSupervisorMaintenance
         Me.ToolStrip2.TabIndex = 2
         Me.ToolStrip2.Text = "ToolStrip2"
         '
-        'tsNewBranch
-        '
-        Me.tsNewBranch.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.tsNewBranch.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.add_image_24
-        Me.tsNewBranch.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.tsNewBranch.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsNewBranch.Name = "tsNewBranch"
-        Me.tsNewBranch.Size = New System.Drawing.Size(28, 28)
-        Me.tsNewBranch.Text = "Create"
-        '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
@@ -425,15 +271,129 @@ Partial Class frmSupervisorMaintenance
         Me.ToolStripLabel2.Size = New System.Drawing.Size(73, 28)
         Me.ToolStripLabel2.Text = "                      "
         '
-        'tsSaveBranch
+        'tpItem
         '
-        Me.tsSaveBranch.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.tsSaveBranch.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.approval_24
-        Me.tsSaveBranch.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.tsSaveBranch.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsSaveBranch.Name = "tsSaveBranch"
-        Me.tsSaveBranch.Size = New System.Drawing.Size(28, 28)
-        Me.tsSaveBranch.Text = "Update"
+        Me.tpItem.Controls.Add(Me.gbSupervisorEntry)
+        Me.tpItem.Controls.Add(Me.ToolStrip1)
+        Me.tpItem.Controls.Add(Me.GroupBox1)
+        Me.tpItem.Location = New System.Drawing.Point(4, 27)
+        Me.tpItem.Margin = New System.Windows.Forms.Padding(4)
+        Me.tpItem.Name = "tpItem"
+        Me.tpItem.Padding = New System.Windows.Forms.Padding(4)
+        Me.tpItem.Size = New System.Drawing.Size(832, 377)
+        Me.tpItem.TabIndex = 0
+        Me.tpItem.Text = "Supervisor"
+        '
+        'gbSupervisorEntry
+        '
+        Me.gbSupervisorEntry.Controls.Add(Me.chkIsActiveSupervisor)
+        Me.gbSupervisorEntry.Controls.Add(Me.Label1)
+        Me.gbSupervisorEntry.Controls.Add(Me.txtSupervisorName)
+        Me.gbSupervisorEntry.Enabled = False
+        Me.gbSupervisorEntry.Location = New System.Drawing.Point(472, 38)
+        Me.gbSupervisorEntry.Name = "gbSupervisorEntry"
+        Me.gbSupervisorEntry.Size = New System.Drawing.Size(355, 104)
+        Me.gbSupervisorEntry.TabIndex = 2
+        Me.gbSupervisorEntry.TabStop = False
+        Me.gbSupervisorEntry.Text = "Supervisor Data Entry"
+        '
+        'chkIsActiveSupervisor
+        '
+        Me.chkIsActiveSupervisor.AutoSize = True
+        Me.chkIsActiveSupervisor.Location = New System.Drawing.Point(133, 63)
+        Me.chkIsActiveSupervisor.Name = "chkIsActiveSupervisor"
+        Me.chkIsActiveSupervisor.Size = New System.Drawing.Size(65, 22)
+        Me.chkIsActiveSupervisor.TabIndex = 4
+        Me.chkIsActiveSupervisor.Text = "Active"
+        Me.chkIsActiveSupervisor.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(16, 31)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(114, 18)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Supervisor Name"
+        '
+        'txtSupervisorName
+        '
+        Me.txtSupervisorName.Location = New System.Drawing.Point(133, 28)
+        Me.txtSupervisorName.Name = "txtSupervisorName"
+        Me.txtSupervisorName.Size = New System.Drawing.Size(216, 26)
+        Me.txtSupervisorName.TabIndex = 0
+        '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsCreateSupervisor, Me.ToolStripSeparator1, Me.ToolStripLabel1, Me.tsSaveSupervisor})
+        Me.ToolStrip1.Location = New System.Drawing.Point(4, 4)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(824, 31)
+        Me.ToolStrip1.TabIndex = 1
+        Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 31)
+        '
+        'ToolStripLabel1
+        '
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(73, 28)
+        Me.ToolStripLabel1.Text = "                      "
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.dgSupervisorList)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.txtSearchSupervisor)
+        Me.GroupBox1.Location = New System.Drawing.Point(6, 38)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(460, 331)
+        Me.GroupBox1.TabIndex = 0
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Supervisor Details"
+        '
+        'dgSupervisorList
+        '
+        Me.dgSupervisorList.AllowUserToAddRows = False
+        Me.dgSupervisorList.AllowUserToDeleteRows = False
+        Me.dgSupervisorList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgSupervisorList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dgEdit})
+        Me.dgSupervisorList.Location = New System.Drawing.Point(9, 63)
+        Me.dgSupervisorList.Name = "dgSupervisorList"
+        Me.dgSupervisorList.ReadOnly = True
+        Me.dgSupervisorList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.dgSupervisorList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgSupervisorList.Size = New System.Drawing.Size(429, 262)
+        Me.dgSupervisorList.TabIndex = 5
+        '
+        'dgEdit
+        '
+        Me.dgEdit.HeaderText = "Edit"
+        Me.dgEdit.Name = "dgEdit"
+        Me.dgEdit.ReadOnly = True
+        Me.dgEdit.Text = "Edit"
+        Me.dgEdit.UseColumnTextForLinkValue = True
+        Me.dgEdit.Width = 60
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(12, 28)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(49, 18)
+        Me.Label4.TabIndex = 4
+        Me.Label4.Text = "Search"
+        '
+        'txtSearchSupervisor
+        '
+        Me.txtSearchSupervisor.Location = New System.Drawing.Point(67, 25)
+        Me.txtSearchSupervisor.Name = "txtSearchSupervisor"
+        Me.txtSearchSupervisor.Size = New System.Drawing.Size(371, 26)
+        Me.txtSearchSupervisor.TabIndex = 1
         '
         'tpPartners
         '
@@ -459,6 +419,46 @@ Partial Class frmSupervisorMaintenance
         '
         Me.SpGET_DM_ITEM_LISTTableAdapter2.ClearBeforeFill = True
         '
+        'tsNewBranch
+        '
+        Me.tsNewBranch.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsNewBranch.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.add_image_24
+        Me.tsNewBranch.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsNewBranch.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsNewBranch.Name = "tsNewBranch"
+        Me.tsNewBranch.Size = New System.Drawing.Size(28, 28)
+        Me.tsNewBranch.Text = "Create"
+        '
+        'tsSaveBranch
+        '
+        Me.tsSaveBranch.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsSaveBranch.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.approval_24
+        Me.tsSaveBranch.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsSaveBranch.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsSaveBranch.Name = "tsSaveBranch"
+        Me.tsSaveBranch.Size = New System.Drawing.Size(28, 28)
+        Me.tsSaveBranch.Text = "Update"
+        '
+        'tsCreateSupervisor
+        '
+        Me.tsCreateSupervisor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsCreateSupervisor.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.add_image_24
+        Me.tsCreateSupervisor.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsCreateSupervisor.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsCreateSupervisor.Name = "tsCreateSupervisor"
+        Me.tsCreateSupervisor.Size = New System.Drawing.Size(28, 28)
+        Me.tsCreateSupervisor.Text = "Create"
+        '
+        'tsSaveSupervisor
+        '
+        Me.tsSaveSupervisor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsSaveSupervisor.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.approval_24
+        Me.tsSaveSupervisor.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsSaveSupervisor.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsSaveSupervisor.Name = "tsSaveSupervisor"
+        Me.tsSaveSupervisor.Size = New System.Drawing.Size(28, 28)
+        Me.tsSaveSupervisor.Text = "Update"
+        '
         'frmSupervisorMaintenance
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 18.0!)
@@ -468,8 +468,17 @@ Partial Class frmSupervisorMaintenance
         Me.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmSupervisorMaintenance"
-        Me.Text = "Personnel / Branch Maintenance"
+        Me.Text = "Branch / Supervisor Maintenance"
         Me.TabControl1.ResumeLayout(False)
+        Me.tpCompany.ResumeLayout(False)
+        Me.tpCompany.PerformLayout()
+        Me.gbBranchEntry.ResumeLayout(False)
+        Me.gbBranchEntry.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
+        CType(Me.dgBranchList, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ToolStrip2.ResumeLayout(False)
+        Me.ToolStrip2.PerformLayout()
         Me.tpItem.ResumeLayout(False)
         Me.tpItem.PerformLayout()
         Me.gbSupervisorEntry.ResumeLayout(False)
@@ -479,15 +488,6 @@ Partial Class frmSupervisorMaintenance
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.dgSupervisorList, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.tpBranch.ResumeLayout(False)
-        Me.tpBranch.PerformLayout()
-        Me.gbBranchEntry.ResumeLayout(False)
-        Me.gbBranchEntry.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
-        CType(Me.dgBranchList, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ToolStrip2.ResumeLayout(False)
-        Me.ToolStrip2.PerformLayout()
         CType(Me.SpGETDMITEMLISTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DsItemList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -505,7 +505,7 @@ Partial Class frmSupervisorMaintenance
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents ToolStripLabel1 As ToolStripLabel
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents tpBranch As System.Windows.Forms.TabPage
+    Friend WithEvents tpCompany As System.Windows.Forms.TabPage
     Friend WithEvents txtSearchSupervisor As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents dgSupervisorList As DataGridView
@@ -546,5 +546,5 @@ Partial Class frmSupervisorMaintenance
     Friend WithEvents Label7 As Label
     Friend WithEvents cmbBusinessPartner As ComboBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents cmbSupervisor As ComboBox
+    Friend WithEvents cmbBranch As ComboBox
 End Class

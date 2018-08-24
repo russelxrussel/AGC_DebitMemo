@@ -130,7 +130,56 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Base_C.vb" />
+    <Compile Include="Class\CA_C.vb" />
     <Compile Include="Class\DMT_C.vb" />
+    <Compile Include="Class\Employee_C.vb" />
+    <Compile Include="Class\System_C.vb" />
+    <Compile Include="DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsAttachment.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAttachment.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployeeForm.Designer.vb">
+      <DependentUpon>frmEmployeeForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployeeForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCA_RequestForm.Designer.vb">
+      <DependentUpon>frmCA_RequestForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCA_RequestForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCompanyMaintenance.Designer.vb">
+      <DependentUpon>frmCompanyMaintenance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCompanyMaintenance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserModification.Designer.vb">
+      <DependentUpon>frmUserModification.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserModification.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVoucherPaymentRequest.Designer.vb">
+      <DependentUpon>frmVoucherPaymentRequest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmVoucherPaymentRequest.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmVoucherList.Designer.vb">
       <DependentUpon>frmVoucherList.vb</DependentUpon>
     </Compile>
@@ -236,6 +285,24 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Reports\repCheckForm.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>repCheckForm.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="repCheckPaymentRequest.Designer.vb">
+      <DependentUpon>repCheckPaymentRequest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="repCheckPaymentRequest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="repVoucherReceipt.Designer.vb">
+      <DependentUpon>repVoucherReceipt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="repVoucherReceipt.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="repDebitMemoApproved.Designer.vb">
       <DependentUpon>repDebitMemoApproved.vb</DependentUpon>
     </Compile>
@@ -340,6 +407,24 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmEmployeeForm.resx">
+      <DependentUpon>frmEmployeeForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCA_RequestForm.resx">
+      <DependentUpon>frmCA_RequestForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCompanyMaintenance.resx">
+      <DependentUpon>frmCompanyMaintenance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserModification.resx">
+      <DependentUpon>frmUserModification.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVoucherPaymentRequest.resx">
+      <DependentUpon>frmVoucherPaymentRequest.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmVoucherList.resx">
       <DependentUpon>frmVoucherList.vb</DependentUpon>
     </EmbeddedResource>
@@ -363,6 +448,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSupervisorMaintenance.resx">
       <DependentUpon>frmSupervisorMaintenance.vb</DependentUpon>
@@ -381,6 +467,16 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\repCheckForm.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>repCheckForm.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="repCheckPaymentRequest.resx">
+      <DependentUpon>repCheckPaymentRequest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="repVoucherReceipt.resx">
+      <DependentUpon>repVoucherReceipt.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="repDebitMemoApproved.resx">
       <DependentUpon>repDebitMemoApproved.vb</DependentUpon>
@@ -449,6 +545,28 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="dsAttachment.xsc">
+      <DependentUpon>dsAttachment.xsd</DependentUpon>
+    </None>
+    <None Include="dsAttachment.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAttachment.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsAttachment.xss">
+      <DependentUpon>dsAttachment.xsd</DependentUpon>
+    </None>
     <None Include="dsItemList.xsc">
       <DependentUpon>dsItemList.xsd</DependentUpon>
     </None>
@@ -832,6 +950,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\default\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

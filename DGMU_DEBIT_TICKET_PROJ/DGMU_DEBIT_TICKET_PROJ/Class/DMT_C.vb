@@ -2,10 +2,7 @@
 Imports System.Data.SqlClient
 Imports System.Data
 
-'Public Class DMT_C
-'    Inherits Base_C
 
-'End Class
 
 Public Class DMT_ITEM_C
     Inherits Base_C
@@ -124,6 +121,12 @@ Public Class UTILITY
     Public Function GET_VOUCHER_TYPE() As DataTable
         Dim dt As New DataTable
         dt = queryCommandDT_SP("[UTIL].[spGET_VOUCHER_TYPE_LIST]")
+        Return dt
+    End Function
+
+    Public Function GET_ACCOUNT_LIST() As DataTable
+        Dim dt As New DataTable
+        dt = queryCommandDT_SP("[UTIL].[spGET_ACCOUNT_LIST]")
         Return dt
     End Function
 
@@ -290,6 +293,7 @@ Public Class DMT_DEBITMEMO_C
 
         Return dt
     End Function
+
 
 
     Public Function GET_LIST_ITEM_FOR_APPROVAL(ByVal _dmrnum As String) As DataTable
@@ -738,6 +742,22 @@ Public Class DMT_SYSTEM_C
 
     End Sub
 
+    Public Sub UPDATE_USER_PASSWORD(ByVal _userCode As String, ByVal _newPassword As String)
+        Using cn As New SqlConnection(_CONSTRING)
+
+            Using cmd As New SqlCommand("[xSys].[UPDATE_USER_PASSWORD]", cn)
+                With cmd
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.AddWithValue("@USERCODE", _userCode)
+                    .Parameters.AddWithValue("@NEW_PASSWORD", _newPassword)
+                End With
+                cn.Open()
+                cmd.ExecuteNonQuery()
+
+            End Using
+        End Using
+    End Sub
+
     Public Function GET_TRANSACTION_TYPE_LIST() As DataTable
         Dim dt As New DataTable
         dt = queryCommandDT_SP("[xSystem].[GET_TRANSACTION_TYPE_LIST]")
@@ -776,6 +796,13 @@ End Class
 
 Public Class VOUCHER_C
     Inherits Base_C
+
+    Public Function GET_VOUCHER_LIST() As DataTable
+        Dim dt As New DataTable
+        dt = queryCommandDT_SP("[TRANSACTION].[spGET_VOUCHER_LIST]")
+        Return dt
+    End Function
+
     Public Function GET_USER_VOUCHER_LIST(ByVal _usercode As String) As DataTable
         Dim dt As New DataTable
         Using cn As New SqlConnection(_CONSTRING)
@@ -795,11 +822,30 @@ Public Class VOUCHER_C
         Return dt
     End Function
 
+    Public Function GET_USER_VOUCHER_ITEM_LIST(ByVal _voucherNum As String) As DataTable
+        Dim dt As New DataTable
+        Using cn As New SqlConnection(_CONSTRING)
+            Dim cmd As New SqlCommand("[TRANSACTION].[spGET_USER_VOUCHER_ITEM_LIST]", cn)
+            Dim sqlDA As New SqlDataAdapter(cmd)
+            With cmd
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@VOUCHERNUM", _voucherNum)
+            End With
+
+            sqlDA.Fill(dt)
+
+            cn.Open()
+
+        End Using
+
+        Return dt
+    End Function
+
 
 
     Public Sub INSERT_VOUCHER(ByVal _voucherNumber As String, ByVal _voucherTypeCode As String,
                              ByVal _companyCode As String, ByVal _voucherDate As DateTime, ByVal _supplierID As Integer,
-                             ByVal _docRemarks As String, ByVal _discount1 As Double, ByVal _discount2 As Double,
+                             ByVal _docRemarks As String, ByVal _discount1 As Double, ByVal _discount2 As Double, ByVal _totalAmountToPay As Double,
                               ByVal _attachment As Byte(), ByVal _isAttachment As Boolean,
                               ByVal _particular As String, ByVal _itemAmount As Double, ByVal _itemDiscount As Double,
                               ByVal _userCode As String)
@@ -817,6 +863,7 @@ Public Class VOUCHER_C
                     .Parameters.AddWithValue("@DOCREMARKS", _docRemarks)
                     .Parameters.AddWithValue("@DISCOUNT1", _discount1)
                     .Parameters.AddWithValue("@DISCOUNT2", _discount2)
+                    .Parameters.AddWithValue("@TOTAL_AMOUNT_TO_PAY", _totalAmountToPay)
                     .Parameters.AddWithValue("@ATTACHMENT", _attachment)
                     .Parameters.AddWithValue("@ISATTACHMENT", _isAttachment)
                     .Parameters.AddWithValue("@PARTICULAR", _particular)
@@ -833,6 +880,28 @@ Public Class VOUCHER_C
 
     End Sub
 
+
+    Public Sub INSERT_VOUCHER_PAYMENT(ByVal _voucherNum As String, ByVal _accountNumber As String, ByVal _supplierID As Integer,
+                                      ByVal _checkPayeeName As String, ByVal _checkNumber As String, ByVal _checkDate As DateTime, ByVal _userCode As String)
+        Using cn As New SqlConnection(_CONSTRING)
+
+            Using cmd As New SqlCommand("[TRANSACTION].[spINSERT_VOUCHER_PAYMENT]", cn)
+                With cmd
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.AddWithValue("@VOUCHERNUM", _voucherNum)
+                    .Parameters.AddWithValue("@ACCOUNT_NUMBER", _accountNumber)
+                    .Parameters.AddWithValue("@SUPPLIERID", _supplierID)
+                    .Parameters.AddWithValue("@CHECK_PAYEE_NAME", _checkPayeeName)
+                    .Parameters.AddWithValue("@CHECK_NUMBER", _checkNumber)
+                    .Parameters.AddWithValue("@CHECK_DATE", _checkDate)
+                    .Parameters.AddWithValue("@USERCODE", _userCode)
+                End With
+                cn.Open()
+                cmd.ExecuteNonQuery()
+
+            End Using
+        End Using
+    End Sub
 End Class
 
 

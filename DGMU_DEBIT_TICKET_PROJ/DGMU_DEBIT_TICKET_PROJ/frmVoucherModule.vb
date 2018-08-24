@@ -10,6 +10,7 @@ Public Class frmVoucherModule
     Private rowIndex As Integer = 0
     Private pTotalAmountPrice As Double = 0
     Private pTotalTransDiscount As Double = 0
+    Private pTotalAmountToPay As Double = 0
 
 
 
@@ -203,6 +204,7 @@ Public Class frmVoucherModule
         total = (total - itemDiscountTotal) - Convert.ToDouble(txtTotalDiscount1.Text) - Convert.ToDouble(txtTotalDiscount2.Text)
 
 
+        pTotalAmountToPay = total
 
         lblTotalAmount.Text = "Total Amount : " & String.Format("{0:n}", total)
 
@@ -282,7 +284,7 @@ Public Class frmVoucherModule
                             Dim dAmount As Double = Double.Parse(dgVoucherItemList.Rows(i).Cells(1).Value)
                             Dim dItemDiscount As Double = Double.Parse(dgVoucherItemList.Rows(i).Cells(2).Value)
 
-                            oVoucher.INSERT_VOUCHER(lblVoucherSeries.Text, ddVoucherType.SelectedValue, ddCompany.SelectedValue, Convert.ToDateTime(dtRequest.Text), Convert.ToInt32(ddSupplier_Payee.SelectedValue), txtDocumentRemarks.Text, Convert.ToDouble(txtTotalDiscount1.Text), Convert.ToDouble(txtTotalDiscount2.Text), bAttachment, fIsAttachment, sItemDescription, dAmount, dItemDiscount, frmMain.tsUserCode.Text)
+                            oVoucher.INSERT_VOUCHER(lblVoucherSeries.Text, ddVoucherType.SelectedValue, ddCompany.SelectedValue, Convert.ToDateTime(dtRequest.Text), Convert.ToInt32(ddSupplier_Payee.SelectedValue), txtDocumentRemarks.Text, Convert.ToDouble(txtTotalDiscount1.Text), Convert.ToDouble(txtTotalDiscount2.Text), pTotalAmountToPay, bAttachment, fIsAttachment, sItemDescription, dAmount, dItemDiscount, frmMain.tsUserCode.Text)
                         Next
 
 
@@ -294,10 +296,13 @@ Public Class frmVoucherModule
 
                         'frmMain.countForApprovalDBR()
                         ''RELOAD FORM
+                        frmMain.countForVoucherPayment()
+
                         Controls.Clear()
                         InitializeComponent()
                         Show()
                         defaultInit()
+
 
 
                     End If

@@ -137,7 +137,6 @@ Public Class frmApprover
         If chkApprovedAll.Checked = True Then
             If dgListOfRequestItems.Rows.Count > 0 Then
                 For i As Integer = 0 To dgListOfRequestItems.RowCount - 1
-                    'Dim sDMRNum As String = dgRequestList.Rows(i).Cells(0).Value.ToString()
                     dgListOfRequestItems.Rows(i).Cells(7).Value = "A"
                 Next
             End If
@@ -145,7 +144,6 @@ Public Class frmApprover
         Else
             If dgListOfRequestItems.Rows.Count > 0 Then
                 For i As Integer = 0 To dgListOfRequestItems.RowCount - 1
-                    'Dim sDMRNum As String = dgRequestList.Rows(i).Cells(0).Value.ToString()
                     dgListOfRequestItems.Rows(i).Cells(7).Value = "P"
                 Next
             End If

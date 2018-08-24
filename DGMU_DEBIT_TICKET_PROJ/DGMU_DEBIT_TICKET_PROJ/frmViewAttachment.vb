@@ -8,5 +8,7 @@
         dt = oDebitMemo.GET_ATTACHMENT(lblDMRNum.Text)
 
         dgAttachment.DataSource = dt
+
+
     End Sub
 End Class

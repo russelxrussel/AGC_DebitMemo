@@ -1,0 +1,8 @@
+whileprintingrecords;
+numbervar MyValue:= {@Total_Amount};
+numbervar cents:= (MyValue-int(MyValue));
+if cents = 0 then
+ProperCase(towords(int(MyValue),0) & " pesos only ")
+else
+ProperCase(towords(int(MyValue),0) & " pesos and " & towords(cents*100,0) & " centavos only")
+

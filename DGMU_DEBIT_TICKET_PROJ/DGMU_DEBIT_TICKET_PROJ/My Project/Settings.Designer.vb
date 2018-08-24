@@ -57,20 +57,20 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=AGC;User ID=sa;password=p@ssw0rd")>  _
-        Public ReadOnly Property DGMUConnectionString() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("Dsn=AGC_CON;uid=sa")>  _
+        Public ReadOnly Property odbcConnection() As String
             Get
-                Return CType(Me("DGMUConnectionString"),String)
+                Return CType(Me("odbcConnection"),String)
             End Get
         End Property
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Dsn=AGC_CON;uid=sa")>  _
-        Public ReadOnly Property odbcConnection() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.3.75;Initial Catalog=AGC;User ID=sa;password=p@ssw0rd")>  _
+        Public ReadOnly Property DGMUConnectionString() As String
             Get
-                Return CType(Me("odbcConnection"),String)
+                Return CType(Me("DGMUConnectionString"),String)
             End Get
         End Property
     End Class
