@@ -139,6 +139,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmApproveDMList.Designer.vb">
+      <DependentUpon>frmApproveDMList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmApproveDMList.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="dsAttachment.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -407,6 +413,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmApproveDMList.resx">
+      <DependentUpon>frmApproveDMList.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEmployeeForm.resx">
       <DependentUpon>frmEmployeeForm.vb</DependentUpon>
     </EmbeddedResource>

@@ -19,6 +19,8 @@ Public Class DMT_ITEM_C
 
 
 
+
+
 #End Region
 
 
@@ -237,6 +239,13 @@ Public Class DMT_DEBITMEMO_C
         Return dt
     End Function
 
+
+    Public Function GET_APPROVED_DM_LIST() As DataTable
+        Dim dt As New DataTable
+        dt = queryCommandDT_SP("[TRANSACTION].[spGET_DM_APPROVED_LIST]")
+        Return dt
+    End Function
+
     Public Function GET_USER_REQUEST_LIST(ByVal _usercode As String) As DataTable
         Dim dt As New DataTable
         Using cn As New SqlConnection(_CONSTRING)
@@ -334,6 +343,84 @@ Public Class DMT_DEBITMEMO_C
         Return dt
     End Function
 
+    Public Function GET_FOR_APPROVAL() As Integer
+        Dim i As Integer = 0
+
+        Using cn As New SqlConnection(_CONSTRING)
+
+            Using cmd As New SqlCommand("[TRANSACTION].[spGET_COUNT_FOR_APPROVAL_DM]", cn)
+                With cmd
+                    .CommandType = CommandType.StoredProcedure
+                End With
+
+                cn.Open()
+                i = Convert.ToInt32(cmd.ExecuteScalar)
+            End Using
+
+        End Using
+        Return i
+    End Function
+
+    Public Function GET_APPROVED_STATUS_COUNT_PER_USER(ByVal _userCode As String) As Integer
+        Dim i As Integer = 0
+
+        Using cn As New SqlConnection(_CONSTRING)
+
+            Using cmd As New SqlCommand("[TRANSACTION].[spGET_COUNT_APPROVE_DM_PER_USER]", cn)
+                With cmd
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.AddWithValue("@USERCODE", _userCode)
+                End With
+
+                cn.Open()
+                i = Convert.ToInt32(cmd.ExecuteScalar)
+            End Using
+
+        End Using
+        Return i
+    End Function
+
+    Public Function GET_STATUS_COUNT(ByVal _requestStatusCode As String) As Integer
+        Dim i As Integer = 0
+
+        Using cn As New SqlConnection(_CONSTRING)
+
+            Using cmd As New SqlCommand("[TRANSACTION].[spGET_COUNT_REQUEST_STATUS]", cn)
+                With cmd
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.AddWithValue("@REQUEST_STATUS_CODE", _requestStatusCode)
+                End With
+
+                cn.Open()
+                i = Convert.ToInt32(cmd.ExecuteScalar)
+            End Using
+
+        End Using
+        Return i
+    End Function
+
+
+
+
+
+    Public Function GET_TOTA_ITEM_COUNT() As Integer
+        Dim i As Integer = 0
+
+        Using cn As New SqlConnection(_CONSTRING)
+
+            Using cmd As New SqlCommand("[TRANSACTION].[spGET_COUNT_TOTAL_ITEM_REQUEST]", cn)
+                With cmd
+                    .CommandType = CommandType.StoredProcedure
+
+                End With
+
+                cn.Open()
+                i = Convert.ToInt32(cmd.ExecuteScalar)
+            End Using
+
+        End Using
+        Return i
+    End Function
 #End Region
 
 #Region "TRANSACTION"
@@ -448,6 +535,21 @@ Public Class DMT_DEBITMEMO_C
         Using cn As New SqlConnection(_CONSTRING)
 
             Using cmd As New SqlCommand("[TRANSACTION].[spUPDATE_DM_PRINTED_APPROVED]", cn)
+                With cmd
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.AddWithValue("@DMRNUM", _dmrNum)
+                End With
+                cn.Open()
+                cmd.ExecuteNonQuery()
+
+            End Using
+        End Using
+    End Sub
+
+    Public Sub UPDATE_CANCELLATION_DM(ByVal _dmrNum As String)
+        Using cn As New SqlConnection(_CONSTRING)
+
+            Using cmd As New SqlCommand("[TRANSACTION].[spUPDATE_DM_CANCEL]", cn)
                 With cmd
                     .CommandType = CommandType.StoredProcedure
                     .Parameters.AddWithValue("@DMRNUM", _dmrNum)

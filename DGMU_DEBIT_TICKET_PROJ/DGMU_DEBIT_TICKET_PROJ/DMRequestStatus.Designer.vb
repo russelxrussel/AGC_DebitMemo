@@ -31,6 +31,7 @@ Partial Class frmMyDMRequest
         Me.lnkPrint = New MetroFramework.Controls.MetroLink()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtSearch = New System.Windows.Forms.TextBox()
+        Me.lnkCancel = New MetroFramework.Controls.MetroLink()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgUserRequestList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -43,7 +44,7 @@ Partial Class frmMyDMRequest
         Me.GroupBox1.Controls.Add(Me.dgUserRequestList)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 56)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(581, 226)
+        Me.GroupBox1.Size = New System.Drawing.Size(654, 226)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "List of your request"
@@ -64,7 +65,7 @@ Partial Class frmMyDMRequest
         Me.dgUserRequestList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.dgUserRequestList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgUserRequestList.ShowEditingIcon = False
-        Me.dgUserRequestList.Size = New System.Drawing.Size(575, 204)
+        Me.dgUserRequestList.Size = New System.Drawing.Size(648, 204)
         Me.dgUserRequestList.TabIndex = 0
         '
         'GroupBox2
@@ -72,7 +73,7 @@ Partial Class frmMyDMRequest
         Me.GroupBox2.Controls.Add(Me.dgUser_Requested_List_Item)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 296)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(708, 210)
+        Me.GroupBox2.Size = New System.Drawing.Size(765, 210)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "List of Items"
@@ -93,16 +94,17 @@ Partial Class frmMyDMRequest
         Me.dgUser_Requested_List_Item.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.dgUser_Requested_List_Item.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgUser_Requested_List_Item.ShowEditingIcon = False
-        Me.dgUser_Requested_List_Item.Size = New System.Drawing.Size(702, 188)
+        Me.dgUser_Requested_List_Item.Size = New System.Drawing.Size(759, 188)
         Me.dgUser_Requested_List_Item.TabIndex = 0
         '
         'flayoutControl
         '
         Me.flayoutControl.Controls.Add(Me.lnkPost)
         Me.flayoutControl.Controls.Add(Me.lnkPrint)
-        Me.flayoutControl.Location = New System.Drawing.Point(603, 65)
+        Me.flayoutControl.Controls.Add(Me.lnkCancel)
+        Me.flayoutControl.Location = New System.Drawing.Point(672, 65)
         Me.flayoutControl.Name = "flayoutControl"
-        Me.flayoutControl.Size = New System.Drawing.Size(117, 148)
+        Me.flayoutControl.Size = New System.Drawing.Size(114, 148)
         Me.flayoutControl.TabIndex = 6
         '
         'lnkPost
@@ -157,11 +159,29 @@ Partial Class frmMyDMRequest
         Me.txtSearch.Size = New System.Drawing.Size(349, 23)
         Me.txtSearch.TabIndex = 7
         '
+        'lnkCancel
+        '
+        Me.lnkCancel.BackColor = System.Drawing.Color.Transparent
+        Me.lnkCancel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lnkCancel.DisplayFocus = True
+        Me.lnkCancel.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.cancel_24
+        Me.lnkCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lnkCancel.ImageSize = 24
+        Me.lnkCancel.Location = New System.Drawing.Point(3, 61)
+        Me.lnkCancel.Name = "lnkCancel"
+        Me.lnkCancel.Size = New System.Drawing.Size(110, 23)
+        Me.lnkCancel.Style = MetroFramework.MetroColorStyle.Purple
+        Me.lnkCancel.TabIndex = 107
+        Me.lnkCancel.Text = "CANCEL"
+        Me.lnkCancel.UseCustomBackColor = True
+        Me.lnkCancel.UseSelectable = True
+        Me.lnkCancel.UseStyleColors = True
+        '
         'frmMyDMRequest
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(728, 532)
+        Me.ClientSize = New System.Drawing.Size(789, 532)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txtSearch)
         Me.Controls.Add(Me.flayoutControl)
@@ -190,4 +210,5 @@ Partial Class frmMyDMRequest
     Friend WithEvents lnkPrint As MetroFramework.Controls.MetroLink
     Friend WithEvents Label4 As Label
     Friend WithEvents txtSearch As TextBox
+    Friend WithEvents lnkCancel As MetroFramework.Controls.MetroLink
 End Class

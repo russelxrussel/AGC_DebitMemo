@@ -267,6 +267,7 @@ Public Class frmEmployeeForm
                 cmbEmploymentStatus.SelectedValue = drv("EmpStatusCode").ToString()
                 dtDateHired.Value = Convert.ToDateTime(drv("date_Hired"))
                 cmbCompanyList.SelectedValue = drv("CompanyCode").ToString()
+                cmbCompanyList.Enabled = False
                 cmbDepartmentList.SelectedValue = drv("DepartmentCode").ToString()
                 cmbJobPosition.SelectedValue = drv("JPCode").ToString()
 
@@ -306,4 +307,5 @@ Public Class frmEmployeeForm
         txtLastName.Focus()
         G_ACTION_ITEM = False
     End Sub
+
 End Class

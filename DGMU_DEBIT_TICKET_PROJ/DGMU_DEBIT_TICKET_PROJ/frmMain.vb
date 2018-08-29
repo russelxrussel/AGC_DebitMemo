@@ -32,10 +32,10 @@
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles Me.Load
 
 
-        Label1.Text = "Operating System: " & My.Computer.Info.OSFullName.ToString() & vbCrLf & _
-                      "Product : " & My.Application.Info.Description.ToString & vbCrLf & _
-                      "Registered to: " & My.Application.Info.CompanyName.ToString() & vbCrLf & _
-                      "Copyright: " & My.Application.Info.Copyright.ToString() & vbCrLf & _
+        Label1.Text = "Operating System: " & My.Computer.Info.OSFullName.ToString() & vbCrLf &
+                      "Product : " & My.Application.Info.Description.ToString & vbCrLf &
+                      "Registered to: " & My.Application.Info.CompanyName.ToString() & vbCrLf &
+                      "Copyright: " & My.Application.Info.Copyright.ToString() & vbCrLf &
                       "System Version: " & My.Application.Info.Version.ToString
 
 
@@ -75,8 +75,8 @@
 
     Public Sub countForApprovalDBR()
 
-        Dim i As Integer = countDebitMemoStatus("IsCompleted = 0")
-
+        'Dim i As Integer = countDebitMemoStatus("IsCompleted = 0")
+        Dim i As Integer = oDBR.GET_FOR_APPROVAL()
         If i <> 0 Then
 
             lnkApproval.Text = "Approval Request (" + i.ToString + ")"
@@ -86,7 +86,8 @@
 
     End Sub
     Public Sub countApproveDBR_ForPosting()
-        Dim i As Integer = countDebitMemoStatus("IsPosted = 0 and IsCompleted = 1 and usercode = '" + tsUserCode.Text + "'")
+        'Dim i As Integer = countDebitMemoStatus("IsPosted = 0 and IsCompleted = 1 and usercode = '" + tsUserCode.Text + "'")
+        Dim i As Integer = oDBR.GET_APPROVED_STATUS_COUNT_PER_USER(tsUserCode.Text)
         If i <> 0 Then
 
             lnkMyRequest.Text = "My Request (" + i.ToString + ")"
@@ -136,32 +137,38 @@
     End Function
 
     Public Sub DISPLAY_STAT_COUNT()
-        Dim dt As New DataTable
-        dt = oDBR.GET_ALL_REQUEST_ITEM
+        'Dim dt As New DataTable
+        'dt = oDBR.GET_ALL_REQUEST_ITEM
 
-        lblTotalDebitRequest.Text = dt.Rows.Count.ToString()
+        'lblTotalDebitRequest.Text = dt.Rows.Count.ToString()
 
-        'Approve
-        Dim dvApprove As DataView = dt.DefaultView
-        dvApprove.RowFilter = "RequestStatus = '" + "A" + "'"
-        lblTotalApproveCount.Text = dvApprove.Count.ToString()
+        ''Approve
+        'Dim dvApprove As DataView = dt.DefaultView
+        'dvApprove.RowFilter = "RequestStatus = '" + "A" + "'"
+        'lblTotalApproveCount.Text = dvApprove.Count.ToString()
 
-        'Pending
-        Dim dvPending As DataView = dt.DefaultView
-        dvPending.RowFilter = "RequestStatus = '" + "P" + "'"
-        lblTotalPendingCount.Text = dvPending.Count.ToString()
+        ''Pending
+        'Dim dvPending As DataView = dt.DefaultView
+        'dvPending.RowFilter = "RequestStatus = '" + "P" + "'"
+        'lblTotalPendingCount.Text = dvPending.Count.ToString()
 
-        'On Process
-        Dim dvOnProcess As DataView = dt.DefaultView
-        dvOnProcess.RowFilter = "RequestStatus = '" + "F" + "'"
-        lblOnProcessCount.Text = dvOnProcess.Count.ToString()
+        ''On Process
+        'Dim dvOnProcess As DataView = dt.DefaultView
+        'dvOnProcess.RowFilter = "RequestStatus = '" + "F" + "'"
+        'lblOnProcessCount.Text = dvOnProcess.Count.ToString()
 
-        'Reject
-        Dim dvReject As DataView = dt.DefaultView
-        dvReject.RowFilter = "RequestStatus = '" + "R" + "'"
-        lblTotalRejectCount.Text = dvReject.Count.ToString()
+        ''Reject
+        'Dim dvReject As DataView = dt.DefaultView
+        'dvReject.RowFilter = "RequestStatus = '" + "R" + "'"
+        'lblTotalRejectCount.Text = dvReject.Count.ToString()
+
+        lblTotalApproveCount.Text = oDBR.GET_STATUS_COUNT("A").ToString()
+        lblTotalPendingCount.Text = oDBR.GET_STATUS_COUNT("P").ToString()
+        lblOnProcessCount.Text = oDBR.GET_STATUS_COUNT("F").ToString()
+        lblTotalRejectCount.Text = oDBR.GET_STATUS_COUNT("R").ToString()
 
 
+        lblTotalDebitRequest.Text = oDBR.GET_TOTA_ITEM_COUNT().ToString()
     End Sub
 
     Public Sub countForVoucherPayment()
@@ -346,5 +353,17 @@
         frmUserModification.Show()
         Me.scPage.Panel2.Controls.Add(frmUserModification)
         frmUserModification.BringToFront()
+    End Sub
+
+    Private Sub lnkApproveDMList_Click(sender As Object, e As EventArgs) Handles lnkApproveDMList.Click
+        With frmApproveDMList
+            .TopLevel = False
+            .Left = 0
+            .Top = 0
+        End With
+
+        frmApproveDMList.Show()
+        Me.scPage.Panel2.Controls.Add(frmApproveDMList)
+        frmApproveDMList.BringToFront()
     End Sub
 End Class

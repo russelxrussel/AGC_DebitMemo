@@ -72,6 +72,7 @@ Partial Class frmMain
         Me.Label5 = New System.Windows.Forms.Label()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.lnkApproveDMList = New MetroFramework.Controls.MetroLink()
         CType(Me.scPage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.scPage.Panel1.SuspendLayout()
         Me.scPage.Panel2.SuspendLayout()
@@ -127,6 +128,7 @@ Partial Class frmMain
         Me.FlowLayoutPanel1.Controls.Add(Me.lnkDBR)
         Me.FlowLayoutPanel1.Controls.Add(Me.lnkDispatching)
         Me.FlowLayoutPanel1.Controls.Add(Me.lnkApproval)
+        Me.FlowLayoutPanel1.Controls.Add(Me.lnkApproveDMList)
         Me.FlowLayoutPanel1.Controls.Add(Me.lnkCreateVoucher)
         Me.FlowLayoutPanel1.Controls.Add(Me.lnkVoucherList)
         Me.FlowLayoutPanel1.Controls.Add(Me.lnkVoucherPaymentRequest)
@@ -265,7 +267,7 @@ Partial Class frmMain
         Me.lnkCreateVoucher.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.add_column_24
         Me.lnkCreateVoucher.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lnkCreateVoucher.ImageSize = 24
-        Me.lnkCreateVoucher.Location = New System.Drawing.Point(3, 207)
+        Me.lnkCreateVoucher.Location = New System.Drawing.Point(3, 236)
         Me.lnkCreateVoucher.Name = "lnkCreateVoucher"
         Me.lnkCreateVoucher.Size = New System.Drawing.Size(168, 28)
         Me.lnkCreateVoucher.Style = MetroFramework.MetroColorStyle.Purple
@@ -274,6 +276,7 @@ Partial Class frmMain
         Me.lnkCreateVoucher.UseCustomBackColor = True
         Me.lnkCreateVoucher.UseSelectable = True
         Me.lnkCreateVoucher.UseStyleColors = True
+        Me.lnkCreateVoucher.Visible = False
         '
         'lnkVoucherList
         '
@@ -283,7 +286,7 @@ Partial Class frmMain
         Me.lnkVoucherList.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.list_24
         Me.lnkVoucherList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lnkVoucherList.ImageSize = 24
-        Me.lnkVoucherList.Location = New System.Drawing.Point(3, 241)
+        Me.lnkVoucherList.Location = New System.Drawing.Point(3, 270)
         Me.lnkVoucherList.Name = "lnkVoucherList"
         Me.lnkVoucherList.Size = New System.Drawing.Size(159, 28)
         Me.lnkVoucherList.Style = MetroFramework.MetroColorStyle.Purple
@@ -292,6 +295,7 @@ Partial Class frmMain
         Me.lnkVoucherList.UseCustomBackColor = True
         Me.lnkVoucherList.UseSelectable = True
         Me.lnkVoucherList.UseStyleColors = True
+        Me.lnkVoucherList.Visible = False
         '
         'lnkVoucherPaymentRequest
         '
@@ -301,7 +305,7 @@ Partial Class frmMain
         Me.lnkVoucherPaymentRequest.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.multiple_inputs_24
         Me.lnkVoucherPaymentRequest.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lnkVoucherPaymentRequest.ImageSize = 24
-        Me.lnkVoucherPaymentRequest.Location = New System.Drawing.Point(3, 275)
+        Me.lnkVoucherPaymentRequest.Location = New System.Drawing.Point(3, 304)
         Me.lnkVoucherPaymentRequest.Name = "lnkVoucherPaymentRequest"
         Me.lnkVoucherPaymentRequest.Size = New System.Drawing.Size(168, 37)
         Me.lnkVoucherPaymentRequest.Style = MetroFramework.MetroColorStyle.Purple
@@ -310,6 +314,7 @@ Partial Class frmMain
         Me.lnkVoucherPaymentRequest.UseCustomBackColor = True
         Me.lnkVoucherPaymentRequest.UseSelectable = True
         Me.lnkVoucherPaymentRequest.UseStyleColors = True
+        Me.lnkVoucherPaymentRequest.Visible = False
         '
         'lnkReports
         '
@@ -319,7 +324,7 @@ Partial Class frmMain
         Me.lnkReports.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.print_24
         Me.lnkReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lnkReports.ImageSize = 24
-        Me.lnkReports.Location = New System.Drawing.Point(3, 318)
+        Me.lnkReports.Location = New System.Drawing.Point(3, 347)
         Me.lnkReports.Name = "lnkReports"
         Me.lnkReports.Size = New System.Drawing.Size(146, 23)
         Me.lnkReports.Style = MetroFramework.MetroColorStyle.Purple
@@ -337,7 +342,7 @@ Partial Class frmMain
         Me.lnkMaintenance.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.folder_24
         Me.lnkMaintenance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lnkMaintenance.ImageSize = 24
-        Me.lnkMaintenance.Location = New System.Drawing.Point(3, 347)
+        Me.lnkMaintenance.Location = New System.Drawing.Point(3, 376)
         Me.lnkMaintenance.Name = "lnkMaintenance"
         Me.lnkMaintenance.Size = New System.Drawing.Size(159, 23)
         Me.lnkMaintenance.Style = MetroFramework.MetroColorStyle.Purple
@@ -355,7 +360,7 @@ Partial Class frmMain
         Me.lnkPersonnelMaintenance.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.flow_chart_24
         Me.lnkPersonnelMaintenance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lnkPersonnelMaintenance.ImageSize = 24
-        Me.lnkPersonnelMaintenance.Location = New System.Drawing.Point(3, 376)
+        Me.lnkPersonnelMaintenance.Location = New System.Drawing.Point(3, 405)
         Me.lnkPersonnelMaintenance.Name = "lnkPersonnelMaintenance"
         Me.lnkPersonnelMaintenance.Size = New System.Drawing.Size(168, 23)
         Me.lnkPersonnelMaintenance.Style = MetroFramework.MetroColorStyle.Purple
@@ -367,7 +372,7 @@ Partial Class frmMain
         '
         'Panel7
         '
-        Me.Panel7.Location = New System.Drawing.Point(3, 405)
+        Me.Panel7.Location = New System.Drawing.Point(3, 434)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(171, 21)
         Me.Panel7.TabIndex = 113
@@ -380,7 +385,7 @@ Partial Class frmMain
         Me.lnkLogOut.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.lock_24
         Me.lnkLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lnkLogOut.ImageSize = 24
-        Me.lnkLogOut.Location = New System.Drawing.Point(3, 432)
+        Me.lnkLogOut.Location = New System.Drawing.Point(3, 461)
         Me.lnkLogOut.Name = "lnkLogOut"
         Me.lnkLogOut.Size = New System.Drawing.Size(119, 23)
         Me.lnkLogOut.Style = MetroFramework.MetroColorStyle.Purple
@@ -708,6 +713,24 @@ Partial Class frmMain
         '
         Me.Timer1.Enabled = True
         '
+        'lnkApproveDMList
+        '
+        Me.lnkApproveDMList.BackColor = System.Drawing.Color.Transparent
+        Me.lnkApproveDMList.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lnkApproveDMList.DisplayFocus = True
+        Me.lnkApproveDMList.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.bullish_24
+        Me.lnkApproveDMList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lnkApproveDMList.ImageSize = 24
+        Me.lnkApproveDMList.Location = New System.Drawing.Point(3, 207)
+        Me.lnkApproveDMList.Name = "lnkApproveDMList"
+        Me.lnkApproveDMList.Size = New System.Drawing.Size(168, 23)
+        Me.lnkApproveDMList.Style = MetroFramework.MetroColorStyle.Purple
+        Me.lnkApproveDMList.TabIndex = 114
+        Me.lnkApproveDMList.Text = "Approve DM List"
+        Me.lnkApproveDMList.UseCustomBackColor = True
+        Me.lnkApproveDMList.UseSelectable = True
+        Me.lnkApproveDMList.UseStyleColors = True
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -802,4 +825,5 @@ Partial Class frmMain
     Friend WithEvents lnkVoucherPaymentRequest As MetroFramework.Controls.MetroLink
     Friend WithEvents Panel7 As Panel
     Friend WithEvents lnkChangePassword As MetroFramework.Controls.MetroLink
+    Friend WithEvents lnkApproveDMList As MetroFramework.Controls.MetroLink
 End Class

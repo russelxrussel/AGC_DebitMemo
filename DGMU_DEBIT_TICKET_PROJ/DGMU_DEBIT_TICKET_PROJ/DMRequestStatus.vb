@@ -17,20 +17,25 @@ Public Class frmMyDMRequest
         sDMRNum = dgUserRequestList.Item(0, i).Value
         Dim bPosted As Boolean = Convert.ToBoolean(dgUserRequestList.Item(3, i).Value)
         Dim bComplete As Boolean = Convert.ToBoolean(dgUserRequestList.Item(4, i).Value)
+        Dim bCancel As Boolean = Convert.ToBoolean(dgUserRequestList.Item(5, i).Value)
 
-        If (bComplete And bPosted) Then
+        If (bComplete And bPosted And bCancel = False) Then
             flayoutControl.Visible = True
             lnkPost.Visible = False
             lnkPrint.Visible = True
-        ElseIf (bComplete And bPosted = False) Then
+            lnkCancel.Visible = False
+        ElseIf (bComplete And bPosted = False And bCancel = False) Then
             flayoutControl.Visible = True
             lnkPost.Visible = True
             lnkPrint.Visible = False
-        Else
+            lnkCancel.Visible = False
+        ElseIf (bCancel = True)
             flayoutControl.Visible = False
-
-
-
+        Else
+            flayoutControl.Visible = True
+            lnkPost.Visible = False
+            lnkPrint.Visible = False
+            lnkCancel.Visible = True
         End If
 
 
@@ -52,10 +57,23 @@ Public Class frmMyDMRequest
 
         For Each row As DataGridViewRow In dgUserRequestList.Rows
             Dim bComplete As Boolean = Convert.ToBoolean(row.Cells(3).Value)
+
+
             If bComplete Then
                 row.DefaultCellStyle.BackColor = Color.LightGreen
             End If
+
         Next
+
+        'For Each row As DataGridViewRow In dgUserRequestList.Rows
+        '        Dim bCancel As Boolean = Convert.ToBoolean(row.Cells(4).Value)
+
+        '        If bCancel Then
+        '        row.ReadOnly = True
+        '        row.DefaultCellStyle.BackColor = Color.Red
+        '    End If
+
+        '    Next
     End Sub
 
 
@@ -134,6 +152,24 @@ Public Class frmMyDMRequest
         dv.RowFilter = "BranchName like '%" + txtSearch.Text + "%'"
 
         dgUserRequestList.DataSource = dv
+    End Sub
+
+    Private Sub lnkCancel_Click(sender As Object, e As EventArgs) Handles lnkCancel.Click
+        If (MetroMessageBox.Show(Me, "Cancellation" & vbNewLine _
+                                       & "Warning cancellation of request will not reversable after confirming.", "Debit Memo Request", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = Windows.Forms.DialogResult.Yes) Then
+
+            oDebitMemo.UPDATE_CANCELLATION_DM(sDMRNum)
+
+            'RELOAD FORM
+            Controls.Clear()
+            InitializeComponent()
+            Show()
+
+            DisplayUserRequest()
+        Else
+            Exit Sub
+        End If
+
     End Sub
 
 
