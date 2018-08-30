@@ -15,6 +15,11 @@ Public Class Employee_C
         Dim dt As DataTable = queryCommandDT_SP("[HR].[spGET_MARITAL_STATUS_LIST]")
         Return dt
     End Function
+
+    Public Function GET_RELIGION_LIST() As DataTable
+        Dim dt As DataTable = queryCommandDT_SP("[HR].[spGET_RELIGION_LIST]")
+        Return dt
+    End Function
     Public Function GET_JOB_POSITION_LIST() As DataTable
         Dim dt As DataTable = queryCommandDT_SP("[HR].[spGET_JOB_POSITION_LIST]")
         Return dt
@@ -74,8 +79,8 @@ Public Class Employee_C
 
     'INSERT NEW EMPLOYEE WITH PHOTO
     Public Sub INSERT_EMPLOYEE_INFORMATION(ByVal _empCode As String, ByVal _lastName As String, ByVal _firstName As String, ByVal _middleName As String,
-                                           ByVal _suffix As String, ByVal _birthDate As DateTime, ByVal _genderCode As String,
-                                           ByVal _maritalCode As String, ByVal _address As String, ByVal _contactNumber As String, ByVal _contactPerson As String,
+                                           ByVal _suffix As String, ByVal _birthDate As DateTime, ByVal _placeOfBirth As String, ByVal _genderCode As String,
+                                           ByVal _maritalCode As String, ByVal _religionCode As String, ByVal _address As String, ByVal _contactNumber As String, ByVal _contactPerson As String,
                                            ByVal _tin As String, ByVal _sss As String, ByVal _hdmf As String, ByVal _philHealth As String,
                                            ByVal _dateHired As DateTime, ByVal _companyCode As String, ByVal _jpCode As String, ByVal _departmentCode As String,
                                            ByVal _employmentStatusCode As String,
@@ -92,8 +97,10 @@ Public Class Employee_C
                     .Parameters.AddWithValue("@MIDDLENAME", _middleName)
                     .Parameters.AddWithValue("@SUFFIX", _suffix)
                     .Parameters.AddWithValue("@BIRTHDATE", _birthDate)
+                    .Parameters.AddWithValue("@PLACEOFBIRTH", _placeOfBirth)
                     .Parameters.AddWithValue("@GENDERCODE", _genderCode)
                     .Parameters.AddWithValue("@MARITALCODE", _maritalCode)
+                    .Parameters.AddWithValue("@RELIGIONCODE", _religionCode)
                     .Parameters.AddWithValue("@ADDRESS", _address)
                     .Parameters.AddWithValue("@CONTACTNUMBER", _contactNumber)
                     .Parameters.AddWithValue("@CONTACTPERSON", _contactPerson)
@@ -118,8 +125,8 @@ Public Class Employee_C
     End Sub
 
     Public Sub UPDATE_EMPLOYEE_INFORMATION(ByVal _empCode As String, ByVal _lastName As String, ByVal _firstName As String, ByVal _middleName As String,
-                                           ByVal _suffix As String, ByVal _birthDate As DateTime, ByVal _genderCode As String,
-                                           ByVal _maritalCode As String, ByVal _address As String, ByVal _contactNumber As String, ByVal _contactPerson As String,
+                                           ByVal _suffix As String, ByVal _birthDate As DateTime, ByVal _placeOfBirth As String, ByVal _genderCode As String,
+                                           ByVal _maritalCode As String, ByVal _religionCode As String, ByVal _address As String, ByVal _contactNumber As String, ByVal _contactPerson As String,
                                            ByVal _tin As String, ByVal _sss As String, ByVal _hdmf As String, ByVal _philHealth As String,
                                            ByVal _dateHired As DateTime, ByVal _companyCode As String, ByVal _jpCode As String, ByVal _departmentCode As String,
                                            ByVal _employmentStatusCode As String,
@@ -136,8 +143,10 @@ Public Class Employee_C
                     .Parameters.AddWithValue("@MIDDLENAME", _middleName)
                     .Parameters.AddWithValue("@SUFFIX", _suffix)
                     .Parameters.AddWithValue("@BIRTHDATE", _birthDate)
+                    .Parameters.AddWithValue("@PLACEOFBIRTH", _placeOfBirth)
                     .Parameters.AddWithValue("@GENDERCODE", _genderCode)
                     .Parameters.AddWithValue("@MARITALCODE", _maritalCode)
+                    .Parameters.AddWithValue("@RELIGIONCODE", _religionCode)
                     .Parameters.AddWithValue("@ADDRESS", _address)
                     .Parameters.AddWithValue("@CONTACTNUMBER", _contactNumber)
                     .Parameters.AddWithValue("@CONTACTPERSON", _contactPerson)

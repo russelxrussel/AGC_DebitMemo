@@ -29,6 +29,7 @@ Partial Class frmApproveDMList
         Me.lnkCancel = New MetroFramework.Controls.MetroLink()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtSearch = New System.Windows.Forms.TextBox()
+        Me.lnkAttachment = New System.Windows.Forms.LinkLabel()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgDMApproveList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -127,11 +128,23 @@ Partial Class frmApproveDMList
         Me.txtSearch.Size = New System.Drawing.Size(349, 23)
         Me.txtSearch.TabIndex = 7
         '
+        'lnkAttachment
+        '
+        Me.lnkAttachment.AutoSize = True
+        Me.lnkAttachment.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lnkAttachment.Location = New System.Drawing.Point(672, 117)
+        Me.lnkAttachment.Name = "lnkAttachment"
+        Me.lnkAttachment.Size = New System.Drawing.Size(116, 18)
+        Me.lnkAttachment.TabIndex = 108
+        Me.lnkAttachment.TabStop = True
+        Me.lnkAttachment.Text = "View Attachment"
+        '
         'frmApproveDMList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(789, 532)
+        Me.ClientSize = New System.Drawing.Size(791, 532)
+        Me.Controls.Add(Me.lnkAttachment)
         Me.Controls.Add(Me.lnkCancel)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txtSearch)
@@ -157,4 +170,5 @@ Partial Class frmApproveDMList
     Friend WithEvents Label4 As Label
     Friend WithEvents txtSearch As TextBox
     Friend WithEvents lnkCancel As MetroFramework.Controls.MetroLink
+    Friend WithEvents lnkAttachment As LinkLabel
 End Class

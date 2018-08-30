@@ -25,6 +25,7 @@ Public Class frmEmployeeForm
         'Display data in Combo Lists
         displayGenderList()
         displayMaritaList()
+        displayReligionList()
         displayCompanyList()
         displayJobPositionList()
         displayDepartmentList()
@@ -80,6 +81,16 @@ Public Class frmEmployeeForm
             .DataSource = dt
             .DisplayMember = dt.Columns("MaritalStatus").ToString()
             .ValueMember = dt.Columns("maritalCode").ToString()
+        End With
+    End Sub
+
+    Private Sub displayReligionList()
+        Dim dt As DataTable = oEmployee.GET_RELIGION_LIST
+
+        With cmbReligionList
+            .DataSource = dt
+            .DisplayMember = dt.Columns("ReligionName").ToString()
+            .ValueMember = dt.Columns("ReligionCode").ToString()
         End With
     End Sub
 
@@ -154,8 +165,8 @@ Public Class frmEmployeeForm
 
                 'oEmployee.INSERT_EMPLOYEE_PHOTO(cmbRequestee.SelectedValue.ToString(), bAttachment)
 
-                oEmployee.INSERT_EMPLOYEE_INFORMATION(oSystem.GENERATE_SERIES_NUMBER_5DIGITS(cmbCompanyList.SelectedValue), txtLastName.Text, txtFirstName.Text, txtMiddleName.Text, "", Convert.ToDateTime(dtBirthDate.Value), cmbGender.SelectedValue,
-                                              cmbMaritalStatus.SelectedValue, txtAddress.Text, txtContactNumber.Text, txtContactPerson.Text,
+                oEmployee.INSERT_EMPLOYEE_INFORMATION(oSystem.GENERATE_SERIES_NUMBER_5DIGITS(cmbCompanyList.SelectedValue), txtLastName.Text, txtFirstName.Text, txtMiddleName.Text, cmbSuffix.Text, Convert.ToDateTime(dtBirthDate.Value), txtPlaceOfBirth.Text, cmbGender.SelectedValue,
+                                              cmbMaritalStatus.SelectedValue, cmbReligionList.SelectedValue, txtAddress.Text, txtContactNumber.Text, txtContactPerson.Text,
                                               txtTIN.Text, txtSSS.Text, txtPagibig.Text, txtPhilHealth.Text, Convert.ToDateTime(dtDateHired.Value), cmbCompanyList.SelectedValue, cmbJobPosition.SelectedValue, cmbDepartmentList.SelectedValue, cmbEmploymentStatus.SelectedValue, iFileSize, bEmpPhoto)
 
 
@@ -180,8 +191,8 @@ Public Class frmEmployeeForm
                 End If
 
 
-                oEmployee.UPDATE_EMPLOYEE_INFORMATION(lblEmployeeCode.Text, txtLastName.Text, txtFirstName.Text, txtMiddleName.Text, "", Convert.ToDateTime(dtBirthDate.Value), cmbGender.SelectedValue,
-                                              cmbMaritalStatus.SelectedValue, txtAddress.Text, txtContactNumber.Text, txtContactPerson.Text,
+                oEmployee.UPDATE_EMPLOYEE_INFORMATION(lblEmployeeCode.Text, txtLastName.Text, txtFirstName.Text, txtMiddleName.Text, cmbSuffix.Text, Convert.ToDateTime(dtBirthDate.Value), txtPlaceOfBirth.Text, cmbGender.SelectedValue,
+                                              cmbMaritalStatus.SelectedValue, cmbReligionList.SelectedValue, txtAddress.Text, txtContactNumber.Text, txtContactPerson.Text,
                                               txtTIN.Text, txtSSS.Text, txtPagibig.Text, txtPhilHealth.Text, Convert.ToDateTime(dtDateHired.Value), cmbCompanyList.SelectedValue, cmbJobPosition.SelectedValue, cmbDepartmentList.SelectedValue, cmbEmploymentStatus.SelectedValue, bIsPhotoChange, bEmpPhoto)
 
                 MetroMessageBox.Show(Me, "Employee Data successfully updated.", "HRIS", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -257,8 +268,10 @@ Public Class frmEmployeeForm
                 txtMiddleName.Text = drv("E_MiddleName").ToString()
 
                 dtBirthDate.Value = Convert.ToDateTime(drv("BirthDate"))
+                txtPlaceOfBirth.Text = drv("PlaceOfBirth").ToString()
                 cmbGender.SelectedValue = drv("GenderCode").ToString()
                 cmbMaritalStatus.SelectedValue = drv("MaritalCode").ToString()
+                cmbReligionList.SelectedValue = drv("ReligionCode").ToString()
 
                 txtAddress.Text = drv("Address").ToString()
                 txtContactNumber.Text = drv("Contact_Number").ToString()
@@ -270,6 +283,7 @@ Public Class frmEmployeeForm
                 cmbCompanyList.Enabled = False
                 cmbDepartmentList.SelectedValue = drv("DepartmentCode").ToString()
                 cmbJobPosition.SelectedValue = drv("JPCode").ToString()
+
 
                 txtTIN.Text = drv("TIN").ToString()
                 txtSSS.Text = drv("SSS").ToString()
@@ -307,5 +321,6 @@ Public Class frmEmployeeForm
         txtLastName.Focus()
         G_ACTION_ITEM = False
     End Sub
+
 
 End Class

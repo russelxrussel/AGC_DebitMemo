@@ -33,6 +33,7 @@ Partial Class frmMain
         Me.lnkDBR = New MetroFramework.Controls.MetroLink()
         Me.lnkDispatching = New MetroFramework.Controls.MetroLink()
         Me.lnkApproval = New MetroFramework.Controls.MetroLink()
+        Me.lnkApproveDMList = New MetroFramework.Controls.MetroLink()
         Me.lnkCreateVoucher = New MetroFramework.Controls.MetroLink()
         Me.lnkVoucherList = New MetroFramework.Controls.MetroLink()
         Me.lnkVoucherPaymentRequest = New MetroFramework.Controls.MetroLink()
@@ -72,7 +73,6 @@ Partial Class frmMain
         Me.Label5 = New System.Windows.Forms.Label()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.lnkApproveDMList = New MetroFramework.Controls.MetroLink()
         CType(Me.scPage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.scPage.Panel1.SuspendLayout()
         Me.scPage.Panel2.SuspendLayout()
@@ -258,6 +258,24 @@ Partial Class frmMain
         Me.lnkApproval.UseCustomBackColor = True
         Me.lnkApproval.UseSelectable = True
         Me.lnkApproval.UseStyleColors = True
+        '
+        'lnkApproveDMList
+        '
+        Me.lnkApproveDMList.BackColor = System.Drawing.Color.Transparent
+        Me.lnkApproveDMList.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lnkApproveDMList.DisplayFocus = True
+        Me.lnkApproveDMList.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.bullish_24
+        Me.lnkApproveDMList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lnkApproveDMList.ImageSize = 24
+        Me.lnkApproveDMList.Location = New System.Drawing.Point(3, 207)
+        Me.lnkApproveDMList.Name = "lnkApproveDMList"
+        Me.lnkApproveDMList.Size = New System.Drawing.Size(168, 23)
+        Me.lnkApproveDMList.Style = MetroFramework.MetroColorStyle.Purple
+        Me.lnkApproveDMList.TabIndex = 114
+        Me.lnkApproveDMList.Text = "Approve DM List"
+        Me.lnkApproveDMList.UseCustomBackColor = True
+        Me.lnkApproveDMList.UseSelectable = True
+        Me.lnkApproveDMList.UseStyleColors = True
         '
         'lnkCreateVoucher
         '
@@ -712,24 +730,6 @@ Partial Class frmMain
         'Timer1
         '
         Me.Timer1.Enabled = True
-        '
-        'lnkApproveDMList
-        '
-        Me.lnkApproveDMList.BackColor = System.Drawing.Color.Transparent
-        Me.lnkApproveDMList.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lnkApproveDMList.DisplayFocus = True
-        Me.lnkApproveDMList.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.bullish_24
-        Me.lnkApproveDMList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lnkApproveDMList.ImageSize = 24
-        Me.lnkApproveDMList.Location = New System.Drawing.Point(3, 207)
-        Me.lnkApproveDMList.Name = "lnkApproveDMList"
-        Me.lnkApproveDMList.Size = New System.Drawing.Size(168, 23)
-        Me.lnkApproveDMList.Style = MetroFramework.MetroColorStyle.Purple
-        Me.lnkApproveDMList.TabIndex = 114
-        Me.lnkApproveDMList.Text = "Approve DM List"
-        Me.lnkApproveDMList.UseCustomBackColor = True
-        Me.lnkApproveDMList.UseSelectable = True
-        Me.lnkApproveDMList.UseStyleColors = True
         '
         'frmMain
         '

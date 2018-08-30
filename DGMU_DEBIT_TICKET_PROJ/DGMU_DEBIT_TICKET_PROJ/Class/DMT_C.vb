@@ -561,6 +561,21 @@ Public Class DMT_DEBITMEMO_C
         End Using
     End Sub
 
+    Public Sub UPDATE_CANCELLATION_APPROVE_DM(ByVal _dmrNum As String)
+        Using cn As New SqlConnection(_CONSTRING)
+
+            Using cmd As New SqlCommand("[TRANSACTION].[spUPDATE_DM_CANCEL_APPROVED]", cn)
+                With cmd
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.AddWithValue("@DMRNUM", _dmrNum)
+                End With
+                cn.Open()
+                cmd.ExecuteNonQuery()
+
+            End Using
+        End Using
+    End Sub
+
 
     Public Sub UPDATE_DISPATCHED(ByVal _dmrNum As String, ByVal _dispatchDate As DateTime, ByVal _dispatchPerson As String)
         Using cn As New SqlConnection(_CONSTRING)

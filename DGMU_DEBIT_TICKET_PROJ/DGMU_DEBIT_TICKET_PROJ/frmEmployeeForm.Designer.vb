@@ -22,7 +22,7 @@ Partial Class frmEmployeeForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmEmployeeForm))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
@@ -90,6 +90,10 @@ Partial Class frmEmployeeForm
         Me.Edit = New System.Windows.Forms.DataGridViewLinkColumn()
         Me.gbInput = New System.Windows.Forms.GroupBox()
         Me.lblImageSize = New System.Windows.Forms.Label()
+        Me.cmbReligionList = New System.Windows.Forms.ComboBox()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.txtPlaceOfBirth = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         CType(Me.imgEmpPhoto, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -105,6 +109,10 @@ Partial Class frmEmployeeForm
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.txtPlaceOfBirth)
+        Me.GroupBox1.Controls.Add(Me.Label25)
+        Me.GroupBox1.Controls.Add(Me.cmbReligionList)
+        Me.GroupBox1.Controls.Add(Me.Label24)
         Me.GroupBox1.Controls.Add(Me.GroupBox5)
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.lblPhotoPath)
@@ -139,7 +147,7 @@ Partial Class frmEmployeeForm
         Me.GroupBox5.Controls.Add(Me.Label22)
         Me.GroupBox5.Controls.Add(Me.txtContactNumber)
         Me.GroupBox5.Controls.Add(Me.Label21)
-        Me.GroupBox5.Location = New System.Drawing.Point(6, 296)
+        Me.GroupBox5.Location = New System.Drawing.Point(6, 321)
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.Size = New System.Drawing.Size(458, 125)
         Me.GroupBox5.TabIndex = 36
@@ -232,7 +240,7 @@ Partial Class frmEmployeeForm
         Me.cmbMaritalStatus.Location = New System.Drawing.Point(121, 247)
         Me.cmbMaritalStatus.Name = "cmbMaritalStatus"
         Me.cmbMaritalStatus.Size = New System.Drawing.Size(121, 26)
-        Me.cmbMaritalStatus.TabIndex = 22
+        Me.cmbMaritalStatus.TabIndex = 20
         '
         'Label6
         '
@@ -250,7 +258,7 @@ Partial Class frmEmployeeForm
         Me.cmbGender.Location = New System.Drawing.Point(121, 215)
         Me.cmbGender.Name = "cmbGender"
         Me.cmbGender.Size = New System.Drawing.Size(121, 26)
-        Me.cmbGender.TabIndex = 20
+        Me.cmbGender.TabIndex = 19
         '
         'Label3
         '
@@ -368,7 +376,7 @@ Partial Class frmEmployeeForm
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsNew, Me.tsSave, Me.ToolStripLabel1, Me.tsSearch})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(862, 36)
+        Me.ToolStrip1.Size = New System.Drawing.Size(862, 52)
         Me.ToolStrip1.TabIndex = 33
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -378,7 +386,7 @@ Partial Class frmEmployeeForm
         Me.tsNew.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.plus_24
         Me.tsNew.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsNew.Name = "tsNew"
-        Me.tsNew.Size = New System.Drawing.Size(36, 33)
+        Me.tsNew.Size = New System.Drawing.Size(36, 49)
         Me.tsNew.Text = "NEW"
         Me.tsNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
@@ -388,7 +396,7 @@ Partial Class frmEmployeeForm
         Me.tsSave.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.survey_24
         Me.tsSave.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsSave.Name = "tsSave"
-        Me.tsSave.Size = New System.Drawing.Size(36, 33)
+        Me.tsSave.Size = New System.Drawing.Size(36, 49)
         Me.tsSave.Text = "SAVE"
         Me.tsSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
@@ -404,7 +412,7 @@ Partial Class frmEmployeeForm
         Me.tsSearch.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.search_24
         Me.tsSearch.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsSearch.Name = "tsSearch"
-        Me.tsSearch.Size = New System.Drawing.Size(52, 33)
+        Me.tsSearch.Size = New System.Drawing.Size(52, 49)
         Me.tsSearch.Text = "SEARCH"
         Me.tsSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
@@ -643,7 +651,7 @@ Partial Class frmEmployeeForm
         'gbListOfEmployee
         '
         Me.gbListOfEmployee.Controls.Add(Me.FlowLayoutPanel1)
-        Me.gbListOfEmployee.Location = New System.Drawing.Point(6, 51)
+        Me.gbListOfEmployee.Location = New System.Drawing.Point(12, 51)
         Me.gbListOfEmployee.Name = "gbListOfEmployee"
         Me.gbListOfEmployee.Size = New System.Drawing.Size(849, 488)
         Me.gbListOfEmployee.TabIndex = 37
@@ -715,10 +723,10 @@ Partial Class frmEmployeeForm
         'EmpPhoto
         '
         Me.EmpPhoto.DataPropertyName = "EmpPhoto"
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.NullValue = CType(resources.GetObject("DataGridViewCellStyle5.NullValue"), Object)
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.EmpPhoto.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.NullValue = CType(resources.GetObject("DataGridViewCellStyle6.NullValue"), Object)
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.EmpPhoto.DefaultCellStyle = DataGridViewCellStyle6
         Me.EmpPhoto.HeaderText = "Photo"
         Me.EmpPhoto.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
         Me.EmpPhoto.Name = "EmpPhoto"
@@ -752,11 +760,45 @@ Partial Class frmEmployeeForm
         Me.lblImageSize.TabIndex = 39
         Me.lblImageSize.Text = "0"
         '
+        'cmbReligionList
+        '
+        Me.cmbReligionList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbReligionList.FormattingEnabled = True
+        Me.cmbReligionList.Location = New System.Drawing.Point(333, 210)
+        Me.cmbReligionList.Name = "cmbReligionList"
+        Me.cmbReligionList.Size = New System.Drawing.Size(131, 26)
+        Me.cmbReligionList.TabIndex = 21
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Location = New System.Drawing.Point(254, 216)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(73, 18)
+        Me.Label24.TabIndex = 37
+        Me.Label24.Text = "RELIGION :"
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(3, 286)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(112, 18)
+        Me.Label25.TabIndex = 39
+        Me.Label25.Text = "PLACE OF BIRTH :"
+        '
+        'txtPlaceOfBirth
+        '
+        Me.txtPlaceOfBirth.Location = New System.Drawing.Point(121, 283)
+        Me.txtPlaceOfBirth.Name = "txtPlaceOfBirth"
+        Me.txtPlaceOfBirth.Size = New System.Drawing.Size(336, 26)
+        Me.txtPlaceOfBirth.TabIndex = 21
+        '
         'frmEmployeeForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(862, 542)
+        Me.ClientSize = New System.Drawing.Size(862, 550)
         Me.Controls.Add(Me.lblImageSize)
         Me.Controls.Add(Me.gbListOfEmployee)
         Me.Controls.Add(Me.gbInput)
@@ -859,4 +901,8 @@ Partial Class frmEmployeeForm
     Friend WithEvents Label22 As Label
     Friend WithEvents txtContactNumber As TextBox
     Friend WithEvents Label21 As Label
+    Friend WithEvents txtPlaceOfBirth As TextBox
+    Friend WithEvents Label25 As Label
+    Friend WithEvents cmbReligionList As ComboBox
+    Friend WithEvents Label24 As Label
 End Class

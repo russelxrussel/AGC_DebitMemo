@@ -204,4 +204,6 @@ Public Class frmApprover
         'lblTotalItems.Text = totalItems.ToString()
         lblTotalAmount.Text = String.Format("{0:n}", total)
     End Sub
+
+
 End Class

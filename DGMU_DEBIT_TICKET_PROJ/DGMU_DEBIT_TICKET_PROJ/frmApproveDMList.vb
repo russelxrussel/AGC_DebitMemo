@@ -17,7 +17,7 @@ Public Class frmApproveDMList
         sDMRNum = dgDMApproveList.Item(0, i).Value
         'Dim bPosted As Boolean = Convert.ToBoolean(dgDMApproveList.Item(3, i).Value)
         'Dim bComplete As Boolean = Convert.ToBoolean(dgDMApproveList.Item(4, i).Value)
-        Dim bCancel As Boolean = Convert.ToBoolean(dgDMApproveList.Item(6, i).Value)
+        Dim bCancel As Boolean = Convert.ToBoolean(dgDMApproveList.Item(7, i).Value)
 
         'If (bComplete And bPosted And bCancel = False) Then
         '    flayoutControl.Visible = True
@@ -72,7 +72,7 @@ Public Class frmApproveDMList
         'Next
 
         For Each row As DataGridViewRow In dgDMApproveList.Rows
-            Dim bCancel As Boolean = Convert.ToBoolean(row.Cells(6).Value)
+            Dim bCancel As Boolean = Convert.ToBoolean(row.Cells(7).Value)
 
             If bCancel Then
                 row.ReadOnly = True
@@ -118,13 +118,25 @@ Public Class frmApproveDMList
         dv.RowFilter = "BranchName like '%" + txtSearch.Text + "%'"
 
         dgDMApproveList.DataSource = dv
+
+        For Each row As DataGridViewRow In dgDMApproveList.Rows
+            Dim bCancel As Boolean = Convert.ToBoolean(row.Cells(7).Value)
+
+            If bCancel Then
+                row.ReadOnly = True
+                row.DefaultCellStyle.BackColor = Color.Red
+            End If
+
+        Next
+
+        lnkCancel.Visible = False
     End Sub
 
     Private Sub lnkCancel_Click(sender As Object, e As EventArgs) Handles lnkCancel.Click
-        If (MetroMessageBox.Show(Me, "Cancellation" & vbNewLine _
-                                       & "Warning cancellation of request will not reversable after confirming.", "Debit Memo Request", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = Windows.Forms.DialogResult.Yes) Then
+        If (MetroMessageBox.Show(Me, "Are you sure you want to cancel this Debit Memo? " & vbNewLine _
+                                       & "Warning cancellation of request will not reversable after confirming.", "Debit Memo Request", MessageBoxButtons.YesNo, MessageBoxIcon.Stop) = Windows.Forms.DialogResult.Yes) Then
 
-            oDebitMemo.UPDATE_CANCELLATION_DM(sDMRNum)
+            oDebitMemo.UPDATE_CANCELLATION_APPROVE_DM(sDMRNum)
 
             'RELOAD FORM
             Controls.Clear()
@@ -136,6 +148,18 @@ Public Class frmApproveDMList
             Exit Sub
         End If
 
+    End Sub
+
+    Private Sub lnkAttachment_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lnkAttachment.LinkClicked
+
+        Dim i As Integer
+
+        i = dgDMApproveList.CurrentRow.Index
+
+        sDMRNum = dgDMApproveList.Item(0, i).Value
+
+        frmViewAttachment.lblDMRNum.Text = sDMRNum
+        frmViewAttachment.ShowDialog()
     End Sub
 
 
