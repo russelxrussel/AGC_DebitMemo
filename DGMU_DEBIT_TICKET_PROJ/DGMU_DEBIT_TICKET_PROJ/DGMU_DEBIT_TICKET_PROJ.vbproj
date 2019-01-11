@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -61,7 +61,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>process-24.ico</ApplicationIcon>
+    <ApplicationIcon>Aroche-Delta-Program-Group.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -85,6 +85,9 @@
     <PlatformTarget>x86</PlatformTarget>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
@@ -303,6 +306,12 @@
     <Compile Include="repCheckPaymentRequest.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reports\repDMPerItem.vb">
+      <DependentUpon>repDMPerItem.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="repVoucherReceipt.Designer.vb">
       <DependentUpon>repVoucherReceipt.vb</DependentUpon>
     </Compile>
@@ -484,6 +493,10 @@
     <EmbeddedResource Include="repCheckPaymentRequest.resx">
       <DependentUpon>repCheckPaymentRequest.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\repDMPerItem.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>repDMPerItem.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="repVoucherReceipt.resx">
       <DependentUpon>repVoucherReceipt.vb</DependentUpon>
     </EmbeddedResource>
@@ -609,6 +622,7 @@
     <None Include="dsTest.xss">
       <DependentUpon>dsTest.xsd</DependentUpon>
     </None>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -626,9 +640,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Aroche-Delta-Program-Group.ico" />
     <Content Include="Images\malou_sign06282018_ps.png" />
     <Content Include="Images\x1.png" />
     <Content Include="process-24.ico" />
+    <Content Include="Shek0101-Scardi-Program-group.ico" />
     <None Include="packages.config" />
     <None Include="Resources\DGMU_logo_700x385px.PNG" />
     <None Include="Resources\workflow-24.png" />

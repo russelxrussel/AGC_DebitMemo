@@ -98,7 +98,8 @@
 
 
     Public Sub countForDispatchDBR()
-        Dim i As Integer = countDebitMemoStatus("Isposted = 1 and IsCompleted = 1 and IsDispatch = 0")
+        Dim i As Integer = oDBR.GET_FOR_DISPATCH_COUNT_PER_USER(tsUserCode.Text)
+        ' countDebitMemoStatus("Isposted = 1 and IsCompleted = 1 and IsDispatch = 0")
         If i <> 0 Then
             lnkDispatching.Text = "For Dispatch (" + i.ToString + ")"
         Else
@@ -202,12 +203,11 @@
     Private Sub ControlUserAccess()
         If (ACCESSTYPE = "O") Then
             lnkApproval.Visible = False
+            lnkApproveDMList.Visible = False
         End If
     End Sub
 
-    Private Sub TableLayoutPanel1_Paint(sender As Object, e As PaintEventArgs)
 
-    End Sub
 
 
     Private Sub lnkReports_Click(sender As Object, e As EventArgs) Handles lnkReports.Click

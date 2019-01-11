@@ -740,6 +740,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.scMain)
         Me.Font = New System.Drawing.Font("Segoe UI Symbol", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmMain"
         Me.Text = "Aces of Grace Corporation Debit Memo"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized

@@ -39,6 +39,9 @@ Public Class frmDebitMemoRequest
 
         ' InitAutoSearch()
 
+        'Hide text of filename
+        lblFileName.Text = ""
+
 
     End Sub
 

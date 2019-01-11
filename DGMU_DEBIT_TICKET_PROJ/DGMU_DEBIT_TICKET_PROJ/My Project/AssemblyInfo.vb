@@ -8,10 +8,10 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("DGMU_DEBIT_TICKET")>
-<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyTitle("Ace of Grace Computerize System")>
+<Assembly: AssemblyDescription("Integrated system of AGC")>
 <Assembly: AssemblyCompany("Aces of Grace Corporation")>
-<Assembly: AssemblyProduct("DGMU DEBIT MEMO AND TICKETING")> 
+<Assembly: AssemblyProduct("AGC")>
 <Assembly: AssemblyCopyright("Russel Vasquez ©  2018")> 
 <Assembly: AssemblyTrademark("")> 
 
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("1.2.0.0")>
+<Assembly: AssemblyVersion("1.3.0.0")>
 <Assembly: AssemblyFileVersion("3.0.0.0")>

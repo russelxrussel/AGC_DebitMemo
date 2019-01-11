@@ -132,7 +132,7 @@ Partial Class repDMTotalSummary
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox1.Size = New System.Drawing.Size(249, 126)
+        Me.GroupBox1.Size = New System.Drawing.Size(249, 111)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Report Type"
@@ -145,7 +145,7 @@ Partial Class repDMTotalSummary
         Me.lnkPreview.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.print_24
         Me.lnkPreview.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lnkPreview.ImageSize = 24
-        Me.lnkPreview.Location = New System.Drawing.Point(7, 81)
+        Me.lnkPreview.Location = New System.Drawing.Point(7, 75)
         Me.lnkPreview.Name = "lnkPreview"
         Me.lnkPreview.Size = New System.Drawing.Size(105, 23)
         Me.lnkPreview.Style = MetroFramework.MetroColorStyle.Purple

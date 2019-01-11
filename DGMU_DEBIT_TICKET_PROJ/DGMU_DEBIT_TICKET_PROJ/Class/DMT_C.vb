@@ -380,6 +380,25 @@ Public Class DMT_DEBITMEMO_C
         Return i
     End Function
 
+    Public Function GET_FOR_DISPATCH_COUNT_PER_USER(ByVal _userCode As String) As Integer
+        Dim i As Integer = 0
+
+        Using cn As New SqlConnection(_CONSTRING)
+
+            Using cmd As New SqlCommand("[TRANSACTION].[spGET_COUNT_FOR_DISPATCH_DM_PER_USER]", cn)
+                With cmd
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.AddWithValue("@USERCODE", _userCode)
+                End With
+
+                cn.Open()
+                i = Convert.ToInt32(cmd.ExecuteScalar)
+            End Using
+
+        End Using
+        Return i
+    End Function
+
     Public Function GET_STATUS_COUNT(ByVal _requestStatusCode As String) As Integer
         Dim i As Integer = 0
 

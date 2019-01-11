@@ -286,13 +286,14 @@ Partial Class frmDebitMemoRequest
         'lblFileName
         '
         Me.lblFileName.AutoSize = True
+        Me.lblFileName.BackColor = System.Drawing.Color.Transparent
         Me.lblFileName.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFileName.Location = New System.Drawing.Point(461, 198)
         Me.lblFileName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblFileName.Name = "lblFileName"
-        Me.lblFileName.Size = New System.Drawing.Size(13, 14)
+        Me.lblFileName.Size = New System.Drawing.Size(19, 14)
         Me.lblFileName.TabIndex = 28
-        Me.lblFileName.Text = ".."
+        Me.lblFileName.Text = "**"
         '
         'cmbSupervisor
         '
