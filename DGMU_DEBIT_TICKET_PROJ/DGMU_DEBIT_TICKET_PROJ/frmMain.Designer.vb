@@ -41,6 +41,8 @@ Partial Class frmMain
         Me.lnkMaintenance = New MetroFramework.Controls.MetroLink()
         Me.lnkPersonnelMaintenance = New MetroFramework.Controls.MetroLink()
         Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.lnkGasolineSlip = New MetroFramework.Controls.MetroLink()
+        Me.Panel8 = New System.Windows.Forms.Panel()
         Me.lnkLogOut = New MetroFramework.Controls.MetroLink()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
@@ -136,6 +138,8 @@ Partial Class frmMain
         Me.FlowLayoutPanel1.Controls.Add(Me.lnkMaintenance)
         Me.FlowLayoutPanel1.Controls.Add(Me.lnkPersonnelMaintenance)
         Me.FlowLayoutPanel1.Controls.Add(Me.Panel7)
+        Me.FlowLayoutPanel1.Controls.Add(Me.lnkGasolineSlip)
+        Me.FlowLayoutPanel1.Controls.Add(Me.Panel8)
         Me.FlowLayoutPanel1.Controls.Add(Me.lnkLogOut)
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(12, 8)
@@ -395,6 +399,31 @@ Partial Class frmMain
         Me.Panel7.Size = New System.Drawing.Size(171, 21)
         Me.Panel7.TabIndex = 113
         '
+        'lnkGasolineSlip
+        '
+        Me.lnkGasolineSlip.BackColor = System.Drawing.Color.Transparent
+        Me.lnkGasolineSlip.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lnkGasolineSlip.DisplayFocus = True
+        Me.lnkGasolineSlip.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.multiple_inputs_24
+        Me.lnkGasolineSlip.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lnkGasolineSlip.ImageSize = 24
+        Me.lnkGasolineSlip.Location = New System.Drawing.Point(3, 461)
+        Me.lnkGasolineSlip.Name = "lnkGasolineSlip"
+        Me.lnkGasolineSlip.Size = New System.Drawing.Size(168, 23)
+        Me.lnkGasolineSlip.Style = MetroFramework.MetroColorStyle.Purple
+        Me.lnkGasolineSlip.TabIndex = 115
+        Me.lnkGasolineSlip.Text = "Gasoline Slip Entry"
+        Me.lnkGasolineSlip.UseCustomBackColor = True
+        Me.lnkGasolineSlip.UseSelectable = True
+        Me.lnkGasolineSlip.UseStyleColors = True
+        '
+        'Panel8
+        '
+        Me.Panel8.Location = New System.Drawing.Point(3, 490)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(171, 21)
+        Me.Panel8.TabIndex = 116
+        '
         'lnkLogOut
         '
         Me.lnkLogOut.BackColor = System.Drawing.Color.Transparent
@@ -403,7 +432,7 @@ Partial Class frmMain
         Me.lnkLogOut.Image = Global.DGMU_DEBIT_TICKET_PROJ.My.Resources.Resources.lock_24
         Me.lnkLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lnkLogOut.ImageSize = 24
-        Me.lnkLogOut.Location = New System.Drawing.Point(3, 461)
+        Me.lnkLogOut.Location = New System.Drawing.Point(3, 517)
         Me.lnkLogOut.Name = "lnkLogOut"
         Me.lnkLogOut.Size = New System.Drawing.Size(119, 23)
         Me.lnkLogOut.Style = MetroFramework.MetroColorStyle.Purple
@@ -827,4 +856,6 @@ Partial Class frmMain
     Friend WithEvents Panel7 As Panel
     Friend WithEvents lnkChangePassword As MetroFramework.Controls.MetroLink
     Friend WithEvents lnkApproveDMList As MetroFramework.Controls.MetroLink
+    Friend WithEvents lnkGasolineSlip As MetroFramework.Controls.MetroLink
+    Friend WithEvents Panel8 As Panel
 End Class

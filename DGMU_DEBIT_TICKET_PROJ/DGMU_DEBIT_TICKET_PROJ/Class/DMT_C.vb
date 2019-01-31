@@ -1038,6 +1038,59 @@ Public Class VOUCHER_C
             End Using
         End Using
     End Sub
+
+
 End Class
+
+Public Class GASOLINESLIP_C
+    Inherits Base_C
+
+    Public Function GET_DRIVER_LIST() As DataTable
+        Dim dt As New DataTable
+        dt = queryCommandDT_SP("[GS].[spGET_DRIVER_LIST]")
+        Return dt
+    End Function
+
+    Public Function GET_PLATENUMBER_LIST() As DataTable
+        Dim dt As New DataTable
+        dt = queryCommandDT_SP("[GS].[spGET_PLATENUMBER_LIST]")
+        Return dt
+    End Function
+
+    Public Function GET_GASOLINE_SLIP_OPEN_LIST() As DataTable
+        Dim dt As New DataTable
+        dt = queryCommandDT_SP("[GS].[spGET_GASOLINE_SLIP_OPEN_LIST]")
+        Return dt
+    End Function
+
+
+    Public Sub INSERT_GASOLINESLIP(ByVal _gasSlipNum As String, ByVal _createdDate As DateTime, ByVal _driverID As Integer,
+                              ByVal _plateNumberID As Integer, ByVal _product As String, ByVal _remarks As String)
+
+        Using cn As New SqlConnection(_CONSTRING)
+
+            Using cmd As New SqlCommand("[GS].[spINSERT_GS_ENTRY]", cn)
+                With cmd
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.AddWithValue("@GASSLIPNUM", _gasSlipNum)
+                    .Parameters.AddWithValue("@CREATEDDATE", _createdDate)
+                    .Parameters.AddWithValue("@DRIVERID", _driverID)
+                    .Parameters.AddWithValue("@PLATENUMBERID", _plateNumberID)
+                    .Parameters.AddWithValue("@PRODUCT", _product)
+                    .Parameters.AddWithValue("@REMARKS", _remarks)
+                End With
+                cn.Open()
+                cmd.ExecuteNonQuery()
+
+            End Using
+        End Using
+
+
+    End Sub
+
+
+
+End Class
+
 
 

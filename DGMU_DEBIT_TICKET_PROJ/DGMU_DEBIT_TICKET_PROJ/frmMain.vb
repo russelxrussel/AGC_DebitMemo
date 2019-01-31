@@ -366,4 +366,16 @@
         Me.scPage.Panel2.Controls.Add(frmApproveDMList)
         frmApproveDMList.BringToFront()
     End Sub
+
+    Private Sub lnkGasolineSlip_Click(sender As Object, e As EventArgs) Handles lnkGasolineSlip.Click
+        With frmGasSlip
+            .TopLevel = False
+            .Left = 0
+            .Top = 0
+        End With
+
+        frmGasSlip.Show()
+        Me.scPage.Panel2.Controls.Add(frmGasSlip)
+        frmGasSlip.BringToFront()
+    End Sub
 End Class

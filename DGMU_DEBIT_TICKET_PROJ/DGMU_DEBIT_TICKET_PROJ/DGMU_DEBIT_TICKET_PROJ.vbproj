@@ -171,6 +171,12 @@
     <Compile Include="frmCompanyMaintenance.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmReprintGasSlip.Designer.vb">
+      <DependentUpon>frmReprintGasSlip.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReprintGasSlip.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmUserModification.Designer.vb">
       <DependentUpon>frmUserModification.vb</DependentUpon>
     </Compile>
@@ -181,6 +187,12 @@
       <DependentUpon>frmLogin.vb</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGasSlip.Designer.vb">
+      <DependentUpon>frmGasSlip.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGasSlip.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmVoucherPaymentRequest.Designer.vb">
@@ -293,6 +305,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="repGasolineFormSlip.Designer.vb">
+      <DependentUpon>repGasolineFormSlip.vb</DependentUpon>
+    </Compile>
+    <Compile Include="repGasolineFormSlip.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\repGasolineSlip.vb">
+      <DependentUpon>repGasolineSlip.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Reports\repCheckForm.vb">
       <AutoGen>True</AutoGen>
@@ -434,11 +458,17 @@
     <EmbeddedResource Include="frmCompanyMaintenance.resx">
       <DependentUpon>frmCompanyMaintenance.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReprintGasSlip.resx">
+      <DependentUpon>frmReprintGasSlip.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmUserModification.resx">
       <DependentUpon>frmUserModification.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGasSlip.resx">
+      <DependentUpon>frmGasSlip.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVoucherPaymentRequest.resx">
       <DependentUpon>frmVoucherPaymentRequest.vb</DependentUpon>
@@ -485,6 +515,13 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="repGasolineFormSlip.resx">
+      <DependentUpon>repGasolineFormSlip.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\repGasolineSlip.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>repGasolineSlip.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\repCheckForm.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
